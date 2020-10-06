@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Miyamoto.unity
-=======
 - path: Assets/Scenes/kuroiwa_Scene.unity
->>>>>>> 763f0f6a5e2750e48cae27cdebae8cde249144df
   isLoaded: 1
   isActive: 1
   isSubScene: 0
