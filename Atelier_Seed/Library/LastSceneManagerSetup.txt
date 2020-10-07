@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Sonfi/Sonfi_Scene.unity
+=======
+- path: Assets/Scenes/kuroiwa/kuroiwa_Scene.unity
+>>>>>>> parent of a6f956b... そ：プロトを追加
   isLoaded: 1
   isActive: 1
   isSubScene: 0
