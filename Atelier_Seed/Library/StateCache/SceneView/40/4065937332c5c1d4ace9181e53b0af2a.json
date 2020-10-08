@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":-0.15999984741210938,"y":-0.869999885559082,"z":-1.4621288776397706},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":6.364746570587158,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":15.525565147399903,"y":-0.6261814832687378,"z":-1.1446176767349244},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":2.338585615158081,"orthographic":true}
+>>>>>>> ステージ確認用

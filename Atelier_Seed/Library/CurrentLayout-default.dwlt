@@ -15,6 +15,7 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
 <<<<<<< HEAD
     y: 42.666668
@@ -35,8 +36,18 @@ MonoBehaviour:
   m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
+=======
+    x: 0
+    y: 42.666668
+    width: 1280
+    height: 677.3334
+  m_ShowMode: 4
+  m_Title: Tile Palette
+  m_RootView: {fileID: 6}
+  m_MinSize: {x: 875, y: 763}
+>>>>>>> ステージ確認用
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -56,6 +67,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 1280
     height: 627
@@ -80,6 +92,14 @@ MonoBehaviour:
   controlID: 47
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    width: 1280
+    height: 627.3334
+  m_MinSize: {x: 679, y: 442}
+  m_MaxSize: {x: 12004, y: 8042}
+  vertical: 0
+  controlID: 62
+>>>>>>> ステージ確認用
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -95,6 +115,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 923
     y: 0
@@ -120,8 +141,17 @@ MonoBehaviour:
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
   m_ActualView: {fileID: 14}
+=======
+    x: 923.3333
+    y: 0
+    width: 356.6667
+    height: 627.3334
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 15}
+>>>>>>> ステージ確認用
   m_Panes:
-  - {fileID: 14}
+  - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &4
@@ -142,6 +172,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 259
     height: 282
   m_MinSize: {x: 201, y: 221}
@@ -160,8 +191,15 @@ MonoBehaviour:
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
   m_ActualView: {fileID: 15}
+=======
+    width: 259.33334
+    height: 313.33334
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
+>>>>>>> ステージ確認用
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &5
@@ -174,12 +212,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: GridPaintPaletteWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     y: 282
     width: 923
@@ -198,10 +237,19 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 13}
+=======
+    y: 313.33334
+    width: 923.3333
+    height: 314.00003
+  m_MinSize: {x: 241, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
+>>>>>>> ステージ確認用
   m_Panes:
-  - {fileID: 13}
-  - {fileID: 18}
-  m_Selected: 0
+  - {fileID: 14}
+  - {fileID: 19}
+  - {fileID: 12}
+  m_Selected: 2
   m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -224,6 +272,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1280
     height: 677
 =======
@@ -236,6 +285,11 @@ MonoBehaviour:
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
   m_MinSize: {x: 875, y: 300}
+=======
+    width: 1280
+    height: 677.3334
+  m_MinSize: {x: 875, y: 763}
+>>>>>>> ステージ確認用
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -259,6 +313,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1280
 =======
 <<<<<<< HEAD
@@ -267,12 +322,15 @@ MonoBehaviour:
     width: 876.6667
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    width: 1280
+>>>>>>> ステージ確認用
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
-  - {fileID: 19}
-  m_MainToolbar: {fileID: 19}
+  - {fileID: 20}
+  m_MainToolbar: {fileID: 20}
   m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
@@ -291,6 +349,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 657
     width: 1280
 =======
@@ -302,6 +361,10 @@ MonoBehaviour:
     width: 876.6667
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    y: 657.3334
+    width: 1280
+>>>>>>> ステージ確認用
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -324,6 +387,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 923
     height: 627
@@ -348,6 +412,14 @@ MonoBehaviour:
   controlID: 102
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    width: 923.3333
+    height: 627.3334
+  m_MinSize: {x: 403, y: 442}
+  m_MaxSize: {x: 8003, y: 8042}
+  vertical: 1
+  controlID: 63
+>>>>>>> ステージ確認用
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -367,6 +439,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 923
     height: 282
@@ -391,6 +464,14 @@ MonoBehaviour:
   controlID: 53
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    width: 923.3333
+    height: 313.33334
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 64
+>>>>>>> ステージ確認用
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -406,6 +487,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 259
     y: 0
@@ -431,13 +513,53 @@ MonoBehaviour:
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
   m_ActualView: {fileID: 16}
+=======
+    x: 259.33334
+    y: 0
+    width: 664
+    height: 313.33334
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 17}
+>>>>>>> ステージ確認用
   m_Panes:
-  - {fileID: 16}
   - {fileID: 17}
-  - {fileID: 12}
+  - {fileID: 18}
+  - {fileID: 13}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f683d99f24875748a6656966ca9cea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 240, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Tile Palette
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 386
+    width: 922.3333
+    height: 293.00003
+  m_ViewDataDictionary: {fileID: 0}
+  m_PreviewResizer:
+    m_CachedPref: -50
+    m_ControlHash: 1964396721
+    m_PrefName: Preview_TilemapBrushInspector
+  m_Palette: {fileID: 2200851100916360671, guid: 095b53c3608d69047973f71ab7c4097c, type: 3}
+  m_DrawGizmos: 0
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -454,6 +576,7 @@ MonoBehaviour:
   m_TitleContent:
     m_Text: Asset Store
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000, type: 0}
 =======
 <<<<<<< HEAD
@@ -462,6 +585,9 @@ MonoBehaviour:
     m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000, type: 0}
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000, type: 0}
+>>>>>>> ステージ確認用
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -470,7 +596,7 @@ MonoBehaviour:
     width: 973
     height: 501
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -487,15 +613,20 @@ MonoBehaviour:
   m_TitleContent:
     m_Text: Project
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Image: {fileID: -7501376956915960154, guid: 0000000000000000d000000000000000, type: 0}
 =======
 <<<<<<< HEAD
     m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    m_Image: {fileID: -7501376956915960154, guid: 0000000000000000d000000000000000, type: 0}
+>>>>>>> ステージ確認用
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     y: 354.6667
     width: 922
@@ -515,6 +646,11 @@ MonoBehaviour:
     height: 241.00006
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    y: 386
+    width: 922.3333
+    height: 293.00003
+>>>>>>> ステージ確認用
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -557,6 +693,7 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 1e3d0000
     m_LastClickedID: 15646
@@ -585,12 +722,23 @@ MonoBehaviour:
       m_OriginalName: Script
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    scrollPos: {x: 0, y: 130.99997}
+    m_SelectedIDs: 423d0000
+    m_LastClickedID: 15682
+    m_ExpandedIDs: 00000000123d0000243d0000303d0000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: Tilemap
+      m_OriginalName: Tilemap
+>>>>>>> ステージ確認用
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
       m_UserData: 0
 =======
@@ -600,9 +748,12 @@ MonoBehaviour:
       m_UserData: 15668
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+      m_UserData: 15660
+>>>>>>> ステージ確認用
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -617,6 +768,7 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000003d0000
 =======
 <<<<<<< HEAD
@@ -625,6 +777,9 @@ MonoBehaviour:
     m_ExpandedIDs: 00000000f03c0000
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    m_ExpandedIDs: 00000000123d0000
+>>>>>>> ステージ確認用
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -649,10 +804,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000883d0000
+=======
+    m_SelectedInstanceIDs: 9cd5ffff
+    m_LastClickedInstanceID: -10852
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000c23e0000a4400000
+>>>>>>> ステージ確認用
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -680,7 +842,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 115
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -701,6 +863,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 923.3334
     y: 72.66667
     width: 356
@@ -718,6 +881,12 @@ MonoBehaviour:
     height: 454.33337
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    x: 923.3334
+    y: 72.66667
+    width: 355.6667
+    height: 606.3334
+>>>>>>> ステージ確認用
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -732,7 +901,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -749,15 +918,20 @@ MonoBehaviour:
   m_TitleContent:
     m_Text: Hierarchy
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000, type: 0}
 =======
 <<<<<<< HEAD
     m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000, type: 0}
+>>>>>>> ステージ確認用
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     y: 72.66667
     width: 258
@@ -796,6 +970,18 @@ MonoBehaviour:
       m_ExpandedIDs: 76f7ffffa4f7ffffb8f7ffffcaf7ffffdcf7ffffeef7ffff02f8ffff8af9ffff5afbffff5a3c00008a3d0000
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    y: 72.66667
+    width: 258.33334
+    height: 292.33334
+  m_ViewDataDictionary: {fileID: 0}
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 38}
+      m_SelectedIDs: 9cd5ffff
+      m_LastClickedID: -10852
+      m_ExpandedIDs: 12d2ffffb8d8ffff5afbffff783c0000783f0000
+>>>>>>> ステージ確認用
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -819,7 +1005,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 656d71c3938d8dd4da7bbd42ca8a22ab
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -835,6 +1021,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
@@ -855,16 +1042,25 @@ MonoBehaviour:
     width: 698
     height: 386.2
 =======
+=======
+>>>>>>> ステージ確認用
     m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 540.6667
     y: 306.6667
     width: 398
     height: 192.33333
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    x: 259.33334
+    y: 72.66667
+    width: 662
+    height: 292.33334
+>>>>>>> ステージ確認用
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: c5af4b87e36fe304095966d0cbce9a6b
@@ -877,6 +1073,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -0.15999985, y: -0.8699999, z: -1.4621289}
     speed: 2
 <<<<<<< HEAD
@@ -888,6 +1085,11 @@ MonoBehaviour:
     m_Value: {x: 0.0000015818118, y: -0.0000009544276, z: -0.00000037651395}
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    m_Target: {x: 15.525565, y: -0.6261815, z: -1.1446177}
+    speed: 2
+    m_Value: {x: 15.456744, y: -0.63236725, z: -1.1345454}
+>>>>>>> ステージ確認用
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -924,13 +1126,13 @@ MonoBehaviour:
       m_Size: {x: 0, y: 0}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
-    m_ShowGrid: 1
+    m_ShowGrid: 0
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
@@ -938,6 +1140,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 6.3647466
     speed: 2
 <<<<<<< HEAD
@@ -949,6 +1152,11 @@ MonoBehaviour:
     m_Value: 10.000002
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    m_Target: 2.3385856
+    speed: 2
+    m_Value: 2.237881
+>>>>>>> ステージ確認用
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -973,7 +1181,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -989,6 +1197,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
@@ -1019,6 +1228,16 @@ MonoBehaviour:
     height: 329
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 259.33334
+    y: 72.66667
+    width: 662
+    height: 292.33334
+>>>>>>> ステージ確認用
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -1026,6 +1245,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_TargetSize: {x: 993, y: 360}
 =======
@@ -1035,6 +1255,9 @@ MonoBehaviour:
   m_TargetSize: {x: 873, y: 462}
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+  m_TargetSize: {x: 1440, y: 720}
+>>>>>>> ステージ確認用
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1043,12 +1266,13 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 0a000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_HBaseRangeMin: -331
     m_HBaseRangeMax: 331
@@ -1067,6 +1291,12 @@ MonoBehaviour:
     m_VBaseRangeMax: 154
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    m_HBaseRangeMin: -480
+    m_HBaseRangeMax: 480
+    m_VBaseRangeMin: -240
+    m_VBaseRangeMax: 240
+>>>>>>> ステージ確認用
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1085,6 +1315,7 @@ MonoBehaviour:
       x: 0
       y: 21
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 662
       height: 240
     m_Scale: {x: 1, y: 1}
@@ -1102,12 +1333,19 @@ MonoBehaviour:
     m_Translation: {x: 291, y: 154}
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+      width: 662
+      height: 271.33334
+    m_Scale: {x: 0.5652778, y: 0.5652778}
+    m_Translation: {x: 331, y: 135.66667}
+>>>>>>> ステージ確認用
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
       x: -331
       y: -120
@@ -1135,12 +1373,21 @@ MonoBehaviour:
   m_LastWindowPixelSize: {x: 873, y: 493.5}
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+      x: -585.5528
+      y: -240
+      width: 1171.1056
+      height: 480
+    m_MinimalGUI: 1
+  m_defaultScale: 0.5652778
+  m_LastWindowPixelSize: {x: 993, y: 438.5}
+>>>>>>> ステージ確認用
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1157,10 +1404,14 @@ MonoBehaviour:
   m_TitleContent:
     m_Text: Console
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ステージ確認用
     m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 8
     y: 718
     width: 1366
@@ -1185,8 +1436,14 @@ MonoBehaviour:
     height: 256
 >>>>>>> ステージ制作作業
 >>>>>>> 宮本作業環境構築、プレイヤーのむにゅってなるやつ作る
+=======
+    x: 0
+    y: 364.6667
+    width: 922.3333
+    height: 314.33337
+>>>>>>> ステージ確認用
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &19
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
