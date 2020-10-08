@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//**************************************
+// プレイヤー全般のスクリプト
+//**************************************
+
 public class CPlayerScript : MonoBehaviour
 {
     //*********************
     //他ゲームオブジェクト
     //*********************
-    public GameObject TurnText;
 
     //************
     //対象タグ
     //************
-    public string StopFieldTag;
+    public string StopBlockTag;
 
     //********************
     // コンポーネント
@@ -23,8 +26,6 @@ public class CPlayerScript : MonoBehaviour
     //********
     // 変数
     //********
-    //発射方向
-    public LineRenderer Direction;
     //発射力
     public float Power;
     //最大付与力量
@@ -81,12 +82,6 @@ public class CPlayerScript : MonoBehaviour
             ClickFlag = true;
 
             DragStart = GetMousePosition();
-
-            Direction.enabled = true;
-            Direction.GetComponent<LineRenderer>().sortingOrder = 5;
-            Direction.SetPosition(0, Rbody.position);
-            Direction.SetPosition(1, Rbody.position);
-            Direction.GetComponent<LineRenderer>().sortingOrder = 5;
         }
     }
     //ドラッグ中
@@ -100,11 +95,6 @@ public class CPlayerScript : MonoBehaviour
             {
                 DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
             }
-
-            Direction.GetComponent<LineRenderer>().sortingOrder = 5;
-            Direction.SetPosition(0, Rbody.position);
-            Direction.SetPosition(1, Rbody.position + DirectionForce);
-            Direction.GetComponent<LineRenderer>().sortingOrder = 5;
         }
     }
     /// ドラッグ終了
@@ -118,8 +108,6 @@ public class CPlayerScript : MonoBehaviour
             StopFieldFlag = false;
 
             TurnCount--;
-
-            Direction.enabled = false;
             //弾く
             Flip(DirectionForce * Power * -1);
         }
@@ -156,13 +144,11 @@ public class CPlayerScript : MonoBehaviour
             Rbody.constraints = RigidbodyConstraints2D.None;
             Rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
-
-        TurnText.GetComponent<Text>().text = ((int)TurnCount).ToString("0");
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == StopFieldTag && !StopFieldFlag)
+        if (collision.gameObject.tag == StopBlockTag && !StopFieldFlag)
         {
             StopFieldFlag = true;
         }
