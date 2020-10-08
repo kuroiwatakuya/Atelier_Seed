@@ -33,6 +33,8 @@ public class CPlayerScript : MonoBehaviour
     //速度最小値
     public int VelocityMin;
 
+    public Vector2 Velocity;
+
     //発射方向の力
     private Vector2 DirectionForce;
     //メインカメラ
@@ -127,9 +129,9 @@ public class CPlayerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        var VelocityY = Rbody.velocity.y;
-        var VelocityX = Rbody.velocity.x;
-        if (VelocityY == 0 && VelocityX <= 8 && VelocityX >= -8 && PlayFlag)
+        Velocity.y = Rbody.velocity.y;
+        Velocity.x = Rbody.velocity.x;
+        if (Velocity.y == 0 && Velocity.x <= 8 && Velocity.x >= -8 && PlayFlag)
         {
             Rbody.velocity = new Vector2(0, 0);
             PlayFlag = false;

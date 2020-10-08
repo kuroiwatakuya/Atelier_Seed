@@ -313,6 +313,7 @@ MonoBehaviour:
   Power: 20
   MaxMagnitude: 2
   VelocityMin: 8
+  Velocity: {x: 0, y: 0}
 --- !u!50 &659013411
 Rigidbody2D:
   serializedVersion: 4
@@ -612,7 +613,7 @@ GameObject:
   - component: {fileID: 981562784}
   - component: {fileID: 981562785}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
