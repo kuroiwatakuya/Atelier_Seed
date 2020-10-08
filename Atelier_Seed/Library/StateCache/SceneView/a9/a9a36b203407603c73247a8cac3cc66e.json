@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":0.8151232004165649,"y":0.1923324316740036,"z":-10.043624877929688},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":11.57875919342041,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":-10.034536361694336,"y":-1.11104154586792,"z":-0.6754530668258667},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":6.935075759887695,"orthographic":true}
+>>>>>>> origin/一旦整理

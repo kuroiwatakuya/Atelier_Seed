@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class CPlayerScript : MonoBehaviour
 {
     //*********************
     //他ゲームオブジェクト
@@ -49,7 +49,6 @@ public class Player : MonoBehaviour
 
     //止まるブロックに接触してるか
     private bool StopFieldFlag;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +60,7 @@ public class Player : MonoBehaviour
         ClickFlag = false;
         StopFieldFlag = false;
     }
+
     //マウス座標をワールド座標に変換して取得
     private Vector3 GetMousePosition()
     {
@@ -147,7 +147,7 @@ public class Player : MonoBehaviour
             PlayFlag = false;
         }
 
-        if(StopFieldFlag)
+        if (StopFieldFlag)
         {
             Rbody.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         }
