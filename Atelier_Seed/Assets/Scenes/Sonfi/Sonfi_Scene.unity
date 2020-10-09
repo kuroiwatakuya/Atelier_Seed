@@ -324,6 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StopBlockTag: 
   GunTag: Gun
+  Rbody: {fileID: 0}
   Power: 20
   MaxMagnitude: 2
   VelocityMin: 8
@@ -730,7 +731,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.23914361}
+  m_Offset: {x: 0.10099602, y: -0.28965592}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -741,7 +742,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.4782872}
+  m_Size: {x: 0.79800797, y: 1.009901}
   m_EdgeRadius: 0
 --- !u!4 &1024966109
 Transform:
@@ -751,7 +752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024966107}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.5, y: 4, z: 0}
+  m_LocalPosition: {x: -19, y: 4, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1031675729}
@@ -844,7 +845,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: b4ba276e22bed3343a170b81ed6506b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

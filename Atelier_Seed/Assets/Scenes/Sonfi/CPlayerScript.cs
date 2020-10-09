@@ -22,7 +22,7 @@ public class CPlayerScript : MonoBehaviour
     //********************
     // コンポーネント
     //********************
-    private Rigidbody2D Rbody;
+    public Rigidbody2D Rbody;
 
     //********
     // 変数
@@ -149,6 +149,17 @@ public class CPlayerScript : MonoBehaviour
             Rbody.constraints = RigidbodyConstraints2D.None;
             Rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
+
+        if(GunFlag)
+        {
+            Rbody.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+        }
+        else
+        {
+            Rbody.constraints = RigidbodyConstraints2D.None;
+            Rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
