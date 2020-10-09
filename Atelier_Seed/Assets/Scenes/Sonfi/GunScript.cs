@@ -10,10 +10,10 @@ public class GunScript : MonoBehaviour
 
     private CPlayerScript PlayerScript;
 
-    public float Angle  = 1;
+    public float Angle  = -1;
 
-    public bool Plus = true;
-    public bool Minus = false;
+    public bool Plus = false;
+    public bool Minus = true;
 
     public float NowRotation;
 
@@ -27,22 +27,39 @@ public class GunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    private void FixedUpdate()
+    {
         if (PlayerScript.GunFlag)
         {
 
             Quaternion Rot = Quaternion.AngleAxis(Angle, Vector3.forward);
             Quaternion NowRot = this.transform.rotation;
             this.transform.rotation = NowRot * Rot;
-            if(transform.rotation.z >= 90)
+            if (gameObject.transform.eulerAngles.z >= 90 && gameObject.transform.eulerAngles.z <= 180)
             {
                 Plus = false;
                 Minus = true;
+                Angle = -1;
             }
-            if (transform.rotation.z <= 0)
+            if (gameObject.transform.eulerAngles.z <= 0 || gameObject.transform.eulerAngles.z > 180)
             {
                 Plus = true;
                 Minus = false;
+                Angle = 1;
             }
+
+            /*if(Input)
+            float rad = gameObject.transform.eulerAngles.z * Mathf.Deg2Rad; //角度をラジアン角に変換
+            //rad(ラジアン角)から発射用ベクトルを作成
+            double addforceX = Mathf.Sin(rad) * 10;
+            double addforceY = Mathf.Cos(rad) * 10;
+            Vector2 shotVector = new Vector2((float)addforceX, (float)addforceY);
+
+            PlayerScript.Rbody.AddForce(shotVector);*/
+
         }
         else
         {
