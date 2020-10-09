@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//**************************************
+// プレイヤー全般のスクリプト
+//**************************************
+
 public class CPlayerScript : MonoBehaviour
 {
     //*********************
     //他ゲームオブジェクト
     //*********************
-    public GameObject TurnText;
 
     //************
     //対象タグ
     //************
-    public string StopFieldTag;
+    public string StopBlockTag;
+    public string GunTag;
 
     //********************
     // コンポーネント
@@ -23,14 +27,15 @@ public class CPlayerScript : MonoBehaviour
     //********
     // 変数
     //********
-    //発射方向
-    public LineRenderer Direction;
     //発射力
     public float Power;
     //最大付与力量
     public float MaxMagnitude;
     //速度最小値
     public int VelocityMin;
+
+    public Vector2 Velocity;
+    public bool GunFlag;
 
     //発射方向の力
     private Vector2 DirectionForce;
@@ -59,6 +64,7 @@ public class CPlayerScript : MonoBehaviour
         PlayFlag = false;
         ClickFlag = false;
         StopFieldFlag = false;
+        GunFlag = false;
     }
 
     //マウス座標をワールド座標に変換して取得
@@ -81,12 +87,6 @@ public class CPlayerScript : MonoBehaviour
             ClickFlag = true;
 
             DragStart = GetMousePosition();
-
-            Direction.enabled = true;
-            Direction.GetComponent<LineRenderer>().sortingOrder = 5;
-            Direction.SetPosition(0, Rbody.position);
-            Direction.SetPosition(1, Rbody.position);
-            Direction.GetComponent<LineRenderer>().sortingOrder = 5;
         }
     }
     //ドラッグ中
@@ -100,11 +100,6 @@ public class CPlayerScript : MonoBehaviour
             {
                 DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
             }
-
-            Direction.GetComponent<LineRenderer>().sortingOrder = 5;
-            Direction.SetPosition(0, Rbody.position);
-            Direction.SetPosition(1, Rbody.position + DirectionForce);
-            Direction.GetComponent<LineRenderer>().sortingOrder = 5;
         }
     }
     /// ドラッグ終了
@@ -118,8 +113,6 @@ public class CPlayerScript : MonoBehaviour
             StopFieldFlag = false;
 
             TurnCount--;
-
-            Direction.enabled = false;
             //弾く
             Flip(DirectionForce * Power * -1);
         }
@@ -139,9 +132,9 @@ public class CPlayerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        var VelocityY = Rbody.velocity.y;
-        var VelocityX = Rbody.velocity.x;
-        if (VelocityY == 0 && VelocityX <= 8 && VelocityX >= -8 && PlayFlag)
+        Velocity.y = Rbody.velocity.y;
+        Velocity.x = Rbody.velocity.x;
+        if (Velocity.y == 0 && Velocity.x <= 8 && Velocity.x >= -8 && PlayFlag)
         {
             Rbody.velocity = new Vector2(0, 0);
             PlayFlag = false;
@@ -156,15 +149,21 @@ public class CPlayerScript : MonoBehaviour
             Rbody.constraints = RigidbodyConstraints2D.None;
             Rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
-
-        TurnText.GetComponent<Text>().text = ((int)TurnCount).ToString("0");
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == StopFieldTag && !StopFieldFlag)
+        if (collision.gameObject.tag == StopBlockTag && !StopFieldFlag)
         {
             StopFieldFlag = true;
         }
     }
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == GunTag && !GunFlag)
+        {
+            GunFlag = true;
+        }
+    }
+
 }
