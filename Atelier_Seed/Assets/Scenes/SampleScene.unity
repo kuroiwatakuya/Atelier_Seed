@@ -3242,7 +3242,6 @@ GameObject:
   - component: {fileID: 1484301261}
   - component: {fileID: 1484301260}
   - component: {fileID: 1484301262}
-  - component: {fileID: 1484301263}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3303,24 +3302,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1484301263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1484301259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f36191d16db4ea47aa2b974f36e4068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TurnText: {fileID: 1284197687}
-  StopFieldTag: StopFieldTag
-  Direction: {fileID: 424357242}
-  Power: 20
-  MaxMagnitude: 2
-  VelocityMin: 0
 --- !u!1 &1694843244
 GameObject:
   m_ObjectHideFlags: 0
