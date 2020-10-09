@@ -20,6 +20,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Project
 =======
     y: 42.666668
@@ -30,6 +31,11 @@ MonoBehaviour:
 >>>>>>> bb7025c55c94751af4cb1db4a4be888f9616989d
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
+=======
+  m_Title: Hierarchy
+  m_RootView: {fileID: 2}
+  m_MinSize: {x: 875, y: 492}
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -53,6 +59,7 @@ MonoBehaviour:
     y: 30
 <<<<<<< HEAD
     width: 1536
+<<<<<<< HEAD
     height: 730.8
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
@@ -66,6 +73,15 @@ MonoBehaviour:
   vertical: 0
   controlID: 108
 >>>>>>> bb7025c55c94751af4cb1db4a4be888f9616989d
+=======
+    height: 780.8
+  m_MinSize: {x: 875, y: 492}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_UseTopView: 1
+  m_TopViewHeight: 30
+  m_UseBottomView: 1
+  m_BottomViewHeight: 20
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -84,6 +100,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 1059.2
     y: 0
+<<<<<<< HEAD
     width: 476.80005
     height: 730.8
   m_MinSize: {x: 276, y: 71}
@@ -103,6 +120,15 @@ MonoBehaviour:
   - {fileID: 12}
   m_Selected: 0
   m_LastSelected: 1
+=======
+    width: 1536
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LoadedToolbars: []
+  m_MainToolbar: {fileID: 18}
+  m_LastLoadedLayoutName: 2 by 3
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -119,6 +145,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 0
 <<<<<<< HEAD
     width: 346.4
@@ -137,6 +164,15 @@ MonoBehaviour:
   - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
+=======
+    y: 30
+    width: 1536
+    height: 730.8
+  m_MinSize: {x: 951, y: 442}
+  m_MaxSize: {x: 22006, y: 10021}
+  vertical: 0
+  controlID: 355
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,6 +190,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 441.6
     width: 1059.2
     height: 289.19998
@@ -170,6 +207,13 @@ MonoBehaviour:
   - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
+=======
+    y: 760.8
+    width: 1536
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,6 +235,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1536
     height: 780.8
 =======
@@ -203,6 +248,14 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
+=======
+    width: 826.4
+    height: 730.8
+  m_MinSize: {x: 241, y: 442}
+  m_MaxSize: {x: 4001, y: 8042}
+  vertical: 1
+  controlID: 380
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,6 +271,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 0
 <<<<<<< HEAD
@@ -232,6 +286,19 @@ MonoBehaviour:
   - {fileID: 20}
   m_MainToolbar: {fileID: 20}
   m_LastLoadedLayoutName: 
+=======
+    x: 826.4
+    y: 0
+    width: 201.6
+    height: 730.8
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 13}
+  m_Panes:
+  - {fileID: 13}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,6 +314,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
 <<<<<<< HEAD
     y: 760.8
@@ -258,6 +326,19 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
+=======
+    x: 1028
+    y: 0
+    width: 232
+    height: 730.8
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,6 +359,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1059.2
     height: 730.8
   m_MinSize: {x: 403, y: 492}
@@ -292,6 +374,17 @@ MonoBehaviour:
   vertical: 1
   controlID: 16
 >>>>>>> bb7025c55c94751af4cb1db4a4be888f9616989d
+=======
+    width: 276
+    height: 730.8
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -312,6 +405,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1059.2
     height: 441.6
   m_MinSize: {x: 403, y: 221}
@@ -326,6 +420,17 @@ MonoBehaviour:
   vertical: 0
   controlID: 17
 >>>>>>> bb7025c55c94751af4cb1db4a4be888f9616989d
+=======
+    width: 826.4
+    height: 374.4
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -342,6 +447,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 346.4
     y: 0
     width: 712.7999
@@ -355,6 +461,15 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
+=======
+    x: 0
+    y: 374.4
+    width: 826.4
+    height: 356.4
+  m_MinSize: {x: 241, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
@@ -381,10 +496,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 923.3334
     y: 72.66667
     width: 355.6667
     height: 606.3334
+=======
+    x: 0
+    y: 448
+    width: 825.4
+    height: 335.4
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
   m_ViewDataDictionary: {fileID: 0}
   m_PreviewResizer:
     m_CachedPref: -50
@@ -407,6 +529,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 2048, y: 2048}
   m_TitleContent:
+<<<<<<< HEAD
     m_Text: Asset Store
 <<<<<<< HEAD
     m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000, type: 0}
@@ -421,6 +544,47 @@ MonoBehaviour:
     width: 973
     height: 501
   m_ViewDataDictionary: {fileID: 0}
+=======
+    m_Text: Hierarchy
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 826.4
+    y: 73.6
+    width: 199.6
+    height: 709.8
+  m_ViewDataDictionary: {fileID: 0}
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 2af5ffff06faffff
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 7}
+      m_SearchString: 
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: 5817e29754f0289478f98d29d9966421
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -430,6 +594,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
+=======
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1260
+    y: 73.6
+    width: 275
+    height: 709.8
+  m_ViewDataDictionary: {fileID: 0}
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: -160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_AssetGUID: 
+  m_InstanceID: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
   m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -437,6 +642,7 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
 =======
@@ -455,6 +661,16 @@ MonoBehaviour:
     width: 922.3333
     height: 323.00003
 >>>>>>> bb7025c55c94751af4cb1db4a4be888f9616989d
+=======
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1028
+    y: 73.6
+    width: 230
+    height: 709.8
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -489,6 +705,7 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 39.80002}
     m_SelectedIDs: 123e0000
     m_LastClickedID: 15890
@@ -499,6 +716,12 @@ MonoBehaviour:
     m_LastClickedID: 15692
     m_ExpandedIDs: 00000000123d0000143d0000283d0000
 >>>>>>> bb7025c55c94751af4cb1db4a4be888f9616989d
+=======
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 623d0000
+    m_LastClickedID: 15714
+    m_ExpandedIDs: 00000000483d000000ca9a3b
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -527,10 +750,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000f23d0000f43d0000
 =======
     m_ExpandedIDs: 00000000123d0000143d0000
 >>>>>>> bb7025c55c94751af4cb1db4a4be888f9616989d
+=======
+    m_ExpandedIDs: 00000000483d000000ca9a3b
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -558,7 +785,11 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
+<<<<<<< HEAD
     m_ExpandedInstanceIDs: c6230000
+=======
+    m_ExpandedInstanceIDs: 
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -646,12 +877,17 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
+<<<<<<< HEAD
     m_Text: Hierarchy
 <<<<<<< HEAD
     m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
 =======
     m_Image: {fileID: -9000905672528348964, guid: 0000000000000000d000000000000000, type: 0}
 >>>>>>> bb7025c55c94751af4cb1db4a4be888f9616989d
+=======
+    m_Text: Game
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -666,6 +902,7 @@ MonoBehaviour:
     height: 262.33334
 >>>>>>> bb7025c55c94751af4cb1db4a4be888f9616989d
   m_ViewDataDictionary: {fileID: 0}
+<<<<<<< HEAD
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
@@ -705,6 +942,72 @@ MonoBehaviour:
 --- !u!114 &16
 =======
   m_WindowGUID: a4b4dd229944b314fa34a7df8c090e06
+=======
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1440, y: 720}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_MaximizeOnPlay: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 08000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -576
+    m_HBaseRangeMax: 576
+    m_VBaseRangeMin: -288
+    m_VBaseRangeMax: 288
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 825.4
+      height: 314.4
+    m_Scale: {x: 0.54583335, y: 0.54583335}
+    m_Translation: {x: 412.7, y: 157.20001}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -756.0916
+      y: -288
+      width: 1512.1832
+      height: 576
+    m_MinimalGUI: 1
+  m_defaultScale: 0.54583335
+  m_LastWindowPixelSize: {x: 1031.75, y: 419.25}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 00000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
 --- !u!114 &17
 >>>>>>> bb7025c55c94751af4cb1db4a4be888f9616989d
 MonoBehaviour:
@@ -723,14 +1026,22 @@ MonoBehaviour:
   m_TitleContent:
     m_Text: Scene
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
     m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 346.4
     y: 73.6
+<<<<<<< HEAD
     width: 710.7999
     height: 420.6
+=======
+    width: 825.4
+    height: 353.4
+>>>>>>> parent of ac21ecd... ひらいちゃったやつ
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 5c1133ef6f829f6478841a66d7f50748
