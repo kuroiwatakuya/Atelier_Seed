@@ -16,6 +16,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 43
     width: 1366
     height: 685
@@ -24,14 +25,22 @@ MonoBehaviour:
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
 =======
+=======
+>>>>>>> origin/タップエフェクト実装
     y: 43.2
     width: 1536
     height: 780.8
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 542}
 >>>>>>> origin/大砲続き
+=======
+  m_Title: Game
+  m_RootView: {fileID: 6}
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> origin/タップエフェクト実装
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -55,6 +64,7 @@ MonoBehaviour:
     y: 30
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1280
     height: 627
 =======
@@ -73,6 +83,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 99
 >>>>>>> origin/大砲続き
+=======
+    width: 1536
+    height: 731
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 109
+>>>>>>> origin/タップエフェクト実装
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -88,6 +106,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 981
     y: 0
@@ -109,6 +128,15 @@ MonoBehaviour:
   m_MaxSize: {x: 4001, y: 4021}
 >>>>>>> d61d447dc251dc20285b124e1151a64f4301f889
   m_ActualView: {fileID: 13}
+=======
+    x: 1053
+    y: 0
+    width: 483
+    height: 731
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 14}
+>>>>>>> origin/タップエフェクト実装
   m_Panes:
   - {fileID: 13}
   m_Selected: 0
@@ -131,8 +159,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 280
     height: 333
+=======
+    width: 352
+    height: 423
+>>>>>>> origin/タップエフェクト実装
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
@@ -165,6 +198,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 350
     width: 978
     height: 277
@@ -178,6 +212,11 @@ MonoBehaviour:
     width: 1059.2
     height: 289.19998
 >>>>>>> origin/大砲続き
+=======
+    y: 423
+    width: 1053
+    height: 308
+>>>>>>> origin/タップエフェクト実装
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 12}
@@ -208,6 +247,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1280
     height: 677
 =======
@@ -218,6 +258,10 @@ MonoBehaviour:
     width: 1536
     height: 780.8
 >>>>>>> origin/大砲続き
+=======
+    width: 1536
+    height: 781
+>>>>>>> origin/タップエフェクト実装
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -242,16 +286,25 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1366
 =======
     width: 1536
 >>>>>>> origin/大砲続き
+=======
+    width: 1536
+>>>>>>> origin/タップエフェクト実装
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
+<<<<<<< HEAD
   - {fileID: 18}
   m_MainToolbar: {fileID: 18}
+=======
+  - {fileID: 19}
+  m_MainToolbar: {fileID: 19}
+>>>>>>> origin/タップエフェクト実装
   m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
@@ -271,6 +324,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 657
     width: 1280
 =======
@@ -281,6 +335,10 @@ MonoBehaviour:
     y: 760.8
     width: 1536
 >>>>>>> origin/大砲続き
+=======
+    y: 761
+    width: 1536
+>>>>>>> origin/タップエフェクト実装
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -305,6 +363,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 978
     height: 627
 =======
@@ -323,6 +382,14 @@ MonoBehaviour:
   vertical: 1
   controlID: 104
 >>>>>>> origin/大砲続き
+=======
+    width: 1053
+    height: 731
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 110
+>>>>>>> origin/タップエフェクト実装
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,6 +410,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 981
     height: 333
   m_MinSize: {x: 403, y: 221}
@@ -357,6 +425,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 105
 >>>>>>> origin/大砲続き
+=======
+    width: 1053
+    height: 423
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 111
+>>>>>>> origin/タップエフェクト実装
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -368,14 +444,19 @@ MonoBehaviour:
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: SceneView
 =======
   m_Name: GameView
 >>>>>>> d61d447dc251dc20285b124e1151a64f4301f889
+=======
+  m_Name: GameView
+>>>>>>> origin/タップエフェクト実装
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 280
     y: 0
@@ -390,9 +471,23 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
+=======
+    x: 352
+    y: 0
+    width: 701
+    height: 423
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
+>>>>>>> origin/タップエフェクト実装
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
+<<<<<<< HEAD
+=======
+  - {fileID: 17}
+  - {fileID: 12}
+>>>>>>> origin/タップエフェクト実装
   m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &12
@@ -441,6 +536,7 @@ MonoBehaviour:
     m_Text: Project
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Image: {fileID: -2032128904892744680, guid: 0000000000000000d000000000000000, type: 0}
 =======
     m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
@@ -448,10 +544,14 @@ MonoBehaviour:
 =======
     m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
 >>>>>>> origin/大砲続き
+=======
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+>>>>>>> origin/タップエフェクト実装
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     y: 422.6667
@@ -467,6 +567,11 @@ MonoBehaviour:
     width: 1058.2
     height: 268.19998
 >>>>>>> origin/大砲続き
+=======
+    y: 496
+    width: 1052
+    height: 287
+>>>>>>> origin/タップエフェクト実装
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -483,6 +588,7 @@ MonoBehaviour:
     m_Folders:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets
 =======
     - Assets/Scenes/Ou
@@ -490,10 +596,14 @@ MonoBehaviour:
 =======
     - Assets/Scenes/Sonfi
 >>>>>>> origin/大砲続き
+=======
+    - Assets/Scenes/Miyamoto
+>>>>>>> origin/タップエフェクト実装
     m_Globs: []
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 50
   m_LastFolders:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   - Assets
@@ -528,6 +638,18 @@ MonoBehaviour:
     m_LastClickedID: 15906
     m_ExpandedIDs: 00000000063e0000083e000000ca9a3b
 >>>>>>> origin/大砲続き
+=======
+  - Assets/Scenes/Miyamoto
+  m_LastFoldersGridSize: 50
+  m_LastProjectPath: C:\Users\motch\Documents\Atelier_Seed\Atelier_Seed
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: d03c0000
+    m_LastClickedID: 15568
+    m_ExpandedIDs: 00000000b63c0000b83c0000ba3c000000ca9a3b
+>>>>>>> origin/タップエフェクト実装
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -557,6 +679,7 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000e63c0000e83c0000
 =======
     m_ExpandedIDs: 00000000523e0000543e0000
@@ -564,6 +687,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000063e0000083e0000
 >>>>>>> origin/大砲続き
+=======
+    m_ExpandedIDs: 00000000b63c0000b83c0000ba3c0000
+>>>>>>> origin/タップエフェクト実装
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -590,11 +716,11 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-<<<<<<< HEAD
-    m_HadKeyboardFocusLastEvent: 0
-=======
     m_HadKeyboardFocusLastEvent: 1
+<<<<<<< HEAD
 >>>>>>> origin/大砲続き
+=======
+>>>>>>> origin/タップエフェクト実装
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -611,7 +737,11 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 5}
+=======
+      m_ClientGUIView: {fileID: 0}
+>>>>>>> origin/タップエフェクト実装
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -620,7 +750,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 50
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 --- !u!114 &13
@@ -639,6 +769,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
@@ -665,6 +796,16 @@ MonoBehaviour:
     width: 475.80005
     height: 709.8
 >>>>>>> origin/大砲続き
+=======
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1052.8
+    y: 73.6
+    width: 482
+    height: 710
+>>>>>>> origin/タップエフェクト実装
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -697,6 +838,7 @@ MonoBehaviour:
     m_Text: Hierarchy
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Image: {fileID: -9000905672528348964, guid: 0000000000000000d000000000000000, type: 0}
 =======
     m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
@@ -704,10 +846,14 @@ MonoBehaviour:
 =======
     m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
 >>>>>>> origin/大砲続き
+=======
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
+>>>>>>> origin/タップエフェクト実装
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     y: 73
     width: 279
@@ -717,10 +863,16 @@ MonoBehaviour:
     width: 345.4
     height: 420.6
 >>>>>>> origin/大砲続き
+=======
+    y: 73.6
+    width: 351
+    height: 402
+>>>>>>> origin/タップエフェクト実装
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       m_SelectedIDs: 
@@ -736,6 +888,11 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: 90d7ffff34e0ffffc6f9ffff7a3d00009e3d0000
 >>>>>>> origin/大砲続き
+=======
+      m_SelectedIDs: 683c0000
+      m_LastClickedID: 15464
+      m_ExpandedIDs: 5afbffff723c0000
+>>>>>>> origin/タップエフェクト実装
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: Gun
@@ -759,10 +916,14 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_WindowGUID: 4c969a2b90040154d917609493e03593
 --- !u!114 &15
 =======
   m_WindowGUID: 0fd29bdf41486784b8ceccb49a2dc948
+=======
+  m_WindowGUID: 099d63442c0f3b04fb2798cca2548080
+>>>>>>> origin/タップエフェクト実装
 --- !u!114 &16
 >>>>>>> origin/大砲続き
 MonoBehaviour:
@@ -782,6 +943,7 @@ MonoBehaviour:
     m_Text: Scene
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Image: {fileID: -131512000283675692, guid: 0000000000000000d000000000000000, type: 0}
 =======
     m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
@@ -797,10 +959,13 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
 =======
+=======
+>>>>>>> origin/タップエフェクト実装
     m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 346.4
     y: 73.6
     width: 710.7999
@@ -809,6 +974,15 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 7e94fec2e70bf584b8cc43afb856cc38
 >>>>>>> origin/大砲続き
+=======
+    x: 352
+    y: 73.6
+    width: 699
+    height: 402
+  m_ViewDataDictionary: {fileID: 0}
+  m_ShowContextualTools: 0
+  m_WindowGUID: 2a969402323bb664d8fd28ed4765c851
+>>>>>>> origin/タップエフェクト実装
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
@@ -818,6 +992,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     m_Target: {x: -1.3060236, y: 1.3450403, z: -0.44690478}
@@ -833,6 +1008,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -5.407899, y: -0.11020084, z: -1.4865386}
 >>>>>>> origin/大砲続き
+=======
+    m_Target: {x: -0.23779927, y: 0.34202227, z: -99.49212}
+    speed: 2
+    m_Value: {x: -0.23779927, y: 0.34202227, z: -99.49212}
+>>>>>>> origin/タップエフェクト実装
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -885,6 +1065,7 @@ MonoBehaviour:
   m_Size:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 5.9993796
     speed: 2
     m_Value: 5.9993796
@@ -898,6 +1079,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 5.040115
 >>>>>>> origin/大砲続き
+=======
+    m_Target: 6.8310356
+    speed: 2
+    m_Value: 6.8310356
+>>>>>>> origin/タップエフェクト実装
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -940,6 +1126,7 @@ MonoBehaviour:
     m_Text: Game
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Image: {fileID: 257045534191678443, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
@@ -959,15 +1146,24 @@ MonoBehaviour:
     height: 312
 >>>>>>> d61d447dc251dc20285b124e1151a64f4301f889
 =======
+=======
+>>>>>>> origin/タップエフェクト実装
     m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 346.4
     y: 73.6
     width: 710.7999
     height: 420.6
 >>>>>>> origin/大砲続き
+=======
+    x: 352
+    y: 73.6
+    width: 699
+    height: 402
+>>>>>>> origin/タップエフェクト実装
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -977,6 +1173,7 @@ MonoBehaviour:
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TargetSize: {x: 734, y: 308}
 =======
   m_TargetSize: {x: 1280, y: 720}
@@ -984,6 +1181,9 @@ MonoBehaviour:
 =======
   m_TargetSize: {x: 888.4999, y: 499.5}
 >>>>>>> origin/大砲続き
+=======
+  m_TargetSize: {x: 677, y: 381}
+>>>>>>> origin/タップエフェクト実装
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -993,15 +1193,20 @@ MonoBehaviour:
   m_Gizmos: 0
   m_Stats: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_SelectedSizes: 08000000000000000000000000000000000000000000000000000000000000000000000000000000
 =======
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 >>>>>>> origin/大砲続き
+=======
+  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
+>>>>>>> origin/タップエフェクト実装
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     m_HBaseRangeMin: -244.66667
@@ -1020,6 +1225,12 @@ MonoBehaviour:
     m_VBaseRangeMin: -199.8
     m_VBaseRangeMax: 199.8
 >>>>>>> origin/大砲続き
+=======
+    m_HBaseRangeMin: -270.80002
+    m_HBaseRangeMax: 270.80002
+    m_VBaseRangeMin: -152.40001
+    m_VBaseRangeMax: 152.40001
+>>>>>>> origin/タップエフェクト実装
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1039,6 +1250,7 @@ MonoBehaviour:
       y: 21
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 734
       height: 308
     m_Scale: {x: 1, y: 1}
@@ -1055,12 +1267,19 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 355.39996, y: 199.8}
 >>>>>>> origin/大砲続き
+=======
+      width: 699
+      height: 381
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 349.5, y: 190.5}
+>>>>>>> origin/タップエフェクト実装
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       x: -367
@@ -1088,6 +1307,15 @@ MonoBehaviour:
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 888.4999, y: 525.75}
 >>>>>>> origin/大砲続き
+=======
+      x: -349.5
+      y: -190.5
+      width: 699
+      height: 381
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 873.75, y: 502.5}
+>>>>>>> origin/タップエフェクト実装
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -1111,6 +1339,7 @@ MonoBehaviour:
     m_Text: Console
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Image: {fileID: -3303252850963283158, guid: 0000000000000000d000000000000000, type: 0}
 =======
     m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
@@ -1123,15 +1352,23 @@ MonoBehaviour:
     width: 920
     height: 250
 =======
+=======
+>>>>>>> origin/タップエフェクト実装
     m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 515.2
     width: 1058.2
     height: 268.19998
 >>>>>>> origin/大砲続き
+=======
+    y: 496
+    width: 1051.8
+    height: 287.4
+>>>>>>> origin/タップエフェクト実装
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &18
 MonoBehaviour:
