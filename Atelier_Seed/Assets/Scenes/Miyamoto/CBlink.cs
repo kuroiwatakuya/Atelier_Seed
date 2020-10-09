@@ -22,21 +22,22 @@ public class CBlink : MonoBehaviour
     // // public // //
 
     // 点滅スピード
-    public float speed = 1.0f;
+    public float Speed = 1.0f;          // 点滅するスピード
+    public float AlphaInterval = 0.5f;  // 一回の処理でどれくらいα値が変化するか
 
 //-------------------------------------------------------------------
 
     // // private // //
 
-    // テキスト用変数
-    private Text text;
+    // テキストのコンポーネント格納用
+    private Text ThisText;
 
-    // イメージ用変数
-    private Image image;
+    // イメージのコンポーネント格納用
+    private Image ThisImage;
 
 
-    // 点滅させるための計測用
-    private float time;
+    // 点滅させるための時間
+    private float Timer;
 
 
     // オブジェクトの種類一覧
@@ -48,7 +49,7 @@ public class CBlink : MonoBehaviour
 
 
     // 現在のオブジェクトの種類（初期値はテキスト）
-    private ObjectType thisObjectType = ObjectType.TEXT;
+    private ObjectType ThisObjectType = ObjectType.TEXT;
 
 //-------------------------------------------------------------------
 
@@ -60,15 +61,15 @@ public class CBlink : MonoBehaviour
         // Imageだったとき
         if(this.gameObject.GetComponent<Image>())
         {
-            thisObjectType = ObjectType.IMAGE;
-            image = this.gameObject.GetComponent<Image>();
+            ThisObjectType = ObjectType.IMAGE;                  // オブジェクトの種類をImageに設定
+            ThisImage = this.gameObject.GetComponent<Image>();  // イメージのコンポーネントを取得
         }
 
         // Textだったとき
         else if(this.gameObject.GetComponent<Text>())
         {
-            thisObjectType = ObjectType.TEXT;
-            text = this.gameObject.GetComponent<Text>();
+            ThisObjectType = ObjectType.TEXT;                   // オブジェクトの種類をTextに設定
+            ThisText = this.gameObject.GetComponent<Text>();    // テキストのコンポーネントを取得
         }
     }
 
@@ -80,26 +81,26 @@ public class CBlink : MonoBehaviour
         // // オブジェクトのα値を更新 // //
 
         // Imageだったとき
-        if (thisObjectType==ObjectType.IMAGE)
+        if (ThisObjectType == ObjectType.IMAGE)
         {
-            image.color = GetAlphaColor(image.color);
+            ThisImage.color = GetAlphaColor(ThisImage.color);   // α値調整
         }
 
         // Textだったとき
-        else if(thisObjectType==ObjectType.TEXT)
+        else if (ThisObjectType == ObjectType.TEXT)
         {
-            text.color = GetAlphaColor(text.color);
+            ThisText.color = GetAlphaColor(ThisText.color);     // α値調整
         }
     }
 
 //-------------------------------------------------------------------
 
-    // α値を更新してColorを返す
+    // // α値を更新してColorを返す // //
     Color GetAlphaColor(Color color)
     {
-        time += Time.deltaTime * 5.0f * speed;
-        color.a = Mathf.Sin(time) * 0.5f + 0.5f;
+        Timer += Time.deltaTime * Speed;                     // 点滅時間
+        color.a = Mathf.Sin(Timer) * AlphaInterval + 0.5f;   // α値変更
 
-        return color;
+        return color;   // αを変更したカラーを返す
     }
 }
