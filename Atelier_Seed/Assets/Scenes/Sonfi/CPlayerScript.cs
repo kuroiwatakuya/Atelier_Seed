@@ -17,6 +17,7 @@ public class CPlayerScript : MonoBehaviour
     //対象タグ
     //************
     public string StopBlockTag;
+    public string GunTag;
 
     //********************
     // コンポーネント
@@ -34,6 +35,7 @@ public class CPlayerScript : MonoBehaviour
     public int VelocityMin;
 
     public Vector2 Velocity;
+    public bool GunFlag;
 
     //発射方向の力
     private Vector2 DirectionForce;
@@ -62,6 +64,7 @@ public class CPlayerScript : MonoBehaviour
         PlayFlag = false;
         ClickFlag = false;
         StopFieldFlag = false;
+        GunFlag = false;
     }
 
     //マウス座標をワールド座標に変換して取得
@@ -155,4 +158,12 @@ public class CPlayerScript : MonoBehaviour
             StopFieldFlag = true;
         }
     }
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == GunTag && !GunFlag)
+        {
+            GunFlag = true;
+        }
+    }
+
 }
