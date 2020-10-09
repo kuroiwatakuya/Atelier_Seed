@@ -14,16 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 43.2
-    width: 1536
-    height: 780.8
+    x: 200
+    y: 168.66667
+    width: 991.3334
+    height: 544
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Console
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 542}
+=======
+<<<<<<< HEAD
+  m_Title: Project
+  m_RootView: {fileID: 6}
+  m_MinSize: {x: 875, y: 542}
+=======
+  m_Title: Hierarchy
+  m_RootView: {fileID: 6}
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 1
+  m_Maximized: 0
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -43,12 +55,30 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1536
     height: 730.8
   m_MinSize: {x: 679, y: 342}
   m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
   controlID: 61
+=======
+<<<<<<< HEAD
+    width: 991.3334
+    height: 494
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 85
+=======
+    width: 1536
+    height: 730.8
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
+  vertical: 0
+  controlID: 90
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,12 +94,30 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1052.8
     y: 0
     width: 483.19995
     height: 730.8
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+<<<<<<< HEAD
+    x: 715
+    y: 0
+    width: 276.33337
+    height: 494
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+=======
+    x: 1224
+    y: 0
+    width: 312
+    height: 730.8
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -92,8 +140,18 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 352
     height: 422.4
+=======
+<<<<<<< HEAD
+    width: 201
+    height: 222
+=======
+    width: 273.6
+    height: 441.6
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -111,12 +169,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
   m_Name: ConsoleWindow
+=======
+<<<<<<< HEAD
+  m_Name: 
+=======
+  m_Name: ProjectBrowser
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 422.4
     width: 1052.8
     height: 308.4
@@ -127,7 +194,29 @@ MonoBehaviour:
   - {fileID: 13}
   - {fileID: 18}
   m_Selected: 1
+=======
+<<<<<<< HEAD
+    y: 222
+    width: 715
+    height: 272
+=======
+    y: 441.6
+    width: 1224
+    height: 289.19998
+>>>>>>> origin/点滅スクリプトテスト
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 13}
+  m_Panes:
+  - {fileID: 13}
+  - {fileID: 18}
+  m_Selected: 0
+<<<<<<< HEAD
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_LastSelected: 0
+=======
+  m_LastSelected: 1
+>>>>>>> origin/点滅スクリプトテスト
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,9 +237,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1536
     height: 780.8
   m_MinSize: {x: 875, y: 542}
+=======
+<<<<<<< HEAD
+    width: 991.3334
+    height: 544
+  m_MinSize: {x: 875, y: 542}
+=======
+    width: 1536
+    height: 780.8
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -173,11 +274,20 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 991.3334
+=======
     width: 1536
+>>>>>>> origin/点滅スクリプトテスト
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
+<<<<<<< HEAD
   m_LoadedToolbars: []
+=======
+  m_LoadedToolbars:
+  - {fileID: 19}
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_MainToolbar: {fileID: 19}
   m_LastLoadedLayoutName: 
 --- !u!114 &8
@@ -196,8 +306,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 760.8
     width: 1536
+=======
+    y: 524
+    width: 991.3334
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -220,12 +335,29 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1052.8
+=======
+<<<<<<< HEAD
+    width: 715
+    height: 494
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 86
+=======
+    width: 1224
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     height: 730.8
   m_MinSize: {x: 403, y: 342}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 66
+=======
+  controlID: 91
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,12 +377,30 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1052.8
     height: 422.4
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 67
+=======
+<<<<<<< HEAD
+    width: 715
+    height: 222
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 87
+=======
+    width: 1224
+    height: 441.6
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 92
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -261,11 +411,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
   m_Name: 
+=======
+<<<<<<< HEAD
+  m_Name: 
+=======
+  m_Name: GameView
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 352
     y: 0
     width: 700.80005
@@ -273,12 +432,36 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
+=======
+<<<<<<< HEAD
+    x: 201
+    y: 0
+    width: 514
+    height: 222
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 16}
+=======
+    x: 273.6
+    y: 0
+    width: 950.4
+    height: 441.6
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 17}
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 12}
+<<<<<<< HEAD
   m_Selected: 0
   m_LastSelected: 1
+=======
+  m_Selected: 1
+  m_LastSelected: 0
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -295,7 +478,15 @@ MonoBehaviour:
   m_MaxSize: {x: 2048, y: 2048}
   m_TitleContent:
     m_Text: Asset Store
+<<<<<<< HEAD
     m_Image: {fileID: -8693916549880196297, guid: 0000000000000000d000000000000000, type: 0}
+=======
+<<<<<<< HEAD
+    m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000, type: 0}
+=======
+    m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000, type: 0}
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -320,14 +511,35 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
+<<<<<<< HEAD
     m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
+=======
+<<<<<<< HEAD
+    m_Image: {fileID: -7501376956915960154, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 200
+    y: 420.6667
+    width: 714
+    height: 251
+=======
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 496
     width: 1051.8
     height: 287.4
+=======
+    y: 515.2
+    width: 1223
+    height: 268.19998
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -342,21 +554,51 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets
+=======
+<<<<<<< HEAD
+    - Assets/Scenes/Kuroiwa
+=======
+    - Assets/Scenes/Miyamoto
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
   - Assets
+=======
+<<<<<<< HEAD
+  - Assets/Scenes/Kuroiwa
+=======
+  - Assets/Scenes/Miyamoto
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\motch\Documents\Atelier_Seed\Atelier_Seed
+  m_LastProjectPath: C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 5a3e0000
     m_LastClickedID: 15962
     m_ExpandedIDs: 000000005a3e00005c3e00005e3e000000ca9a3b
+=======
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 120}
+    m_SelectedIDs: fa3c0000
+    m_LastClickedID: 15610
+    m_ExpandedIDs: 00000000f63c0000f83c0000fa3c0000
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: ac3c0000
+    m_LastClickedID: 15532
+    m_ExpandedIDs: 000000008e3c0000a03c000000ca9a3b
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -384,7 +626,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000005a3e00005c3e00005e3e0000
+=======
+<<<<<<< HEAD
+    m_ExpandedIDs: 00000000f63c0000f83c0000fa3c0000
+=======
+    m_ExpandedIDs: 000000008e3c0000
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -411,7 +661,11 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 0
+=======
+    m_HadKeyboardFocusLastEvent: 1
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -428,7 +682,11 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 0}
+=======
+      m_ClientGUIView: {fileID: 5}
+>>>>>>> origin/点滅スクリプトテスト
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -456,14 +714,28 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 8356117983803934776, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1052.8
+=======
+<<<<<<< HEAD
+    x: 915.3334
+    y: 198.66667
+    width: 275.33337
+    height: 473
+=======
+    x: 1224
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     y: 73.6
-    width: 482.19995
+    width: 311
     height: 709.8
+<<<<<<< HEAD
+=======
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -472,7 +744,11 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
+<<<<<<< HEAD
   m_LastVerticalScrollValue: 0
+=======
+  m_LastVerticalScrollValue: 73.599976
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_AssetGUID: 
   m_InstanceID: 0
   m_LockTracker:
@@ -494,21 +770,53 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
+<<<<<<< HEAD
     m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
+=======
+<<<<<<< HEAD
+    m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 200
+    y: 198.66667
+    width: 200
+    height: 201
+=======
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
     y: 73.6
+<<<<<<< HEAD
     width: 351
     height: 401.4
+=======
+    width: 272.6
+    height: 420.6
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 5ef9ffff
+=======
+<<<<<<< HEAD
+      m_SelectedIDs: 323d0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 50faffff5afbffff
+=======
+      m_SelectedIDs: 543c0000
+      m_LastClickedID: 15444
+      m_ExpandedIDs: c6faffff3afbffff
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -531,7 +839,15 @@ MonoBehaviour:
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
+<<<<<<< HEAD
   m_WindowGUID: 117ff0e7025acdc409aa4fe7599499fb
+=======
+<<<<<<< HEAD
+  m_WindowGUID: 78041f58a5b2c9742a31b1c1c94d2cf5
+=======
+  m_WindowGUID: c163a6a6afc94b442b2dd1f8282e81be
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -548,6 +864,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
+<<<<<<< HEAD
     m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
@@ -559,6 +876,33 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 930a7c392075f3c4aa1bd185c02b0c3a
+=======
+<<<<<<< HEAD
+    m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 401.33334
+    y: 198.66667
+    width: 512
+    height: 201
+  m_ViewDataDictionary: {fileID: 0}
+  m_ShowContextualTools: 0
+  m_WindowGUID: dd881219f2b78ff40978c1e3f484b42f
+=======
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 273.6
+    y: 73.6
+    width: 948.4
+    height: 420.6
+  m_ViewDataDictionary: {fileID: 0}
+  m_ShowContextualTools: 0
+  m_WindowGUID: 2dfb293e59d164a45a72b7d137ea4437
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
@@ -568,9 +912,21 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -10.996859, y: 3.5789368, z: 0}
     speed: 2
     m_Value: {x: -10.996859, y: 3.5789368, z: 0}
+=======
+<<<<<<< HEAD
+    m_Target: {x: 0, y: 0, z: 0}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0}
+=======
+    m_Target: {x: 47.37195, y: 0.6075165, z: -9.098022}
+    speed: 2
+    m_Value: {x: 47.37195, y: 0.6075165, z: -9.098022}
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -607,13 +963,13 @@ MonoBehaviour:
       m_Size: {x: 0, y: 0}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
-    m_ShowGrid: 1
+    m_ShowGrid: 0
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
@@ -621,9 +977,21 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 10
     speed: 2
     m_Value: 10
+=======
+<<<<<<< HEAD
+    m_Target: 10
+    speed: 2
+    m_Value: 10
+=======
+    m_Target: 29.339031
+    speed: 2
+    m_Value: 29.339031
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -664,6 +1032,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
+<<<<<<< HEAD
     m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
@@ -672,6 +1041,27 @@ MonoBehaviour:
     y: 94
     width: 1532
     height: 790
+=======
+<<<<<<< HEAD
+    m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 507
+    y: 94
+    width: 1532
+    height: 790
+=======
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 273.6
+    y: 73.6
+    width: 948.4
+    height: 420.6
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -679,7 +1069,15 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
   m_TargetSize: {x: 1532, y: 769}
+=======
+<<<<<<< HEAD
+  m_TargetSize: {x: 1532, y: 769}
+=======
+  m_TargetSize: {x: 710, y: 399.6}
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 0
@@ -688,16 +1086,33 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
+<<<<<<< HEAD
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+=======
+  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     m_HBaseRangeMin: -766
     m_HBaseRangeMax: 766
     m_VBaseRangeMin: -395
     m_VBaseRangeMax: 395
+<<<<<<< HEAD
+=======
+=======
+    m_HBaseRangeMin: -284
+    m_HBaseRangeMax: 284
+    m_VBaseRangeMin: -159.84001
+    m_VBaseRangeMax: 159.84001
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -714,17 +1129,35 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
       y: 0
       width: 1532
       height: 790
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 766, y: 395}
+<<<<<<< HEAD
+=======
+=======
+      y: 21
+      width: 948.4
+      height: 399.6
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 474.2, y: 199.8}
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
       x: -766
       y: -395
       width: 1532
@@ -732,6 +1165,18 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1532, y: 790}
+<<<<<<< HEAD
+=======
+=======
+      x: -474.2
+      y: -199.8
+      width: 948.4
+      height: 399.6
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1185.5, y: 525.75}
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -753,6 +1198,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
+<<<<<<< HEAD
     m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
@@ -761,6 +1207,27 @@ MonoBehaviour:
     y: 496
     width: 1051.8
     height: 287.4
+=======
+<<<<<<< HEAD
+    m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 8
+    y: 718
+    width: 1366
+    height: 308
+=======
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 515.2
+    width: 1223
+    height: 268.19998
+>>>>>>> origin/点滅スクリプトテスト
+>>>>>>> c949351e6b9386ffab1cad8bda1f4a4edb1c59b3
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &19
 MonoBehaviour:
