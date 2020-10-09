@@ -85,7 +85,6 @@ public class CPlayerScript : MonoBehaviour
         if (!PlayFlag && !ClickFlag)
         {
             ClickFlag = true;
-
             DragStart = GetMousePosition();
         }
     }
