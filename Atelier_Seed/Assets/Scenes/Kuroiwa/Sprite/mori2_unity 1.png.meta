@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: 0d3950f39cad91f49a48fd2759a607ca
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6360179579485916019
+    second: mori2_unity 1_0
+  - first:
+      213: 895323461105284052
+    second: mori2_unity 1_1
+  - first:
+      213: -6407240752415834444
+    second: mori2_unity 1_2
+  - first:
+      213: -8292339499175427266
+    second: mori2_unity 1_3
+  - first:
+      213: 3357842882434852177
+    second: mori2_unity 1_4
+  - first:
+      213: 3239245985523513224
+    second: mori2_unity 1_5
+  - first:
+      213: -5486647476918023149
+    second: mori2_unity 1_6
+  - first:
+      213: 2174391745187990122
+    second: mori2_unity 1_7
+  - first:
+      213: 3890904500018682068
+    second: mori2_unity 1_8
+  - first:
+      213: -8317014345945118104
+    second: mori2_unity 1_9
+  - first:
+      213: 5061613758480828592
+    second: mori2_unity 1_10
+  - first:
+      213: 1177208189840920281
+    second: mori2_unity 1_11
+  - first:
+      213: 160258421394688153
+    second: mori2_unity 1_12
+  - first:
+      213: 177478066132145214
+    second: mori2_unity 1_13
+  - first:
+      213: 8672974295567428007
+    second: mori2_unity 1_14
+  - first:
+      213: -7384424869021702735
+    second: mori2_unity 1_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +89,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -73,9 +121,369 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: mori2_unity 1_0
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 346
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b83fe31a5e34850800000000000000
+      internalID: 6360179579485916019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_1
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 346
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3f04ab1f3dc6c00800000000000000
+      internalID: 895323461105284052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 347
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bef8d19b78e417a0800000000000000
+      internalID: -6407240752415834444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_3
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 345
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3345b20921bbec80800000000000000
+      internalID: -8292339499175427266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_4
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 264
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1556a1b9f44799e20800000000000000
+      internalID: 3357842882434852177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_5
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 267
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8873d33cf0d14fc20800000000000000
+      internalID: 3239245985523513224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_6
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 264
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c028270338bd3b0800000000000000
+      internalID: -5486647476918023149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_7
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 266
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ac87695cdfc2e10800000000000000
+      internalID: 2174391745187990122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_8
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 190
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8159227054ff530800000000000000
+      internalID: 3890904500018682068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_9
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 190
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a0d1e8487049c80800000000000000
+      internalID: -8317014345945118104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_10
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 189
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8ca7055e67e3640800000000000000
+      internalID: 5061613758480828592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_11
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 191
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de062e8c98465010800000000000000
+      internalID: 1177208189840920281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_12
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 92
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998ce776f2a593200800000000000000
+      internalID: 160258421394688153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_13
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 91
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34da3f5c57867200800000000000000
+      internalID: 177478066132145214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_14
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 89
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9e361ab289c5870800000000000000
+      internalID: 8672974295567428007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mori2_unity 1_15
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 86
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5a66bb4b0458990800000000000000
+      internalID: -7384424869021702735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
