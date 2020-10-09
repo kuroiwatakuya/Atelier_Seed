@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Ou/Ou_Scene.unity
+=======
+- path: Assets/Scenes/Sonfi/Sonfi_Scene.unity
+>>>>>>> origin/大砲続き
   isLoaded: 1
   isActive: 1
   isSubScene: 0
