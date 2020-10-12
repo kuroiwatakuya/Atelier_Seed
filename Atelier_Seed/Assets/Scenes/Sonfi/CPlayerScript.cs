@@ -12,6 +12,8 @@ public class CPlayerScript : MonoBehaviour
     //*********************
     //他ゲームオブジェクト
     //*********************
+    public GameObject GunObject;
+    public GameObject GunPlayerPosition;
 
     //************
     //対象タグ
@@ -22,7 +24,8 @@ public class CPlayerScript : MonoBehaviour
     //********************
     // コンポーネント
     //********************
-    public Rigidbody2D Rbody;
+    private Rigidbody2D Rbody;
+    private SpriteRenderer SpriteRenderer;
 
     //********
     // 変数
@@ -51,6 +54,11 @@ public class CPlayerScript : MonoBehaviour
     private bool PlayFlag;
     //クリックしたか
     private bool ClickFlag;
+    //大砲用タップ判定
+    private bool TapFlag;
+
+    private float Count = 2;
+    public bool CoolTime = false;
 
     //止まるブロックに接触してるか
     private bool StopFieldFlag;
@@ -58,6 +66,8 @@ public class CPlayerScript : MonoBehaviour
     void Start()
     {
         Rbody = this.GetComponent<Rigidbody2D>();
+        SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
         this.MainCamera = Camera.main;
         this.MainCameraTransform = this.MainCamera.transform;
 
@@ -65,6 +75,7 @@ public class CPlayerScript : MonoBehaviour
         ClickFlag = false;
         StopFieldFlag = false;
         GunFlag = false;
+        TapFlag = false;
     }
 
     //マウス座標をワールド座標に変換して取得
@@ -116,29 +127,29 @@ public class CPlayerScript : MonoBehaviour
             Flip(DirectionForce * Power * -1);
         }
     }
-    /// 力加える
-    public void Flip(Vector2 force)
-    {
-        // 瞬間的に力を加えてはじく
-        Rbody.AddForce(force, ForceMode2D.Impulse);
-    }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetMouseButtonDown(0) && !TapFlag && GunFlag)
+        {
+            //大砲用タップ
+            TapFlag = true;
+        }
     }
 
     void FixedUpdate()
     {
         Velocity.y = Rbody.velocity.y;
         Velocity.x = Rbody.velocity.x;
+        //遅くなったらとめる
         if (Velocity.y == 0 && Velocity.x <= 8 && Velocity.x >= -8 && PlayFlag)
         {
             Rbody.velocity = new Vector2(0, 0);
             PlayFlag = false;
         }
 
+        //くっつくギミック
         if (StopFieldFlag)
         {
             Rbody.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
@@ -146,19 +157,56 @@ public class CPlayerScript : MonoBehaviour
         else
         {
             Rbody.constraints = RigidbodyConstraints2D.None;
-            Rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
 
-        if(GunFlag)
+        //大砲の中に入ったら
+        if (GunFlag)
         {
+            SpriteRenderer.color = new Color(1, 1, 1, 0);
+
+            Count = 0;
+
+            transform.position = GunPlayerPosition.transform.position;
             Rbody.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         }
-        else
+
+        if (TapFlag)
         {
+
+            SpriteRenderer.color = new Color(1, 1, 1, 1);
+
+            GunFlag = false;
             Rbody.constraints = RigidbodyConstraints2D.None;
-            Rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+            var Direction = GunPlayerPosition.transform.position - GunObject.transform.position;
+            Direction *= Direction.magnitude;
+            Flip(Direction * 5);
+
+            TapFlag = false;
+
         }
 
+
+
+        TapFlag = false;
+        CoolTime = true;
+
+        if (CoolTime)
+        {
+            Count += 1 * Time.deltaTime;
+            if (Count >= 1)
+            {
+                CoolTime = false;
+            }
+        }
+
+    }
+
+    //力加える
+    public void Flip(Vector2 force)
+    {
+        // 力加える
+        Rbody.AddForce(force, ForceMode2D.Impulse);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -170,7 +218,7 @@ public class CPlayerScript : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == GunTag && !GunFlag)
+        if (collider.gameObject.tag == GunTag && !GunFlag && !CoolTime)
         {
             GunFlag = true;
         }

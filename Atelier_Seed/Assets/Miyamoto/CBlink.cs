@@ -24,8 +24,11 @@ public class CBlink : MonoBehaviour
     // 点滅スピード
     public float Speed = 1.0f;          // 点滅するスピード
     public float AlphaInterval = 0.5f;  // 一回の処理でどれくらいα値が変化するか
+    
+    public bool TapFlag = false;       // チカチカ開始フラグ
 
-//-------------------------------------------------------------------
+
+    //-------------------------------------------------------------------
 
     // // private // //
 
@@ -56,6 +59,8 @@ public class CBlink : MonoBehaviour
     // // 初期化 // //
     void Start()
     {
+//        TapFlag = false;
+
         // // アタッチしているオブジェクトの判別 // //
 
         // Imageだったとき
@@ -78,18 +83,25 @@ public class CBlink : MonoBehaviour
     // // 更新 // //
     void Update()
     {
-        // // オブジェクトのα値を更新 // //
-
-        // Imageだったとき
-        if (ThisObjectType == ObjectType.IMAGE)
+        if(Input.GetMouseButtonDown(0))
         {
-            ThisImage.color = GetAlphaColor(ThisImage.color);   // α値調整
+            TapFlag = true;
         }
 
-        // Textだったとき
-        else if (ThisObjectType == ObjectType.TEXT)
+        // // オブジェクトのα値を更新 // //
+        if(TapFlag)
         {
-            ThisText.color = GetAlphaColor(ThisText.color);     // α値調整
+            // Imageだったとき
+            if (ThisObjectType == ObjectType.IMAGE)
+            {
+                ThisImage.color = GetAlphaColor(ThisImage.color);   // α値調整
+            }
+
+            // Textだったとき
+            else if (ThisObjectType == ObjectType.TEXT)
+            {
+                ThisText.color = GetAlphaColor(ThisText.color);     // α値調整
+            }
         }
     }
 
