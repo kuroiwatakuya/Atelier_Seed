@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NormalFieldTag
   - Gun
+  - Option
   layers:
   - Default
   - TransparentFX
