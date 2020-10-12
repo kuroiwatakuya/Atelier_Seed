@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Ou/Option/Ou_Option.unity
+- path: Assets/Scenes/Tei/Tei_Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
