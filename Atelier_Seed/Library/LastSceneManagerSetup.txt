@@ -1,13 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-<<<<<<< HEAD
-- path: Assets/Scenes/Ou/Ou_Scene.unity
-=======
-- path: Assets/Scenes/Sonfi/Sonfi_Scene.unity
->>>>>>> origin/大砲続き
-=======
-- path: Assets/Scenes/Miyamoto/Miyamoto_Scene.unity
->>>>>>> origin/タップエフェクト実装
+- path: Assets/Scenes/Kuroiwa/Kuroiwa_Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
