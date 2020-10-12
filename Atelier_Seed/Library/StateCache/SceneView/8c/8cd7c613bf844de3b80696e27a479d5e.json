@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":7.5,"y":4.0,"z":0.0},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":22.940139770507814,"orthographic":true}
 =======
 <<<<<<< HEAD
@@ -11,3 +12,6 @@
 >>>>>>> d61d447dc251dc20285b124e1151a64f4301f889
 >>>>>>> ee0cd7ddcc50513590881c0c07f482613d373e9a
 >>>>>>> 0d9fe2406d7f001018fbf061c5232e19efd0f23b
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":622.1483764648438,"y":356.395751953125,"z":-391.2203063964844},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":398.11248779296877,"orthographic":true}
+>>>>>>> origin/OujikouStage1.2
