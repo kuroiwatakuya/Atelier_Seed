@@ -24,7 +24,7 @@ public class CStageSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Liberation_StageNum = PlayerPrefs.GetInt("SCORE", 0);
+        Liberation_StageNum = PlayerPrefs.GetInt("STAGENUM", 0);
     }
 
     // Update is called once per frame
