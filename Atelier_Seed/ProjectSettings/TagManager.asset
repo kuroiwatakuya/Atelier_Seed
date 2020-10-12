@@ -6,7 +6,11 @@ TagManager:
   tags:
   - NormalFieldTag
   - Gun
+<<<<<<< HEAD
   - Option
+=======
+  - PlayerCrush
+>>>>>>> 1e8ef77d2da01385d4c4b6b3145bbdd344daf8dd
   layers:
   - Default
   - TransparentFX
