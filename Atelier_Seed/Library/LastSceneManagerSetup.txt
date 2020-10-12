@@ -1,17 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Kuroiwa/Kuroiwa_Scene.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/Tei/Tei_Scene.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/Yokokura/Yokokura_Scene.unity
-=======
-- path: Assets/Scenes/Kuroiwa/Kuroiwa_Scene.unity
->>>>>>> 44920c88236609d16eea2853efd67f33dc26fb48
->>>>>>> ee0cd7ddcc50513590881c0c07f482613d373e9a
->>>>>>> 0d9fe2406d7f001018fbf061c5232e19efd0f23b
+- path: Assets/Scenes/Game_Scene/Stage_Select.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
