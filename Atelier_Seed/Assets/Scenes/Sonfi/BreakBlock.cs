@@ -10,17 +10,18 @@ public class BreakBlock : MonoBehaviour
     //************
     public string PlayerTag;
 
-    private GameObject Player;
+    public GameObject Player;
+
+    public bool Flag = false;
 
     //プレイヤースクリプト
     private CPlayerScript PlayerScript;
 
-    private float BreakSpeed = 10;
+    private float BreakSpeed = 3;
 
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.Find("Player");
         PlayerScript = Player.GetComponent<CPlayerScript>();
     }
 
@@ -31,8 +32,9 @@ public class BreakBlock : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == PlayerTag && PlayerScript.Velocity.y>BreakSpeed && PlayerScript.Velocity.x > BreakSpeed)
+        if (collision.gameObject.name == "Player")
         {
+            Flag = true;
             Destroy(this.gameObject);
         }
     }

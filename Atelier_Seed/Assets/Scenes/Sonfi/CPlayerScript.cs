@@ -74,7 +74,7 @@ public class CPlayerScript : MonoBehaviour
     void Start()
     {
         Rbody = this.GetComponent<Rigidbody2D>();
-        SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        SpriteRenderer = GameObject.Find("PlayerSprite").GetComponent<SpriteRenderer>();
 
         Direction = GameObject.Find("Direction").GetComponent<LineRenderer>();
 
