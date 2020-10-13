@@ -143,7 +143,7 @@ public class CPlayerScript : MonoBehaviour
         Velocity.y = Rbody.velocity.y;
         Velocity.x = Rbody.velocity.x;
         //遅くなったらとめる
-        if (Velocity.y == 0 && Velocity.x <= 8 && Velocity.x >= -8 && PlayFlag)
+        if (Velocity.y == 0 && Velocity.x <= 8 && Velocity.x >= -8 && PlayFlag && !GunFlag)
         {
             Rbody.velocity = new Vector2(0, 0);
             PlayFlag = false;
