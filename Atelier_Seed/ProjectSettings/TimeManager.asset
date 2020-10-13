@@ -3,7 +3,15 @@
 --- !u!5 &1
 TimeManager:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
   Fixed Timestep: 0.005
+=======
+  Fixed Timestep: 0.01
+>>>>>>> origin/シーン遷移全般
+=======
+  Fixed Timestep: 0.005
+>>>>>>> main
   Maximum Allowed Timestep: 0.33333334
   m_TimeScale: 1
   Maximum Particle Timestep: 0.05

@@ -15,15 +15,22 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 42.666668
-    width: 1280
-    height: 677.3334
+    y: 43.2
+    width: 1536
+    height: 780.8
   m_ShowMode: 4
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Title: Hierarchy
 =======
   m_Title: Scene
 >>>>>>> origin/Stage5
+=======
+  m_Title: Game
+=======
+  m_Title: Hierarchy
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -49,11 +56,23 @@ MonoBehaviour:
     y: 30
 <<<<<<< HEAD
     width: 1280
-    height: 627
+    height: 627.3334
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
+  controlID: 122
+=======
+    width: 1536
+    height: 730.8
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+<<<<<<< HEAD
+  controlID: 79
+>>>>>>> origin/シーン遷移全般
+=======
   controlID: 64
+<<<<<<< HEAD
 =======
     width: 1366
     height: 635
@@ -62,6 +81,9 @@ MonoBehaviour:
   vertical: 0
   controlID: 79
 >>>>>>> origin/Stage5
+=======
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -78,12 +100,32 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    x: 877.3333
+    y: 0
+    width: 402.6667
+    height: 627.3334
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+=======
+    x: 1051.2
+    y: 0
+    width: 484.80005
+    height: 730.8
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> origin/シーン遷移全般
+=======
+>>>>>>> 黒岩：プレイヤー矢印セット
     x: 877
     y: 0
     width: 403
     height: 627
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> main
   m_ActualView: {fileID: 15}
 =======
     x: 979
@@ -118,8 +160,20 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    width: 292.66666
+    height: 281.33334
+=======
+    width: 352
+    height: 408
+>>>>>>> origin/シーン遷移全般
+=======
+>>>>>>> 黒岩：プレイヤー矢印セット
     width: 293
     height: 295
+>>>>>>> main
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
@@ -151,6 +205,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 295
     width: 877
     height: 332
@@ -159,6 +214,22 @@ MonoBehaviour:
     width: 979
     height: 302
 >>>>>>> origin/Stage5
+=======
+<<<<<<< HEAD
+    y: 281.33334
+    width: 877.3333
+    height: 346.00003
+=======
+    y: 408
+    width: 1051.2
+    height: 322.8
+>>>>>>> origin/シーン遷移全般
+=======
+    y: 295
+    width: 877
+    height: 332
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 14}
@@ -189,7 +260,11 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
     width: 1280
-    height: 677
+    height: 677.3334
+=======
+    width: 1536
+    height: 780.8
+>>>>>>> origin/シーン遷移全般
   m_MinSize: {x: 875, y: 300}
 =======
     width: 1366
@@ -218,7 +293,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1280
+    width: 1536
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -242,8 +317,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 657
+<<<<<<< HEAD
+    y: 657.3334
     width: 1280
+=======
+    y: 760.8
+    width: 1536
+>>>>>>> origin/シーン遷移全般
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -267,12 +347,32 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    width: 877.3333
+    height: 627.3334
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 53
+=======
+    width: 1051.2
+    height: 730.8
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 110
+>>>>>>> origin/シーン遷移全般
+=======
+>>>>>>> 黒岩：プレイヤー矢印セット
     width: 877
     height: 627
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 115
+<<<<<<< HEAD
 =======
     width: 979
     height: 635
@@ -281,6 +381,9 @@ MonoBehaviour:
   vertical: 1
   controlID: 80
 >>>>>>> origin/Stage5
+=======
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -301,12 +404,32 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    width: 877.3333
+    height: 281.33334
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 54
+=======
+    width: 1051.2
+    height: 408
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 89
+>>>>>>> origin/シーン遷移全般
+=======
+>>>>>>> 黒岩：プレイヤー矢印セット
     width: 877
     height: 295
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 116
+<<<<<<< HEAD
 =======
     width: 979
     height: 333
@@ -315,6 +438,9 @@ MonoBehaviour:
   vertical: 0
   controlID: 81
 >>>>>>> origin/Stage5
+=======
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -330,6 +456,23 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 292.66666
+    y: 0
+    width: 584.6666
+    height: 281.33334
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+=======
+    x: 352
+    y: 0
+    width: 699.19995
+    height: 408
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> origin/シーン遷移全般
+=======
     x: 293
     y: 0
 <<<<<<< HEAD
@@ -337,6 +480,7 @@ MonoBehaviour:
     height: 295
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> main
   m_ActualView: {fileID: 18}
 =======
     width: 699
@@ -422,11 +566,12 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -2032128904892744680, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     y: 368
     width: 876
@@ -436,6 +581,22 @@ MonoBehaviour:
     width: 978
     height: 281
 >>>>>>> origin/Stage5
+=======
+<<<<<<< HEAD
+    y: 354
+    width: 876.3333
+    height: 325.00003
+=======
+    y: 481.6
+    width: 1050.2
+    height: 301.8
+>>>>>>> origin/シーン遷移全般
+=======
+    y: 368
+    width: 876
+    height: 311
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -451,25 +612,60 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scenes/Sonfi
 =======
     - Assets/Scenes/Ou/Stage5
 >>>>>>> origin/Stage5
+=======
+<<<<<<< HEAD
+    - Assets/Material
+=======
+    - Assets/Scenes
+>>>>>>> origin/シーン遷移全般
+=======
+    - Assets/Scenes/Sonfi
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  - Assets/Material
+=======
+  - Assets/Scenes
+>>>>>>> origin/シーン遷移全般
+=======
+>>>>>>> 黒岩：プレイヤー矢印セット
   - Assets/Scenes/Sonfi
+>>>>>>> main
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed
+  m_LastProjectPath: C:\Users\sonso\Documents\Atelier_Seed\Atelier_Seed
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 31}
+    m_SelectedIDs: 423e0000
+    m_LastClickedID: 15938
+    m_ExpandedIDs: 00000000363e0000383e00004c3e0000
+=======
+    scrollPos: {x: 0, y: 134.20001}
+    m_SelectedIDs: 703f0000
+    m_LastClickedID: 16240
+    m_ExpandedIDs: 000000006e3f0000703f0000723f0000743f0000943f000000ca9a3b
+>>>>>>> origin/シーン遷移全般
+=======
     scrollPos: {x: 0, y: 31}
     m_SelectedIDs: 46400000
     m_LastClickedID: 16454
     m_ExpandedIDs: 00000000284000002a4000003640000040400000
+<<<<<<< HEAD
 =======
   - Assets/Scenes/Ou/Stage5
   m_LastFoldersGridSize: 46
@@ -482,6 +678,9 @@ MonoBehaviour:
     m_LastClickedID: 16138
     m_ExpandedIDs: 00000000d83e0000da3e0000dc3e0000de3e000000ca9a3b
 >>>>>>> origin/Stage5
+=======
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -510,10 +709,21 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000284000002a400000
 =======
     m_ExpandedIDs: 00000000d83e0000da3e0000dc3e0000de3e0000
 >>>>>>> origin/Stage5
+=======
+<<<<<<< HEAD
+    m_ExpandedIDs: 00000000363e0000383e0000
+=======
+    m_ExpandedIDs: 000000006e3f0000703f0000723f0000743f0000
+>>>>>>> origin/シーン遷移全般
+=======
+    m_ExpandedIDs: 00000000284000002a400000
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -542,10 +752,21 @@ MonoBehaviour:
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedInstanceIDs: c6230000043d00001e4e0000e03e0000
 =======
     m_ExpandedInstanceIDs: c6230000ca3f00007e3e00006c540000c43d0000125600000e560000583f0000
 >>>>>>> origin/Stage5
+=======
+<<<<<<< HEAD
+    m_ExpandedInstanceIDs: c6230000043d00001e4e0000e03e000000000000
+=======
+    m_ExpandedInstanceIDs: c6230000043d00001e4e0000e03e000066480000
+>>>>>>> origin/シーン遷移全般
+=======
+    m_ExpandedInstanceIDs: c6230000043d00001e4e0000e03e0000
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -589,21 +810,40 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: 8356117983803934776, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    x: 877.3334
+    y: 72.66667
+    width: 401.6667
+    height: 606.3334
+=======
+    x: 1051.2001
+    y: 73.6
+    width: 483.80005
+    height: 709.8
+>>>>>>> origin/シーン遷移全般
+=======
+>>>>>>> 黒岩：プレイヤー矢印セット
     x: 877.3334
     y: 72.66667
     width: 402
     height: 606
+<<<<<<< HEAD
 =======
     x: 979
     y: 73
     width: 386
     height: 614
 >>>>>>> origin/Stage5
+=======
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -638,18 +878,30 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: -9000905672528348964, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 72.66667
+<<<<<<< HEAD
+    width: 291.66666
+    height: 260.33334
+=======
+    y: 73.6
+    width: 351
+    height: 387
+>>>>>>> origin/シーン遷移全般
+=======
     width: 292
     height: 274
+>>>>>>> main
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
@@ -659,6 +911,22 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: baebffff8eedffffdeedffff02f3ffff3afbffff
 >>>>>>> origin/Stage5
+=======
+<<<<<<< HEAD
+      m_SelectedIDs: 76420000
+      m_LastClickedID: 0
+      m_ExpandedIDs: daf8ffff32fbffff843c0000
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: bea3fffff2a3ffff16a9ffff2ea9ffff54abffff6aabffff1eacffff30acffffbeacffffeaacffff9eafffff52beffff64beffffe0bfffff14caffffa8cbffffe4cfffff56d1ffffb8d5ffffe4d5ffff36ddffff4cddffff5eddfffface0ffff7ee1ffff58e3ffff6ae3ffff7ce3ffff92e4ffffaae4ffffbce4ffffcee4ffffe0e4fffff2e4ffff04e5ffff2ae5ffff8ce6ffff5cedffff78edffffbeedffff74eeffff9aeeffffd8eeffffaaefffffecefffff56f0ffff92f5ffff00f9ffffeef9ffff0c4100009c4e0000ea5500005258000092620000
+>>>>>>> origin/シーン遷移全般
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: caf4ffffbaf5ffffd6f5ffff28f6ffff40f7ffff60f7ffff50f8fffffaf8ffff
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -698,21 +966,39 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: -131512000283675692, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
     x: 293.33334
     y: 72.66667
     width: 582
     height: 274
+<<<<<<< HEAD
 =======
     x: 280
     y: 73
     width: 697
     height: 312
 >>>>>>> origin/Stage5
+=======
+<<<<<<< HEAD
+=======
+    x: 352
+    y: 73.6
+    width: 697.19995
+    height: 387
+>>>>>>> origin/シーン遷移全般
+=======
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -726,6 +1012,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 1.9185474, y: 0.33072126, z: -1.1504099}
     speed: 2
     m_Value: {x: 1.9185474, y: 0.33072126, z: -1.1504099}
@@ -734,6 +1021,22 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 12.764899, y: 0.35367027, z: -6.4157004}
 >>>>>>> origin/Stage5
+=======
+<<<<<<< HEAD
+    m_Target: {x: 1.9185474, y: 0.33072126, z: -1.1504099}
+    speed: 2
+    m_Value: {x: 1.9185474, y: 0.33072126, z: -1.1504099}
+=======
+    m_Target: {x: 2.3615794, y: 0.93593955, z: 0.8627693}
+    speed: 2
+    m_Value: {x: 2.3615794, y: 0.93593955, z: 0.8627693}
+>>>>>>> origin/シーン遷移全般
+=======
+    m_Target: {x: 1.9185474, y: 0.33072126, z: -1.1504099}
+    speed: 2
+    m_Value: {x: 1.9185474, y: 0.33072126, z: -1.1504099}
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -785,6 +1088,7 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 5.9468293
     speed: 2
     m_Value: 5.9468293
@@ -793,6 +1097,22 @@ MonoBehaviour:
     speed: 2
     m_Value: 9.11733
 >>>>>>> origin/Stage5
+=======
+<<<<<<< HEAD
+    m_Target: 5.9468293
+    speed: 2
+    m_Value: 5.9468293
+=======
+    m_Target: 6.7667804
+    speed: 2
+    m_Value: 6.7667804
+>>>>>>> origin/シーン遷移全般
+=======
+    m_Target: 5.9468293
+    speed: 2
+    m_Value: 5.9468293
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -833,21 +1153,40 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: 257045534191678443, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    x: 292.6667
+    y: 72.66667
+    width: 582.6666
+    height: 260.33334
+=======
+    x: 352
+    y: 73.6
+    width: 697.19995
+    height: 387
+>>>>>>> origin/シーン遷移全般
+=======
+>>>>>>> 黒岩：プレイヤー矢印セット
     x: 293.33334
     y: 72.66667
     width: 582
     height: 274
+<<<<<<< HEAD
 =======
     x: 280
     y: 73
     width: 697
     height: 312
 >>>>>>> origin/Stage5
+=======
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -864,16 +1203,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 0a000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 08000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -480
-    m_HBaseRangeMax: 480
-    m_VBaseRangeMin: -240
-    m_VBaseRangeMax: 240
+    m_HBaseRangeMin: -576
+    m_HBaseRangeMax: 576
+    m_VBaseRangeMin: -288
+    m_VBaseRangeMax: 288
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -892,16 +1231,35 @@ MonoBehaviour:
       x: 0
       y: 21
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      width: 582.6666
+      height: 239.33334
+    m_Scale: {x: 0.49861115, y: 0.49861112}
+    m_Translation: {x: 291.3333, y: 119.66667}
+=======
+      width: 697.19995
+      height: 366
+    m_Scale: {x: 0.6052083, y: 0.6052083}
+    m_Translation: {x: 348.59998, y: 183}
+>>>>>>> origin/シーン遷移全般
+=======
+>>>>>>> 黒岩：プレイヤー矢印セット
       width: 582
       height: 253
     m_Scale: {x: 0.52708334, y: 0.52708334}
     m_Translation: {x: 291, y: 126.5}
+<<<<<<< HEAD
 =======
       width: 697
       height: 291
     m_Scale: {x: 0.40416667, y: 0.40416667}
     m_Translation: {x: 348.5, y: 145.5}
 >>>>>>> origin/Stage5
+=======
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -909,6 +1267,27 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      x: -584.2896
+      y: -240
+      width: 1168.5792
+      height: 480
+    m_MinimalGUI: 1
+  m_defaultScale: 0.49861112
+  m_LastWindowPixelSize: {x: 873.99994, y: 390.5}
+=======
+      x: -576
+      y: -302.37524
+      width: 1152
+      height: 604.7505
+    m_MinimalGUI: 1
+  m_defaultScale: 0.6052083
+  m_LastWindowPixelSize: {x: 871.49994, y: 483.75}
+>>>>>>> origin/シーン遷移全般
+=======
+>>>>>>> 黒岩：プレイヤー矢印セット
       x: -552.09485
       y: -240
       width: 1104.1897
@@ -916,6 +1295,7 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 0.52708334
   m_LastWindowPixelSize: {x: 873, y: 411}
+<<<<<<< HEAD
 =======
       x: -862.26807
       y: -360
@@ -925,6 +1305,9 @@ MonoBehaviour:
   m_defaultScale: 0.40416667
   m_LastWindowPixelSize: {x: 697, y: 312}
 >>>>>>> origin/Stage5
+=======
+>>>>>>> main
+>>>>>>> 黒岩：プレイヤー矢印セット
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -946,7 +1329,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: -3303252850963283158, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2

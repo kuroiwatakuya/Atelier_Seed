@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CGoal : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class CGoal : MonoBehaviour
     void Start()
     {
         Clear_Flag = false;
+
     }
 
     // Update is called once per frame
@@ -29,12 +31,14 @@ public class CGoal : MonoBehaviour
             PlayerPrefs.SetInt("STAGENUM", Now_StageNum + 1);
             //PlayerPrefsをセーブする         
             PlayerPrefs.Save();
+            SceneManager.LoadScene("Result");
+
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (other.gameObject.name == "Player")
+        if (collider.gameObject.name == "Player")
         {
 
             Clear_Flag = true;

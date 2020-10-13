@@ -27,6 +27,10 @@ public class CPlayerScript : MonoBehaviour
     private Rigidbody2D Rbody;
     private SpriteRenderer SpriteRenderer;
 
+    //矢印引っ張り用
+    [SerializeField]
+    private LineRenderer Direction = null;
+
     //********
     // 変数
     //********
@@ -97,6 +101,11 @@ public class CPlayerScript : MonoBehaviour
         {
             ClickFlag = true;
             DragStart = GetMousePosition();
+
+            //矢印フラグ
+            this.Direction.enabled = true;
+            this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
+            this.Direction.SetPosition(1, Rbody.position);
         }
     }
     //ドラッグ中
@@ -110,6 +119,9 @@ public class CPlayerScript : MonoBehaviour
             {
                 DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
             }
+
+            this.Direction.SetPosition(0, Rbody.position);//矢印の位置
+            this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
         }
     }
     /// ドラッグ終了
@@ -125,6 +137,9 @@ public class CPlayerScript : MonoBehaviour
             TurnCount--;
             //弾く
             Flip(DirectionForce * Power * -1);
+
+            //矢印オフ
+            this.Direction.enabled = false;
         }
     }
 
