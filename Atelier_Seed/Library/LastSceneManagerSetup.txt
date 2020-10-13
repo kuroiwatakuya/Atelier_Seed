@@ -1,20 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-<<<<<<< HEAD
 - path: Assets/Scenes/Kuroiwa/Kuroiwa_Scene.unity
-=======
-- path: Assets/Scenes/Ou/Stage5/Stage5.unity
->>>>>>> origin/Stage5
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/Kuroiwa/Kuroiwa_Scene.unity
-=======
-- path: Assets/Scenes/Game_Scene/Stage2.unity
->>>>>>> origin/シーン遷移全般
-=======
-- path: Assets/Scenes/Kuroiwa/Kuroiwa_Scene.unity
->>>>>>> main
->>>>>>> 黒岩：プレイヤー矢印セット
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -536,7 +536,6 @@ C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\Temp\bin\Debug\Unity
 C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\Temp\bin\Debug\UnityEngine.TestRunner.dll
 C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\Temp\bin\Debug\UnityEditor.TestRunner.dll
 C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\Temp\bin\Debug\Unity.CecilTools.dll
-C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
 C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\Temp\bin\Debug\UnityEngine.xml
 C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\Temp\bin\Debug\UnityEditor.xml
 C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\Temp\bin\Debug\Unity.Timeline.Editor.pdb
