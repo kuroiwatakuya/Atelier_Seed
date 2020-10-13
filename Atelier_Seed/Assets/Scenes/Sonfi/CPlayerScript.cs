@@ -106,16 +106,16 @@ public class CPlayerScript : MonoBehaviour
     //ドラック開始
     public void OnMouseDown()
     {
-        if (!PlayFlag && !ClickFlag)
-        {
-            ClickFlag = true;
-            DragStart = GetMousePosition();
+        //if (!PlayFlag && !ClickFlag)
+        //{
+        //    ClickFlag = true;
+        //    DragStart = GetMousePosition();
 
-            //矢印フラグ
-            this.Direction.enabled = true;
-            this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
-            this.Direction.SetPosition(1, Rbody.position);
-        }
+        //    //矢印フラグ
+        //    this.Direction.enabled = true;
+        //    this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
+        //    this.Direction.SetPosition(1, Rbody.position);
+        //}
     }
     //ドラッグ中
     public void OnMouseDrag()
@@ -162,6 +162,21 @@ public class CPlayerScript : MonoBehaviour
         {
             //大砲用タップ
             TapFlag = true;
+        }
+
+        //マウス左クリック＆タップ
+        if(Input.GetMouseButtonDown(0))
+        {
+            if (!PlayFlag && !ClickFlag)
+            {
+                ClickFlag = true;
+                DragStart = GetMousePosition();
+
+                //矢印フラグ
+                this.Direction.enabled = true;
+                this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
+                this.Direction.SetPosition(1, Rbody.position);
+            }
         }
     }
 
