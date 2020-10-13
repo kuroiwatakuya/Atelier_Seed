@@ -72,6 +72,9 @@ public class CPlayerScript : MonoBehaviour
         Rbody = this.GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
+        Direction = GameObject.Find("Direction").GetComponent<LineRenderer>();
+
+
         this.MainCamera = Camera.main;
         this.MainCameraTransform = this.MainCamera.transform;
 
