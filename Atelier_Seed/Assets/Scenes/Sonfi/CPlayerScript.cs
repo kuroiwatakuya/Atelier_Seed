@@ -67,6 +67,10 @@ public class CPlayerScript : MonoBehaviour
     //止まるブロックに接触してるか
     private bool StopFieldFlag;
     // Start is called before the first frame update
+
+    //アニメーション用変数
+    private Animator anim = null;
+    
     void Start()
     {
         Rbody = this.GetComponent<Rigidbody2D>();
@@ -74,6 +78,8 @@ public class CPlayerScript : MonoBehaviour
 
         Direction = GameObject.Find("Direction").GetComponent<LineRenderer>();
 
+        //子のアニメーション取得
+        anim = GameObject.Find("PlayerSprite").GetComponent<Animator>();
 
         this.MainCamera = Camera.main;
         this.MainCameraTransform = this.MainCamera.transform;
@@ -143,6 +149,9 @@ public class CPlayerScript : MonoBehaviour
 
             //矢印オフ
             this.Direction.enabled = false;
+
+            //回転アニメーションオン
+            anim.SetBool("Move", true);
         }
     }
 
@@ -165,6 +174,9 @@ public class CPlayerScript : MonoBehaviour
         {
             Rbody.velocity = new Vector2(0, 0);
             PlayFlag = false;
+
+            //アニメーションを終了させる
+            anim.SetBool("Move", false);
         }
 
         //くっつくギミック

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Sonfi/Sonfi_Scene.unity
+- path: Assets/Scenes/Kuroiwa/Kuroiwa_Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
