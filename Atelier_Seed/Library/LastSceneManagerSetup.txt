@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/Scenes/Kuroiwa/Kuroiwa_Scene.unity
+=======
 - path: Assets/Scenes/Game_Scene/Stage2.unity
+>>>>>>> origin/シーン遷移全般
   isLoaded: 1
   isActive: 1
   isSubScene: 0

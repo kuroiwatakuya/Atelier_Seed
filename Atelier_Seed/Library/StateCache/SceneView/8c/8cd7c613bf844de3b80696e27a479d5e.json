@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":false,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":1.9185473918914796,"y":0.33072125911712649,"z":-1.1504099369049073},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":5.946829319000244,"orthographic":true}
+=======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":2.361579418182373,"y":0.9359395503997803,"z":0.8627693057060242},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":6.766780376434326,"orthographic":true}
+>>>>>>> origin/シーン遷移全般
