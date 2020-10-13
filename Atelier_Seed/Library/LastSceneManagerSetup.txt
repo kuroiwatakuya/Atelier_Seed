@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Kuroiwa/Kuroiwa_Scene.unity
-=======
 - path: Assets/Scenes/Sonfi/Sonfi_Scene.unity
->>>>>>> origin/タイトル、ステージ配置
   isLoaded: 1
   isActive: 1
   isSubScene: 0
