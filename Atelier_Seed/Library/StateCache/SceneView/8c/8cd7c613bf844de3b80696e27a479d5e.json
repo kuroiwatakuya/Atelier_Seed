@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":-2.3543245792388918,"y":0.5123072862625122,"z":-49.11518478393555},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":6.569216251373291,"orthographic":true}
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":1.132575273513794,"y":1.7674765586853028,"z":-0.9422604441642761},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":13.249798774719239,"orthographic":true}
->>>>>>> main
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":-17.89318084716797,"y":-3.6010100841522219,"z":-3.339373826980591},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":1.2736103534698487,"orthographic":true}
->>>>>>> origin/プレイヤーのむにゅ挙動とタップエフェクトの調整
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":false,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":-15.964354515075684,"y":-2.7744617462158205,"z":-2632.26611328125},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":2.1116373538970949,"orthographic":true}
