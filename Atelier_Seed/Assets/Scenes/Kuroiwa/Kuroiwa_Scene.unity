@@ -178,6 +178,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 8185051320554634352, guid: 5edcdc2d299e2344abd6fc451f5a4ea4, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 5
+      objectReference: {fileID: 0}
+>>>>>>> 黒岩：アニメーション
     - target: {fileID: 8185051320999988637, guid: 5edcdc2d299e2344abd6fc451f5a4ea4, type: 3}
       propertyPath: m_Sprite
       value: 

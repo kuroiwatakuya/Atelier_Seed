@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Ou/Stage5/Stage5.unity
+=======
+- path: Assets/Scenes/Kuroiwa/Kuroiwa_Scene.unity
+>>>>>>> 黒岩：アニメーション
   isLoaded: 1
   isActive: 1
   isSubScene: 0
