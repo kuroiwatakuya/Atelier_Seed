@@ -44,6 +44,8 @@ public class CPlayerScript : MonoBehaviour
     public Vector2 Velocity;
     public bool GunFlag;
 
+    public bool StopFlag;
+
     //発射方向の力
     private Vector2 DirectionForce;
     //メインカメラ
@@ -55,9 +57,9 @@ public class CPlayerScript : MonoBehaviour
     //残りターン
     private int TurnCount = 3;
     //弾いてるか
-    private bool PlayFlag;
+    public bool PlayFlag;
     //クリックしたか
-    private bool ClickFlag;
+    public bool ClickFlag;
     //大砲用タップ判定
     private bool TapFlag;
 
@@ -76,6 +78,7 @@ public class CPlayerScript : MonoBehaviour
         Rbody = this.GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
+        //ラインレンダラー取得
         Direction = GameObject.Find("Direction").GetComponent<LineRenderer>();
 
         //子のアニメーション取得
@@ -89,6 +92,7 @@ public class CPlayerScript : MonoBehaviour
         StopFieldFlag = false;
         GunFlag = false;
         TapFlag = false;
+        StopFlag = false;
     }
 
     //マウス座標をワールド座標に変換して取得
@@ -102,59 +106,7 @@ public class CPlayerScript : MonoBehaviour
 
         return position;
     }
-
-    //ドラック開始
-    public void OnMouseDown()
-    {
-        //if (!PlayFlag && !ClickFlag)
-        //{
-        //    ClickFlag = true;
-        //    DragStart = GetMousePosition();
-
-        //    //矢印フラグ
-        //    this.Direction.enabled = true;
-        //    this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
-        //    this.Direction.SetPosition(1, Rbody.position);
-        //}
-    }
-    //ドラッグ中
-    public void OnMouseDrag()
-    {
-        if (ClickFlag)
-        {
-            Vector2 position = GetMousePosition();
-            DirectionForce = position - DragStart;
-            if (DirectionForce.magnitude > MaxMagnitude * MaxMagnitude)
-            {
-                DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
-            }
-
-            this.Direction.SetPosition(0, Rbody.position);//矢印の位置
-            this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
-        }
-    }
-    /// ドラッグ終了
-    public void OnMouseUp()
-    {
-        if (ClickFlag)
-        {
-            ClickFlag = false;
-            PlayFlag = true;
-
-            StopFieldFlag = false;
-
-            TurnCount--;
-            //弾く
-            Flip(DirectionForce * Power * -1);
-
-            //矢印オフ
-            this.Direction.enabled = false;
-
-            //回転アニメーションオン
-            anim.SetBool("Move", true);
-        }
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -165,8 +117,9 @@ public class CPlayerScript : MonoBehaviour
         }
 
         //マウス左クリック＆タップ
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
+            //動いてないかつクリックしてない
             if (!PlayFlag && !ClickFlag)
             {
                 ClickFlag = true;
@@ -178,12 +131,55 @@ public class CPlayerScript : MonoBehaviour
                 this.Direction.SetPosition(1, Rbody.position);
             }
         }
+        if (ClickFlag == true)
+        {
+            //ドラッグ処理
+            if (ClickFlag)
+            {
+                Vector2 position = GetMousePosition();
+                DirectionForce = position - DragStart;
+
+                if (DirectionForce.magnitude > MaxMagnitude * MaxMagnitude)
+                {
+                    DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
+                }
+                
+                this.Direction.SetPosition(0, Rbody.position);//矢印の位置
+                this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
+
+            }
+        }
+            
+        //マウスを離したとき
+        if (Input.GetMouseButtonUp(0))
+        {
+            //クリックフラグがオンなら
+            if (ClickFlag)
+            {
+                ClickFlag = false;
+                PlayFlag = true;
+
+                StopFieldFlag = false;
+
+                TurnCount--;
+                //弾く
+                Flip(DirectionForce * Power * -1);
+
+                //矢印オフ
+                this.Direction.enabled = false;
+
+                //回転アニメーションオン
+                anim.SetBool("Move", true);
+            }
+        }
+       
     }
 
     void FixedUpdate()
     {
         Velocity.y = Rbody.velocity.y;
         Velocity.x = Rbody.velocity.x;
+
         //遅くなったらとめる
         if (Velocity.y == 0 && Velocity.x <= 8 && Velocity.x >= -8 && PlayFlag && !GunFlag)
         {
@@ -193,7 +189,7 @@ public class CPlayerScript : MonoBehaviour
             //アニメーションを終了させる
             anim.SetBool("Move", false);
         }
-
+        
         //くっつくギミック
         if (StopFieldFlag)
         {
