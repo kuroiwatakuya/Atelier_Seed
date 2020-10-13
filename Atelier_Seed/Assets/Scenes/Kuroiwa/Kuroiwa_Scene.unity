@@ -206,8 +206,8 @@ GameObject:
   m_Component:
   - component: {fileID: 83764964}
   - component: {fileID: 83764963}
-  - component: {fileID: 83764962}
   - component: {fileID: 83764965}
+  - component: {fileID: 83764962}
   m_Layer: 0
   m_Name: Pause
   m_TagString: Option
