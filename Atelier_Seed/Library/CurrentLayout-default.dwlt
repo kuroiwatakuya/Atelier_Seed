@@ -49,6 +49,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 15
 =======
     width: 1536
@@ -58,6 +59,9 @@ MonoBehaviour:
   vertical: 0
   controlID: 134
 >>>>>>> origin/タイトル、ステージ配置
+=======
+  controlID: 104
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -116,12 +120,17 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 242
     height: 282.66666
 =======
     width: 294.4
     height: 414.4
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    width: 352
+    height: 341.6
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -146,6 +155,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 282.66666
     width: 978
     height: 344.66672
@@ -154,6 +164,11 @@ MonoBehaviour:
     width: 1208
     height: 316.4
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    y: 341.6
+    width: 1052.8
+    height: 389.19998
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 13}
@@ -278,8 +293,12 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 37
 >>>>>>> origin/タイトル、ステージ配置
+=======
+  controlID: 105
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -300,6 +319,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 978
     height: 282.66666
   m_MinSize: {x: 403, y: 221}
@@ -314,6 +334,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 38
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    width: 1052.8
+    height: 341.6
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 80
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -337,19 +365,31 @@ MonoBehaviour:
 =======
     x: 294.4
     y: 0
+<<<<<<< HEAD
     width: 913.6
     height: 414.4
 >>>>>>> origin/タイトル、ステージ配置
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
+=======
+    width: 700.80005
+    height: 341.6
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 17}
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   - {fileID: 12}
 >>>>>>> origin/タイトル、ステージ配置
+=======
+  - {fileID: 18}
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &12
@@ -425,6 +465,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 355.33334
     width: 977
     height: 323.66672
@@ -433,6 +474,11 @@ MonoBehaviour:
     width: 1207
     height: 295.4
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    y: 415.2
+    width: 1051.8
+    height: 368.19998
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -448,24 +494,33 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Material
 =======
     - Assets/Prefab
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    - Assets/Scenes/Miyamoto
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Assets/Material
 =======
   - Assets/Prefab
 >>>>>>> origin/タイトル、ステージ配置
+=======
+  - Assets/Scenes/Miyamoto
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 2e3d0000
@@ -477,6 +532,12 @@ MonoBehaviour:
     m_LastClickedID: 16018
     m_ExpandedIDs: 000000007e3e0000803e0000983e00009c3e000000ca9a3b
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    scrollPos: {x: 0, y: 55.80002}
+    m_SelectedIDs: d03e0000
+    m_LastClickedID: 16080
+    m_ExpandedIDs: 00000000ae3e0000b03e000000ca9a3b
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -505,10 +566,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000001e3d0000203d0000
 =======
     m_ExpandedIDs: 000000007e3e0000803e0000
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    m_ExpandedIDs: 00000000ae3e0000b03e0000
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -644,13 +709,19 @@ MonoBehaviour:
     height: 261.66666
 =======
     y: 73.6
+<<<<<<< HEAD
     width: 293.4
     height: 393.4
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    width: 351
+    height: 320.6
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
       m_SelectedIDs: 18f1ffff
       m_LastClickedID: -3816
@@ -660,6 +731,11 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: 24caffffa2cafffff2caffff66cfffff92cfffff10d0ffff68d0ffff34e3ffff94e3ffffc0e6fffff4e6ffff0ae7ffff9ce7ffffb0e7ffffc8e7ffff36eaffff68eaffffe8ebffff14ecffff0ef7ffff48f7ffff1af8ffff0e3f0000565500003858000040580000a6600000
 >>>>>>> origin/タイトル、ステージ配置
+=======
+      m_SelectedIDs: fa3e0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 34fbffff
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -715,21 +791,31 @@ MonoBehaviour:
 =======
     x: 294.4
     y: 73.6
+<<<<<<< HEAD
     width: 911.6
     height: 393.4
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    width: 698.80005
+    height: 320.6
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 78de4fe84f595c94b9ea48b4e07c0c00
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
+<<<<<<< HEAD
   m_SceneIsLit: 1
+=======
+  m_SceneIsLit: 0
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Target: {x: -3.0666587, y: -0.6869774, z: 0.43654343}
     speed: 2
@@ -739,6 +825,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -8.002883, y: 0.33880746, z: -0.68452626}
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    m_Target: {x: -15.9643545, y: -2.7744617, z: -2632.266}
+    speed: 2
+    m_Value: {x: -15.9643545, y: -2.7744617, z: -2632.266}
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -790,6 +881,7 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 5.1339064
     speed: 2
     m_Value: 5.1339064
@@ -798,6 +890,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 7.1365104
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    m_Target: 2.1116374
+    speed: 2
+    m_Value: 2.1116374
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -850,9 +947,14 @@ MonoBehaviour:
 =======
     x: 294.4
     y: 73.6
+<<<<<<< HEAD
     width: 911.6
     height: 393.4
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    width: 699
+    height: 323
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -895,6 +997,7 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
+<<<<<<< HEAD
       y: 21
 <<<<<<< HEAD
       width: 734
@@ -907,12 +1010,20 @@ MonoBehaviour:
     m_Scale: {x: 0.64652777, y: 0.64652777}
     m_Translation: {x: 455.8, y: 186.2}
 >>>>>>> origin/タイトル、ステージ配置
+=======
+      y: 0
+      width: 699
+      height: 323
+    m_Scale: {x: 0.5607639, y: 0.5607639}
+    m_Translation: {x: 349.5, y: 161.5}
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
       x: -731.9668
       y: -240.00002
@@ -930,6 +1041,15 @@ MonoBehaviour:
   m_defaultScale: 0.64652777
   m_LastWindowPixelSize: {x: 1139.5, y: 491.75}
 >>>>>>> origin/タイトル、ステージ配置
+=======
+      x: -623.25696
+      y: -288
+      width: 1246.5139
+      height: 576
+    m_MinimalGUI: 1
+  m_defaultScale: 0.5607639
+  m_LastWindowPixelSize: {x: 873.75, y: 403.75}
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -962,10 +1082,16 @@ MonoBehaviour:
     height: 250
 =======
     x: 0
+<<<<<<< HEAD
     y: 488
     width: 1207
     height: 295.4
 >>>>>>> origin/タイトル、ステージ配置
+=======
+    y: 417.6
+    width: 1052
+    height: 366
+>>>>>>> origin/宮本：トロフィー取得エフェクト作成
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &19
 MonoBehaviour:
