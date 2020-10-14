@@ -5,19 +5,12 @@ using UnityEngine;
 public class BreakBlock : MonoBehaviour
 {
 
-    //************
-    //対象タグ
-    //************
-    public string PlayerTag;
-
     public GameObject Player;
 
-    public bool Flag = false;
+    public float Power;
 
     //プレイヤースクリプト
     private CPlayerScript PlayerScript;
-
-    private float BreakSpeed = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +27,6 @@ public class BreakBlock : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            Flag = true;
             Destroy(this.gameObject);
         }
     }
