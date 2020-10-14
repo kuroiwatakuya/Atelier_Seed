@@ -6,17 +6,17 @@ public class GunScript : MonoBehaviour
 {
 
     //プレイヤー
-    private GameObject Player;
+    public GameObject Player;
 
-    private CPlayerScript PlayerScript;
+    public CPlayerScript PlayerScript;
 
     private float Angle = -1;
 
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.Find("Player");
-        PlayerScript = Player.GetComponent<CPlayerScript>();
+        //Player = GameObject.Find("Player");
+        //PlayerScript = Player.GetComponent<CPlayerScript>();
     }
 
     // Update is called once per frame
