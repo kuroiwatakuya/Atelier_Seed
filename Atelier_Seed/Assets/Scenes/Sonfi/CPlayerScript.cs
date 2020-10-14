@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //**************************************
 // プレイヤー全般のスクリプト
@@ -43,6 +44,9 @@ public class CPlayerScript : MonoBehaviour
 
     public Vector2 Velocity;
     public bool GunFlag;
+
+    //回数制限
+    public int PlayCount = 3;
 
     //止まるフラグ
     public bool StopFlag;
@@ -206,6 +210,8 @@ public class CPlayerScript : MonoBehaviour
             //プレイフラグオフ
             PlayFlag = false;
 
+            PlayCount--;
+
             //アニメーションを終了させる
             anim.SetBool("Move", false);
 
@@ -266,6 +272,12 @@ public class CPlayerScript : MonoBehaviour
             {
                 CoolTime = false;
             }
+        }
+
+        //ゲームオーバー
+        if(PlayCount <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
 
     }

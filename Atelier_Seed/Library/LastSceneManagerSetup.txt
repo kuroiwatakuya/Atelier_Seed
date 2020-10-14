@@ -1,5 +1,9 @@
 sceneSetups:
-- path: Assets/Scenes/Game_Scene/Stage5.unity
+<<<<<<< HEAD
+- path: Assets/Scenes/Game_Scene/Stage1.unity
+=======
+- path: Assets/Scenes/Game_Scene/Stage3.unity
+>>>>>>> 黒岩：トロフィーシーン作成
   isLoaded: 1
   isActive: 1
   isSubScene: 0
