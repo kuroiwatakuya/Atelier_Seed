@@ -44,7 +44,14 @@ public class CPlayerScript : MonoBehaviour
     public Vector2 Velocity;
     public bool GunFlag;
 
+    //止まるフラグ
     public bool StopFlag;
+
+    //最大発射可能数
+    public int MaxShotCount;
+
+    //発射カウント
+    private int ShotCount = 1;
 
     //発射方向の力
     private Vector2 DirectionForce;
@@ -109,7 +116,7 @@ public class CPlayerScript : MonoBehaviour
     
     // Update is called once per frame
     void Update()
-    {
+    { 
         if (Input.GetMouseButtonDown(0) && !TapFlag && GunFlag)
         {
             //大砲用タップ
@@ -137,9 +144,9 @@ public class CPlayerScript : MonoBehaviour
             if (ClickFlag)
             {
                 Vector2 position = GetMousePosition();
-                DirectionForce = position - DragStart;
+                DirectionForce = position - DragStart;      
 
-                if (DirectionForce.magnitude > MaxMagnitude * MaxMagnitude)
+                if (DirectionForce.magnitude > MaxMagnitude )
                 {
                     DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
                 }
@@ -168,6 +175,14 @@ public class CPlayerScript : MonoBehaviour
                 //矢印オフ
                 this.Direction.enabled = false;
 
+                //発射カウントを減らす
+                MaxShotCount = MaxShotCount - ShotCount;
+
+                //===============================
+                //ゲームオーバー差し込んでくだちい
+                //===============================
+
+
                 //回転アニメーションオン
                 anim.SetBool("Move", true);
             }
@@ -181,15 +196,27 @@ public class CPlayerScript : MonoBehaviour
         Velocity.x = Rbody.velocity.x;
 
         //遅くなったらとめる
-        if (Velocity.y == 0 && Velocity.x <= 8 && Velocity.x >= -8 && PlayFlag && !GunFlag)
+        if (Velocity.y == 0 &&Velocity.x <= 12 && Velocity.x >= -12 && PlayFlag && !GunFlag)
         {
             Rbody.velocity = new Vector2(0, 0);
+            
+            //プレイヤ―を正しい向きで止める
+            Rbody.rotation = 0.0f;
+
+            //プレイフラグオフ
             PlayFlag = false;
 
             //アニメーションを終了させる
             anim.SetBool("Move", false);
+
+            if (!PlayFlag)
+            {
+                //全てのリジッドボディを止める
+                Rbody.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
+
         }
-        
+
         //くっつくギミック
         if (StopFieldFlag)
         {
@@ -223,7 +250,7 @@ public class CPlayerScript : MonoBehaviour
             Direction *= Direction.magnitude;
             Flip(Direction * 5);
 
-            TapFlag = false;
+            //TapFlag = false;
 
         }
 
@@ -264,5 +291,4 @@ public class CPlayerScript : MonoBehaviour
             GunFlag = true;
         }
     }
-
 }

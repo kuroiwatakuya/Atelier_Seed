@@ -20,16 +20,19 @@ public class CCamera : MonoBehaviour
     void Update()
     {
         Vector3 PlayerPosition = Player.transform.position;
-        
-        //カメラが左端に到達したら動かさない
-        if (transform.position.x >= CameraMin)
+
+        if (CameraMoveFlag)
         {
-            CameraMoveFlag = false;
-        }
-        //カメラが右端に到達したら動かさない
-        if(transform.position.x <= CameraMax)
-        {
-            CameraMoveFlag = false;
+            //カメラが左端に到達したら動かさない
+            if (transform.position.x >= CameraMin)
+            {
+                CameraMoveFlag = false;
+            }
+            //カメラが右端に到達したら動かさない
+            if (transform.position.x <= CameraMax)
+            {
+                CameraMoveFlag = false;
+            }
         }
         
         //移動
