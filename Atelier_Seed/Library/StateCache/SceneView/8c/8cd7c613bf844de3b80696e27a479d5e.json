@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":8.701560974121094,"y":-3.208376169204712,"z":-1.7551971673965455},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":6.988157272338867,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":-12.627679824829102,"y":-4.426369667053223,"z":-8.601984977722168},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":5.663306713104248,"orthographic":true}
+>>>>>>> origin/宮本：大砲関係のエフェクト
