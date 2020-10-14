@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Kuroiwa/Kuroiwa_Scene.unity
-=======
-- path: Assets/Scenes/Game_Scene/Stage5.unity
->>>>>>> origin/ステージ
+- path: Assets/Scenes/Tei/Tet_Stage4.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
