@@ -137,9 +137,9 @@ public class CPlayerScript : MonoBehaviour
             if (ClickFlag)
             {
                 Vector2 position = GetMousePosition();
-                DirectionForce = position - DragStart;
+                DirectionForce = position - DragStart;      
 
-                if (DirectionForce.magnitude > MaxMagnitude * MaxMagnitude)
+                if (DirectionForce.magnitude > MaxMagnitude )
                 {
                     DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
                 }
@@ -181,15 +181,27 @@ public class CPlayerScript : MonoBehaviour
         Velocity.x = Rbody.velocity.x;
 
         //遅くなったらとめる
-        if (Velocity.y == 0 && Velocity.x <= 8 && Velocity.x >= -8 && PlayFlag && !GunFlag)
+        if (Velocity.y == 0 &&Velocity.x <= 12 && Velocity.x >= -12 && PlayFlag && !GunFlag)
         {
             Rbody.velocity = new Vector2(0, 0);
+            
+            //プレイヤ―を正しい向きで止める
+            Rbody.rotation = 0.0f;
+
+            //プレイフラグオフ
             PlayFlag = false;
 
             //アニメーションを終了させる
             anim.SetBool("Move", false);
+
+            if (!PlayFlag)
+            {
+                //全てのリジッドボディを止める
+                Rbody.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
+
         }
-        
+
         //くっつくギミック
         if (StopFieldFlag)
         {
