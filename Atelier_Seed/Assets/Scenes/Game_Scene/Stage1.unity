@@ -908,6 +908,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1654252755604782652, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6147449452fd5e94b90dc99aef6a2034, type: 3}
+    - target: {fileID: 1654252755604782652, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654252755604782652, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932944927691163182, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4932944928562851264, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.86
@@ -3240,6 +3256,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 8413146299134798756, guid: d3a7fc7b72ff6824f80a0ee0ff008e8b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+>>>>>>> 黒岩：トロフィーシーン作成
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a7fc7b72ff6824f80a0ee0ff008e8b, type: 3}
 --- !u!1001 &6624181758700221255

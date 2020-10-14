@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b5c1b664ae35ba04ab792f3cc0a347ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6147449452fd5e94b90dc99aef6a2034, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 4932944928562851269}
   - component: {fileID: 1654252755604782652}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -326,7 +326,9 @@ MonoBehaviour:
   VelocityMin: 8
   Velocity: {x: 0, y: 0}
   GunFlag: 0
+  PlayCount: 3
   StopFlag: 0
+  MaxShotCount: 0
   PlayFlag: 0
   ClickFlag: 0
   CoolTime: 0
