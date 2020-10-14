@@ -44,7 +44,14 @@ public class CPlayerScript : MonoBehaviour
     public Vector2 Velocity;
     public bool GunFlag;
 
+    //止まるフラグ
     public bool StopFlag;
+
+    //最大発射可能数
+    public int MaxShotCount;
+
+    //発射カウント
+    private int ShotCount = 1;
 
     //発射方向の力
     private Vector2 DirectionForce;
@@ -109,7 +116,7 @@ public class CPlayerScript : MonoBehaviour
     
     // Update is called once per frame
     void Update()
-    {
+    { 
         if (Input.GetMouseButtonDown(0) && !TapFlag && GunFlag)
         {
             //大砲用タップ
@@ -167,6 +174,14 @@ public class CPlayerScript : MonoBehaviour
 
                 //矢印オフ
                 this.Direction.enabled = false;
+
+                //発射カウントを減らす
+                MaxShotCount = MaxShotCount - ShotCount;
+
+                //===============================
+                //ゲームオーバー差し込んでくだちい
+                //===============================
+
 
                 //回転アニメーションオン
                 anim.SetBool("Move", true);
@@ -235,7 +250,7 @@ public class CPlayerScript : MonoBehaviour
             Direction *= Direction.magnitude;
             Flip(Direction * 5);
 
-            TapFlag = false;
+            //TapFlag = false;
 
         }
 
@@ -276,5 +291,4 @@ public class CPlayerScript : MonoBehaviour
             GunFlag = true;
         }
     }
-
 }
