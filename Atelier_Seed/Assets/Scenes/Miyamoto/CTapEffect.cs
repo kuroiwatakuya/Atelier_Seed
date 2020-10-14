@@ -22,7 +22,7 @@ public class CTapEffect : MonoBehaviour
     void Start()
     {
         // タップエフェクトプレハブを検索して代入
-        TapEffectObject = (GameObject)Resources.Load("Effect_Tap_RandS");
+        TapEffectObject = (GameObject)Resources.Load("TapEffect_RandS");
     }
 
 

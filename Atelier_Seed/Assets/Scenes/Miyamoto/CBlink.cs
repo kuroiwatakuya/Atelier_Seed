@@ -59,6 +59,8 @@ public class CBlink : MonoBehaviour
     // // 初期化 // //
     void Start()
     {
+//        TapFlag = false;
+
         // // アタッチしているオブジェクトの判別 // //
 
         // Imageだったとき

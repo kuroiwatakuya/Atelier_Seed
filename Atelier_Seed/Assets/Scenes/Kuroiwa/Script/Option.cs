@@ -15,7 +15,7 @@ using DG.Tweening;  //DotWeenを使用する
 public class Option : MonoBehaviour
 {
     public bool OptionFrag;     //オプションオンオフのフラグ
-    public string OptionTag;
+
     public GameObject Pause;     //子のオブジェクト取得(UI画面取得
 
     // Start is called before the first frame update
@@ -36,8 +36,11 @@ public class Option : MonoBehaviour
     //==================================================
     public void OnMouseDown()
     {
-        Pause.SetActive(!Pause.activeSelf);
-
+        //今のところ左クリックでオプション画面起動
+        if(Input.GetMouseButton(0))
+        {
+            Pause.SetActive(!Pause.activeSelf);
+        }
         if (Pause.activeSelf)
         {
             Time.timeScale = 0f;
@@ -46,5 +49,6 @@ public class Option : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
+
     }
 }

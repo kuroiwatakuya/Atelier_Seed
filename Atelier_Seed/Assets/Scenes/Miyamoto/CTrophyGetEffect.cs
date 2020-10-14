@@ -88,8 +88,9 @@ public class CTrophyGetEffect : MonoBehaviour
                                                  thisTransform.position.z);
         }
 
+
         // 当たったとき
-        else
+        if(Hit)
         {
             // 横に伸びるフラグが立つ
             Yoko = true;
@@ -98,8 +99,8 @@ public class CTrophyGetEffect : MonoBehaviour
             if (Yoko && !Tate)
             {
                 // 横に伸ばす
-                nowScale.x += 5.0f * Time.deltaTime;
-                nowScale.y -= 5.0f * Time.deltaTime;
+                nowScale.x += 0.02f;
+                nowScale.y -= 0.02f;
 
                 // 伸ばした拡大縮小値を代入
                 thisTransform.localScale = nowScale;
@@ -116,8 +117,8 @@ public class CTrophyGetEffect : MonoBehaviour
             if (Tate)
             {
                 // 縦に伸ばす
-                nowScale.x -= 5.0f * Time.deltaTime;
-                nowScale.y += 5.0f * Time.deltaTime;
+                nowScale.x -= 0.02f;
+                nowScale.y += 0.02f;
 
                 // 伸ばした拡大縮小値を代入
                 thisTransform.localScale = nowScale;

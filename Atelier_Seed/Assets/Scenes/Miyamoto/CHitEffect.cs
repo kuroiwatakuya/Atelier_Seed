@@ -26,7 +26,7 @@ public class CHitEffect : MonoBehaviour
     void Start()
     {
         // 衝突エフェクトを検索して代入
-        HitEffectObject = (GameObject)Resources.Load("Effect_Hit");
+        HitEffectObject = (GameObject)Resources.Load("HitEffect");
     }
 
 

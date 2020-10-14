@@ -24,20 +24,6 @@ public class CPlayerCollision_Width : MonoBehaviour
     CPlayerScript PlayerScript;     // CPlayerScript
     Vector2 PlayerVelocity;         // プレイヤーのVelocity
     Vector3 PlayerScale;            // プレイヤーのScale
-    Vector3 PlayerInitialScale;     // プレイヤーの初期Scale記憶用
-
-
-    // 速度調整用
-    [SerializeField] private float Velocity_Max_Plus = 3.0f;    // 速度が大きい値（正方向）
-    [SerializeField] private float Velocity_Max_Minus = -3.0f;  // 速度が大きい値（負方向）
-    [SerializeField] private float Velocity_Min_Plus = 1.0f;    // 速度が小さい値（正方向）
-    [SerializeField] private float Velocity_Min_Minus = -1.0f;  // 速度が小さい値（負方向）
-
-
-    // 潰す大きさ調整用
-    [SerializeField] private float CrushPower = 50.0f;          // 一度に潰す量
-    [SerializeField] private float CrushMin_Larger = 0.75f;     // 大きく潰すときの最低値
-    [SerializeField] private float CrushMin_Smaller = 1.0f;     // あまり潰さないときの最低値
 
 
     // // 初期化 // //
@@ -48,10 +34,6 @@ public class CPlayerCollision_Width : MonoBehaviour
 
         // CPlayerScript を取得
         PlayerScript = Player.GetComponent<CPlayerScript>();
-
-
-        // プレイヤーの初期拡大縮小値記憶
-        PlayerInitialScale = this.transform.parent.localScale;
 
 
         // 変形フラグＯＦＦ
@@ -73,17 +55,17 @@ public class CPlayerCollision_Width : MonoBehaviour
         if (Crush_Flag_Width)
         {
             // プレイヤーの速度が大きかったとき
-            if (PlayerVelocity.x >= Velocity_Max_Plus || PlayerVelocity.x <= Velocity_Max_Minus ||
-                PlayerVelocity.y >= Velocity_Max_Plus || PlayerVelocity.y <= Velocity_Max_Minus)
+            if (PlayerVelocity.x > 3.0f || PlayerVelocity.x < -3.0f ||
+                PlayerVelocity.y > 3.0f || PlayerVelocity.y < -3.0f)
             {
                 // 大きく変形する
-                PlayerScale = CJellyBound.Crush_Width(PlayerScale, CrushMin_Larger, CrushPower);
+                //PlayerScale = CJellyBound.Crush_Width(playerscale, 0.25f, 0.5f);
             }
 
 
             // プレイヤーの速度がほぼなかったとき
-            else if (PlayerVelocity.x < Velocity_Min_Plus && PlayerVelocity.x > Velocity_Min_Minus ||
-                     PlayerVelocity.y < Velocity_Min_Plus && PlayerVelocity.y > Velocity_Min_Minus)
+            else if (PlayerVelocity.x < 1.0f && PlayerVelocity.x > -1.0f ||
+                     PlayerVelocity.y < 1.0f && PlayerVelocity.y > -1.0f)
             {
                 // 変形フラグをＯＦＦにする
                 Crush_Flag_Width = false;
@@ -91,11 +73,11 @@ public class CPlayerCollision_Width : MonoBehaviour
 
 
             // プレイヤーの速度が小さかったとき
-            else if (PlayerVelocity.x < Velocity_Max_Plus && PlayerVelocity.x > Velocity_Max_Minus ||
-                     PlayerVelocity.y < Velocity_Max_Plus && PlayerVelocity.y > Velocity_Max_Minus)
+            else if (PlayerVelocity.x < 3.0f && PlayerVelocity.x > -3.0f ||
+                     PlayerVelocity.y < 3.0f && PlayerVelocity.y > -3.0f)
             {
                 // 小さく変形する
-                PlayerScale = CJellyBound.Crush_Width(PlayerScale, CrushMin_Smaller, CrushPower);
+                PlayerScale = CJellyBound.Crush_Width(PlayerScale, 0.5f, 0.5f);
             }
         }
 
@@ -103,7 +85,7 @@ public class CPlayerCollision_Width : MonoBehaviour
         else
         {
             // 元の大きさに戻る
-            PlayerScale = CJellyBound.Expand_Width(PlayerScale, PlayerInitialScale.x, CrushPower);
+            PlayerScale = CJellyBound.Expand_Width(PlayerScale, 1.0f, 0.25f);
         }
 
 
