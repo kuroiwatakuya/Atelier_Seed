@@ -629,4 +629,3 @@ C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\obj\Debug\Assembly-C
 C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\obj\Debug\Assembly-CSharp-firstpass.csproj.CopyComplete
 C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\obj\Debug\Assembly-CSharp-firstpass.pdb
-C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\obj\Debug\Assembly-CSharp-firstpass.csprojAssemblyReference.cache
