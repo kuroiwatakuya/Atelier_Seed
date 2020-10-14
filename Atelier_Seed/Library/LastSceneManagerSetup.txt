@@ -1,5 +1,9 @@
 sceneSetups:
-- path: Assets/Scenes/Game_Scene/Stage3.unity
+<<<<<<< HEAD
+- path: Assets/Scenes/Game_Scene/Stage1.unity
+=======
+- path: Assets/Scenes/Sonfi/Sonfi_Scene.unity
+>>>>>>> origin/回数制限
   isLoaded: 1
   isActive: 1
   isSubScene: 0
