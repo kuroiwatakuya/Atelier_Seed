@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class CStageSelect : MonoBehaviour
 {
+    public int BeforeStage;
     public int Liberation_StageNum = 1;   //解放されたステージ
 
     bool OnlySelect = true;     // キーの多重処理防止
@@ -24,7 +25,13 @@ public class CStageSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Liberation_StageNum = PlayerPrefs.GetInt("STAGENUM", 1);
+        BeforeStage = PlayerPrefs.GetInt("STAGENUM", 0);
+        Liberation_StageNum = PlayerPrefs.GetInt("LIBERATION_STAGENUM", 1);
+        if (BeforeStage >= Liberation_StageNum)
+        {
+            Liberation_StageNum = BeforeStage;
+            Liberation_StageNum++;
+        }
     }
 
     // Update is called once per frame
@@ -80,6 +87,7 @@ public class CStageSelect : MonoBehaviour
     {
         if (OnlySelect == true)
         {
+            PlayerPrefs.SetInt("LIBERATION_STAGENUM", Liberation_StageNum);
             SceneManager.LoadScene(StageNumber);
             OnlySelect = false;
         }
