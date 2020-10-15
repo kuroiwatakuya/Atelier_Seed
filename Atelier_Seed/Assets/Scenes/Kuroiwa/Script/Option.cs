@@ -36,11 +36,8 @@ public class Option : MonoBehaviour
     //==================================================
     public void OnMouseDown()
     {
-        //今のところ左クリックでオプション画面起動
-        if(Input.GetMouseButton(0))
-        {
-            Pause.SetActive(!Pause.activeSelf);
-        }
+        Pause.SetActive(!Pause.activeSelf);
+
         if (Pause.activeSelf)
         {
             Time.timeScale = 0f;
@@ -49,6 +46,5 @@ public class Option : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
-
     }
 }
