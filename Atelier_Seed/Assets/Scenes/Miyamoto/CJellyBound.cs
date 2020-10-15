@@ -15,8 +15,8 @@ using UnityEngine;
 public class CJellyBound : MonoBehaviour
 {
     // 今回は使わない人たち
-    void Start() {}   
-    void Update() {}
+    void Start() { }
+    void Update() { }
 
 
     //----------------------------------------------------------------------------------------------------
@@ -42,7 +42,7 @@ public class CJellyBound : MonoBehaviour
 
 
         // ｙ値を変化量分潰す
-        tempScale.y -= change;
+        tempScale.y -= change * Time.deltaTime;
 
         // 潰しすぎないように調整
         if (tempScale.y < min_scale)
@@ -80,7 +80,7 @@ public class CJellyBound : MonoBehaviour
 
 
         // ｘ値を変化量分潰す
-        tempScale.x -= change;
+        tempScale.x -= change * Time.deltaTime;
 
         // 潰しすぎないように調整
         if (tempScale.x < min_scale)
@@ -118,7 +118,7 @@ public class CJellyBound : MonoBehaviour
 
 
         // ｙ値を変化量分伸ばす
-        tempScale.y += change;
+        tempScale.y += change * Time.deltaTime;
 
         // 伸ばしすぎないように調整
         if (tempScale.y > max_scale)
@@ -156,7 +156,7 @@ public class CJellyBound : MonoBehaviour
 
 
         // ｘ値を変化量分伸ばす
-        tempScale.x += change;
+        tempScale.x += change * Time.deltaTime;
 
         // 伸ばしすぎないように調整
         if (tempScale.x > max_scale)
@@ -168,5 +168,5 @@ public class CJellyBound : MonoBehaviour
         // 変形させた拡大縮小値を返す
         return tempScale;
     }
-    
+
 }

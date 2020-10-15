@@ -23,9 +23,9 @@ public class CuvScroll : MonoBehaviour
     {
         rawImage = GameObject.Find("Background");
 
-        move = 0.0f;        
+        move = 0.0f;
     }
-    
+
 
     // // 更新 // //
     void Update()
