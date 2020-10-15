@@ -406,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1586145212599948797, guid: f30343dd118a3844886bfe3f768218bb, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1586145212599948797, guid: f30343dd118a3844886bfe3f768218bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -507,7 +507,7 @@ Transform:
   m_LocalScale: {x: 0.08952742, y: 0.08952742, z: 0.08952742}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &346135666
 GameObject:
@@ -2018,7 +2018,7 @@ Transform:
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1426881935
 GameObject:
@@ -2100,7 +2100,7 @@ Transform:
   m_LocalScale: {x: 16.818983, y: 5.797142, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1605015709
 PrefabInstance:
@@ -3049,7 +3049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1895066767
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -208,18 +208,14 @@ public class CPlayerScript : MonoBehaviour
             //アニメーションを終了させる
             anim.SetBool("Move", false);
 
-            if (!PlayFlag)
-            {
-                //全てのリジッドボディを止める
-                Rbody.constraints = RigidbodyConstraints2D.FreezeAll;
-            }
-
+            //全てのリジッドボディを止める
+            Rbody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 
         //くっつくギミック
         if (StopFieldFlag)
         {
-            Rbody.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            Rbody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
         else
         {
