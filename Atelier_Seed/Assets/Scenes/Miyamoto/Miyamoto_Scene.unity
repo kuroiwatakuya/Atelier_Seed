@@ -2512,11 +2512,17 @@ MonoBehaviour:
   GunPlayerPosition: {fileID: 0}
   StopBlockTag: 
   GunTag: Gun
+  Direction: {fileID: 0}
   Power: 20
   MaxMagnitude: 2
   VelocityMin: 8
   Velocity: {x: 0, y: 0}
   GunFlag: 0
+  PlayCount: 3
+  StopFlag: 0
+  MaxShotCount: 0
+  PlayFlag: 0
+  ClickFlag: 0
   CoolTime: 0
 --- !u!50 &359784724
 Rigidbody2D:
@@ -2684,6 +2690,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crush_Flag_Width: 0
+  Velocity_Max_Plus: 3
+  Velocity_Max_Minus: -3
+  Velocity_Min_Plus: 1
+  Velocity_Min_Minus: -1
+  CrushPower: 50
+  CrushMin_Larger: 0.75
+  CrushMin_Smaller: 1
 --- !u!70 &371241889
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2856,6 +2869,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crush_Flag_Height: 0
+  Velocity_Max_Plus: 3
+  Velocity_Max_Minus: -3
+  Velocity_Min_Plus: 1
+  Velocity_Min_Minus: -1
+  CrushPower: 50
+  CrushMin_Larger: 0.75
+  CrushMin_Smaller: 1
 --- !u!1 &594533197
 GameObject:
   m_ObjectHideFlags: 0
@@ -3357,6 +3377,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crush_Flag_Height: 0
+  Velocity_Max_Plus: 3
+  Velocity_Max_Minus: -3
+  Velocity_Min_Plus: 1
+  Velocity_Min_Minus: -1
+  CrushPower: 50
+  CrushMin_Larger: 0.75
+  CrushMin_Smaller: 1
 --- !u!1 &1700827827
 GameObject:
   m_ObjectHideFlags: 0
@@ -3762,6 +3789,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crush_Flag_Width: 0
+  Velocity_Max_Plus: 3
+  Velocity_Max_Minus: -3
+  Velocity_Min_Plus: 1
+  Velocity_Min_Minus: -1
+  CrushPower: 50
+  CrushMin_Larger: 0.75
+  CrushMin_Smaller: 1
 --- !u!70 &1977770410
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3799,3 +3833,60 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!1001 &8762799098166020308
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8762799098935898325, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}
+      propertyPath: m_Name
+      value: Bees
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762799098935898326, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762799098935898326, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762799098935898326, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762799098935898326, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762799098935898326, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762799098935898326, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762799098935898326, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762799098935898326, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762799098935898326, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762799098935898326, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762799098935898326, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d232ea4328ccdc43af807a3767acbdd, type: 3}

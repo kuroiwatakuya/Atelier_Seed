@@ -22,7 +22,7 @@ public class CTapEffect : MonoBehaviour
     void Start()
     {
         // タップエフェクトプレハブを検索して代入
-        TapEffectObject = (GameObject)Resources.Load("TapEffect_RandS");
+        TapEffectObject = (GameObject)Resources.Load("Effect_Tap_RandS");
     }
 
 
@@ -30,7 +30,7 @@ public class CTapEffect : MonoBehaviour
     void Update()
     {
         // マウスカーソル位置取得
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Vector3 MousePos = Input.mousePosition;     // マウス座標を取得
             MousePos.z = 5.0f;                          // ｚ座標値補間

@@ -24,7 +24,7 @@ public class CBlink : MonoBehaviour
     // 点滅スピード
     public float Speed = 1.0f;          // 点滅するスピード
     public float AlphaInterval = 0.5f;  // 一回の処理でどれくらいα値が変化するか
-    
+
     public bool TapFlag = false;       // チカチカ開始フラグ
 
 
@@ -54,42 +54,40 @@ public class CBlink : MonoBehaviour
     // 現在のオブジェクトの種類（初期値はテキスト）
     private ObjectType ThisObjectType = ObjectType.TEXT;
 
-//-------------------------------------------------------------------
+    //-------------------------------------------------------------------
 
     // // 初期化 // //
     void Start()
     {
-//        TapFlag = false;
-
         // // アタッチしているオブジェクトの判別 // //
 
         // Imageだったとき
-        if(this.gameObject.GetComponent<Image>())
+        if (this.gameObject.GetComponent<Image>())
         {
             ThisObjectType = ObjectType.IMAGE;                  // オブジェクトの種類をImageに設定
             ThisImage = this.gameObject.GetComponent<Image>();  // イメージのコンポーネントを取得
         }
 
         // Textだったとき
-        else if(this.gameObject.GetComponent<Text>())
+        else if (this.gameObject.GetComponent<Text>())
         {
             ThisObjectType = ObjectType.TEXT;                   // オブジェクトの種類をTextに設定
             ThisText = this.gameObject.GetComponent<Text>();    // テキストのコンポーネントを取得
         }
     }
 
-//-------------------------------------------------------------------
+    //-------------------------------------------------------------------
 
     // // 更新 // //
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             TapFlag = true;
         }
 
         // // オブジェクトのα値を更新 // //
-        if(TapFlag)
+        if (TapFlag)
         {
             // Imageだったとき
             if (ThisObjectType == ObjectType.IMAGE)
@@ -105,7 +103,7 @@ public class CBlink : MonoBehaviour
         }
     }
 
-//-------------------------------------------------------------------
+    //-------------------------------------------------------------------
 
     // // α値を更新してColorを返す // //
     Color GetAlphaColor(Color color)

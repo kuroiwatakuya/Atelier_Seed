@@ -21,7 +21,7 @@ public class CTrophyGetEffect : MonoBehaviour
     // スプライトレンダラー取得用
     private SpriteRenderer thisSpriteRenderer;
 
-    
+
     // 現在座標（ｙ値のみ）
     private float nowPos;
 
@@ -45,7 +45,7 @@ public class CTrophyGetEffect : MonoBehaviour
     // フェード計測用
     private float CurrentRemainTime;
 
-// ------------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------------
 
     // // 初期化 // //
     void Start()
@@ -67,10 +67,10 @@ public class CTrophyGetEffect : MonoBehaviour
 
 
         // フェードする残り時間をフェードの速さに設定
-        CurrentRemainTime = FadeTime;        
+        CurrentRemainTime = FadeTime;
     }
 
-// ------------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------------
 
     // // 更新 // //
     void Update()
@@ -80,7 +80,7 @@ public class CTrophyGetEffect : MonoBehaviour
 
 
         // 当たってないとき
-        if(!Hit)
+        if (!Hit)
         {
             // 上下にふわふわ揺れる
             thisTransform.position = new Vector3(thisTransform.position.x,
@@ -88,9 +88,8 @@ public class CTrophyGetEffect : MonoBehaviour
                                                  thisTransform.position.z);
         }
 
-
         // 当たったとき
-        if(Hit)
+        else
         {
             // 横に伸びるフラグが立つ
             Yoko = true;
@@ -99,8 +98,8 @@ public class CTrophyGetEffect : MonoBehaviour
             if (Yoko && !Tate)
             {
                 // 横に伸ばす
-                nowScale.x += 0.02f;
-                nowScale.y -= 0.02f;
+                nowScale.x += 5.0f * Time.deltaTime;
+                nowScale.y -= 5.0f * Time.deltaTime;
 
                 // 伸ばした拡大縮小値を代入
                 thisTransform.localScale = nowScale;
@@ -117,8 +116,8 @@ public class CTrophyGetEffect : MonoBehaviour
             if (Tate)
             {
                 // 縦に伸ばす
-                nowScale.x -= 0.02f;
-                nowScale.y += 0.02f;
+                nowScale.x -= 5.0f * Time.deltaTime;
+                nowScale.y += 5.0f * Time.deltaTime;
 
                 // 伸ばした拡大縮小値を代入
                 thisTransform.localScale = nowScale;
@@ -149,12 +148,12 @@ public class CTrophyGetEffect : MonoBehaviour
                     Hit = false;
                     GameObject.Destroy(gameObject);
                     return;
-                }        
+                }
             }
         }
     }
 
-// ------------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------------
 
     // // 当たった判定 // //
     void OnTriggerEnter2D(Collider2D coll)
