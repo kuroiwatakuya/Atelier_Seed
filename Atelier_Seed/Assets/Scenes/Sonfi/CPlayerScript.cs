@@ -39,6 +39,8 @@ public class CPlayerScript : MonoBehaviour
     public float Power;
     //最大付与力量
     public float MaxMagnitude;
+    //最小付与力量
+    public float MinMagnitude;
     //速度最小値
     public int VelocityMin;
 
@@ -50,12 +52,6 @@ public class CPlayerScript : MonoBehaviour
 
     //止まるフラグ
     public bool StopFlag;
-
-    //最大発射可能数
-    public int MaxShotCount;
-
-    //発射カウント
-    private int ShotCount = 1;
 
     //発射方向の力
     private Vector2 DirectionForce;
@@ -168,27 +164,24 @@ public class CPlayerScript : MonoBehaviour
             if (ClickFlag)
             {
                 ClickFlag = false;
-                PlayFlag = true;
 
-                StopFieldFlag = false;
+                if (DirectionForce.magnitude >= MinMagnitude)
+                {
+                    PlayFlag = true;
 
-                TurnCount--;
-                //弾く
-                Flip(DirectionForce * Power * -1);
+                    StopFieldFlag = false;
 
-                //矢印オフ
-                this.Direction.enabled = false;
+                    TurnCount--;
+                    //弾く
+                    Flip(DirectionForce * Power * -1);
 
-                //発射カウントを減らす
-                MaxShotCount = MaxShotCount - ShotCount;
-
-                //===============================
-                //ゲームオーバー差し込んでくだちい
-                //===============================
+                    //矢印オフ
+                    this.Direction.enabled = false;
 
 
-                //回転アニメーションオン
-                anim.SetBool("Move", true);
+                    //回転アニメーションオン
+                    anim.SetBool("Move", true);
+                }
             }
         }
        
