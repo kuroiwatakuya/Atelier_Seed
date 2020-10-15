@@ -29,6 +29,7 @@ public class CScene_Change : MonoBehaviour
     {
         if (OnlySelect == true)
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene("Stage_Select");
             OnlySelect = false;
         }
@@ -38,6 +39,7 @@ public class CScene_Change : MonoBehaviour
     {
         if (OnlySelect == true)
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene("Title");
             OnlySelect = false;
         }
