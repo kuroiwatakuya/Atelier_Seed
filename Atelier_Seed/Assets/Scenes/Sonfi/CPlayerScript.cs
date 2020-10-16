@@ -82,7 +82,14 @@ public class CPlayerScript : MonoBehaviour
     public int StopFieldCount;
     private bool OnlyStopCount;
 
-    public bool BreakFlag;
+    //壊れるブロックあたった回数
+    public int BreakBlockCount;
+
+    //落ちてるトロフィー獲得したか
+    public bool GetStageTrophy;
+
+    //大砲入る条件用
+    public bool GunTrophyFlag;
 
     // Start is called before the first frame update
 
@@ -111,7 +118,8 @@ public class CPlayerScript : MonoBehaviour
         StopFlag = false;
 
         StopFieldCount = 0;
-        BreakFlag = false;
+
+        GetStageTrophy = false;
 
     }
 
@@ -267,9 +275,11 @@ public class CPlayerScript : MonoBehaviour
             Flip(Direction * 5);
 
             //TapFlag = false;
-
         }
 
+        //*****************************
+        // 壊れるブロック
+        //*****************************
 
 
         TapFlag = false;
@@ -305,42 +315,20 @@ public class CPlayerScript : MonoBehaviour
         {
             StopFieldFlag = true;
         }
-        if (collision.gameObject.name == "BreakBlock")
-        {
-            BreakFlag = true;
-        }
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == GunTag && !GunFlag && !CoolTime)
         {
             GunFlag = true;
+            GunTrophyFlag = true;
         }
 
-        if(GoalScript.Now_StageNum == 1)
+        //トロフィーゲット
+        if (collider.gameObject.name == "Trophy")
         {
-            if (collider.gameObject.name == "Trophy")
-            {
-                Destroy(TrophyObject.gameObject);
-                GoalScript.GetTrophy[2] = true;
-            }
-        }
-
-        if (GoalScript.Now_StageNum == 2)
-        {
-            if (collider.gameObject.name == "Trophy")
-            {
-                Destroy(TrophyObject.gameObject);
-                GoalScript.GetTrophy[3] = true;
-            }
-        }
-        if (GoalScript.Now_StageNum == 3)
-        {
-            if (collider.gameObject.name == "Trophy")
-            {
-                Destroy(TrophyObject.gameObject);
-                GoalScript.GetTrophy[8] = true;
-            }
+            Destroy(TrophyObject.gameObject);
+            GetStageTrophy = true;
         }
     }
 }

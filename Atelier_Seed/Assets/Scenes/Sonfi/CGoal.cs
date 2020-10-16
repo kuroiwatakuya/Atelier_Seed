@@ -48,34 +48,81 @@ public class CGoal : MonoBehaviour
                 {
                     GetTrophy[1] = true;
                 }
+
+                if (PlayerScript.GetStageTrophy)
+                {
+                    GetTrophy[2] = true;
+                }
             }
             //ステージ2クリア条件
             if (Now_StageNum == 2)
             {
 
-                if(PlayerScript.StopFieldCount <= 0)
+                if (PlayerScript.GetStageTrophy)
                 {
-                    GetTrophy[5] = true;
+                    GetTrophy[3] = true;
                 }
-
                 //３回以内にクリア
                 if (PlayerScript.PlayCount >= 3)
                 {
                     GetTrophy[4] = true;
                 }
+                if (PlayerScript.StopFieldCount <= 0)
+                {
+                    GetTrophy[5] = true;
+                }
             }
             //ステージ3クリア条件
             if (Now_StageNum == 3)
             {
-                if(!PlayerScript.BreakFlag)
-                {
-                    GetTrophy[7] = true;
-                }
-
                 //３回以内にクリア
                 if (PlayerScript.PlayCount >= 1)
                 {
                     GetTrophy[6] = true;
+                }
+                if (PlayerScript.BreakBlockCount <= 0)
+                {
+                    GetTrophy[7] = true;
+                }
+
+                if (PlayerScript.GetStageTrophy)
+                {
+                    GetTrophy[8] = true;
+                }
+            }
+            //ステージ4クリア条件
+            if (Now_StageNum == 4)
+            {
+
+                if (PlayerScript.GetStageTrophy)
+                {
+                    GetTrophy[9] = true;
+                }
+                //5回以内にクリア
+                if (PlayerScript.PlayCount >= 3)
+                {
+                    GetTrophy[10] = true;
+                }
+                if (PlayerScript.BreakBlockCount >= 2)
+                {
+                    GetTrophy[11] = true;
+                }
+            }
+            //ステージ5クリア条件
+            if (Now_StageNum == 5)
+            {
+                //4回以内にクリア
+                if (PlayerScript.PlayCount >= 4)
+                {
+                    GetTrophy[12] = true;
+                }
+                if (PlayerScript.BreakBlockCount <= 0)
+                {
+                    GetTrophy[13] = true;
+                }
+                if (PlayerScript.GunTrophyFlag)
+                {
+                    GetTrophy[14] = true;
                 }
             }
 
