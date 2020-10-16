@@ -983,6 +983,7 @@ MonoBehaviour:
   Clear_Flag: 0
   PlayerScript: {fileID: 402273369}
   GetTrophy: 000000000000000000000000000000
+  OldTrophy: 000000000000000000000000000000
 --- !u!61 &769798544
 BoxCollider2D:
   m_ObjectHideFlags: 0

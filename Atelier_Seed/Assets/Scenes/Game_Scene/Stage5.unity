@@ -488,6 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 607617561}
+  BreakEffect: {fileID: 0}
   Power: 0
 --- !u!1 &322380471
 GameObject:
@@ -1498,6 +1499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 607617561}
+  BreakEffect: {fileID: 0}
   Power: 0
 --- !u!1 &872674416
 GameObject:
@@ -1657,6 +1659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 607617561}
+  BreakEffect: {fileID: 0}
   Power: 0
 --- !u!61 &941775752
 BoxCollider2D:
@@ -4920,6 +4923,7 @@ MonoBehaviour:
   Clear_Flag: 0
   PlayerScript: {fileID: 607617563}
   GetTrophy: 000000000000000000000000000000
+  OldTrophy: 000000000000000000000000000000
 --- !u!58 &1892877179
 CircleCollider2D:
   m_ObjectHideFlags: 0

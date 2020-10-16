@@ -5,11 +5,14 @@ using UnityEngine;
 public class CResult : MonoBehaviour
 {
 
+    public GameObject[] NewTrophySprite;
     public GameObject[] TrophySprite;
     public GameObject[] NotTrophySprite;
+
     public GameObject[] StageConditions;
 
     public bool[] GetTrophy;
+    public bool[] OldGetTrophy;
 
     private int StageNum;
 
@@ -22,6 +25,10 @@ public class CResult : MonoBehaviour
         for (int i = 0; i <= 14; i++)
         {
             GetTrophy[i] = CSaveBool.GetBool("Trophy" + i, false);
+        }
+        for (int i = 0; i <= 14; i++)
+        {
+            OldGetTrophy[i] = CSaveBool.GetBool("OldTrophy" + i, false);
         }
 
         for (int i = 0; i <= 4; i++)
@@ -43,11 +50,23 @@ public class CResult : MonoBehaviour
         {
             if(GetTrophy[i])
             {
-                TrophySprite[i].SetActive(true);
-                NotTrophySprite[i].SetActive(false);
+                if(OldGetTrophy[i] != GetTrophy[i])
+                {
+                    NewTrophySprite[i].SetActive(true);
+                    TrophySprite[i].SetActive(false);
+                    NotTrophySprite[i].SetActive(false);
+                    OldGetTrophy[i] = GetTrophy[i];
+                }
+                else
+                {
+                    NewTrophySprite[i].SetActive(false);
+                    TrophySprite[i].SetActive(true);
+                    NotTrophySprite[i].SetActive(false);
+                }
             }
             else
             {
+                NewTrophySprite[i].SetActive(false);
                 TrophySprite[i].SetActive(false);
                 NotTrophySprite[i].SetActive(true);
             }

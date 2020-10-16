@@ -14,6 +14,7 @@ public class CGoal : MonoBehaviour
 
     //トロフィー獲得済みか
     public bool[] GetTrophy;
+    public bool[] OldTrophy;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class CGoal : MonoBehaviour
         for (int i = 0; i <= 14; i++)
         {
             GetTrophy[i] = CSaveBool.GetBool("Trophy" + i, false);
+            OldTrophy[i] = GetTrophy[i];
         }
 
     }
@@ -132,6 +134,10 @@ public class CGoal : MonoBehaviour
             for(int i = 0; i <= 14; i++)
             {
                 CSaveBool.SetBool("Trophy"+i, GetTrophy[i]);
+            }
+            for (int i = 0; i <= 14; i++)
+            {
+                CSaveBool.SetBool("OldTrophy" + i, OldTrophy[i]);
             }
 
             //PlayerPrefsをセーブする         
