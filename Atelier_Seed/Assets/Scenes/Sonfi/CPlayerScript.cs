@@ -20,8 +20,9 @@ public class CPlayerScript : MonoBehaviour
     [SerializeField] private GameObject ShotEffect;
     [SerializeField] private GameObject GunEnterEffect;
     [SerializeField] private GameObject GunShootEffect;
-    [SerializeField] private Quaternion GunRotate;
+    public Quaternion GunRotate;
     private Vector3 EffectPosition;
+    private GameObject GunFind;
     //---宮本加筆ここまで------------------------------
 
 
@@ -133,6 +134,10 @@ public class CPlayerScript : MonoBehaviour
         ShotEffect = (GameObject)Resources.Load("Effect_PlayerShot");
         GunEnterEffect = (GameObject)Resources.Load("Effect_GunEnter");
         GunShootEffect = (GameObject)Resources.Load("Effect_GunShoot");
+        if (GunFind == null)
+        {
+            GunFind = GameObject.FindWithTag("Gun");
+        }
         //---宮本加筆ここまで------------------------------
 
     }
@@ -154,7 +159,10 @@ public class CPlayerScript : MonoBehaviour
     {
         //---宮本加筆ここから------------------------------
         EffectPosition = this.transform.position;
-        GunRotate = GameObject.Find("Gun").transform.rotation;
+        if (GunFind != null)
+        {
+            GunRotate = GunObject.transform.rotation;
+        }
         //---宮本加筆ここまで------------------------------
 
         if (Input.GetMouseButtonDown(0) && !TapFlag && GunFlag)

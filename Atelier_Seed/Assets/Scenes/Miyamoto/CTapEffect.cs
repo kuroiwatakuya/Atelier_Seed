@@ -41,7 +41,7 @@ public class CTapEffect : MonoBehaviour
 
 
             // エフェクトを生成
-            Instantiate(TapEffectObject, new Vector3(EffectPos.x, EffectPos.y, EffectPos.z), Quaternion.identity);
+            Instantiate(TapEffectObject, EffectPos, Quaternion.identity);
         }
     }
 }
