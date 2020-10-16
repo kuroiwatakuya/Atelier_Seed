@@ -15,12 +15,16 @@ public class CPlayerScript : MonoBehaviour
     //*********************
     public GameObject GunObject;
     public GameObject GunPlayerPosition;
+    public GameObject TrophyObject;
 
     //************
     //対象タグ
     //************
     public string StopBlockTag;
     public string GunTag;
+
+    //他スクリプト
+    public CGoal GoalScript;
 
     //********************
     // コンポーネント
@@ -75,11 +79,16 @@ public class CPlayerScript : MonoBehaviour
 
     //止まるブロックに接触してるか
     private bool StopFieldFlag;
+    public int StopFieldCount;
+    private bool OnlyStopCount;
+
+    public bool BreakFlag;
+
     // Start is called before the first frame update
 
     //アニメーション用変数
     private Animator anim = null;
-    
+
     void Start()
     {
         Rbody = this.GetComponent<Rigidbody2D>();
@@ -100,6 +109,10 @@ public class CPlayerScript : MonoBehaviour
         GunFlag = false;
         TapFlag = false;
         StopFlag = false;
+
+        StopFieldCount = 0;
+        BreakFlag = false;
+
     }
 
     //マウス座標をワールド座標に変換して取得
@@ -212,13 +225,21 @@ public class CPlayerScript : MonoBehaviour
             Rbody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 
+        //********************************************************************
         //くっつくギミック
+        //********************************************************************
         if (StopFieldFlag)
         {
+            if(!OnlyStopCount)
+            {
+                StopFieldCount++;
+            }
+            OnlyStopCount = true;
             Rbody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
         else
         {
+            OnlyStopCount = false;
             Rbody.constraints = RigidbodyConstraints2D.None;
         }
 
@@ -284,12 +305,42 @@ public class CPlayerScript : MonoBehaviour
         {
             StopFieldFlag = true;
         }
+        if (collision.gameObject.name == "BreakBlock")
+        {
+            BreakFlag = true;
+        }
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == GunTag && !GunFlag && !CoolTime)
         {
             GunFlag = true;
+        }
+
+        if(GoalScript.Now_StageNum == 1)
+        {
+            if (collider.gameObject.name == "Trophy")
+            {
+                Destroy(TrophyObject.gameObject);
+                GoalScript.GetTrophy[2] = true;
+            }
+        }
+
+        if (GoalScript.Now_StageNum == 2)
+        {
+            if (collider.gameObject.name == "Trophy")
+            {
+                Destroy(TrophyObject.gameObject);
+                GoalScript.GetTrophy[3] = true;
+            }
+        }
+        if (GoalScript.Now_StageNum == 3)
+        {
+            if (collider.gameObject.name == "Trophy")
+            {
+                Destroy(TrophyObject.gameObject);
+                GoalScript.GetTrophy[8] = true;
+            }
         }
     }
 }
