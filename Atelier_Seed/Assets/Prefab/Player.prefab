@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!70 &4247551374859874011
@@ -224,7 +224,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!70 &4586358145724039442
@@ -478,8 +478,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GunObject: {fileID: 0}
   GunPlayerPosition: {fileID: 0}
+  TrophyObject: {fileID: 0}
+  ShotEffect: {fileID: 5664917040781186869, guid: 816561f59d8fb664788d514a34e303a0, type: 3}
+  GunEnterEffect: {fileID: 7505187921048583444, guid: 4dbd2d4f0ed877d449edfeec1c857c01, type: 3}
+  GunShootEffect: {fileID: 5222335967982672262, guid: 5a582f49ffd7010458fb072bb65682e2, type: 3}
+  GunRotate: {x: 0, y: 0, z: 0, w: 0}
   StopBlockTag: StopFieldTag
   GunTag: Gun
+  GoalScript: {fileID: 0}
   Direction: {fileID: 8482991219702913122}
   Power: 20
   MaxMagnitude: 5
@@ -492,6 +498,10 @@ MonoBehaviour:
   PlayFlag: 0
   ClickFlag: 0
   CoolTime: 0
+  StopFieldCount: 0
+  BreakBlockCount: 0
+  GetStageTrophy: 0
+  GunTrophyFlag: 0
 --- !u!212 &8482991219431080184
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -766,7 +776,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!70 &1468302318915996195
@@ -908,7 +918,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!70 &1428561812756063625

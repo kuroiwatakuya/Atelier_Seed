@@ -16,6 +16,14 @@ public class CPlayerScript : MonoBehaviour
     public GameObject GunObject;
     public GameObject GunPlayerPosition;
     public GameObject TrophyObject;
+    //---宮本加筆ここから------------------------------
+    [SerializeField] private GameObject ShotEffect;
+    [SerializeField] private GameObject GunEnterEffect;
+    [SerializeField] private GameObject GunShootEffect;
+    [SerializeField] private Quaternion GunRotate;
+    private Vector3 EffectPosition;
+    //---宮本加筆ここまで------------------------------
+
 
     //************
     //対象タグ
@@ -121,6 +129,12 @@ public class CPlayerScript : MonoBehaviour
 
         GetStageTrophy = false;
 
+        //---宮本加筆ここから------------------------------
+        ShotEffect = (GameObject)Resources.Load("Effect_PlayerShot");
+        GunEnterEffect = (GameObject)Resources.Load("Effect_GunEnter");
+        GunShootEffect = (GameObject)Resources.Load("Effect_GunShoot");
+        //---宮本加筆ここまで------------------------------
+
     }
 
     //マウス座標をワールド座標に変換して取得
@@ -137,7 +151,12 @@ public class CPlayerScript : MonoBehaviour
     
     // Update is called once per frame
     void Update()
-    { 
+    {
+        //---宮本加筆ここから------------------------------
+        EffectPosition = this.transform.position;
+        GunRotate = GameObject.Find("Gun").transform.rotation;
+        //---宮本加筆ここまで------------------------------
+
         if (Input.GetMouseButtonDown(0) && !TapFlag && GunFlag)
         {
             //大砲用タップ
@@ -195,6 +214,11 @@ public class CPlayerScript : MonoBehaviour
                     TurnCount--;
                     //弾く
                     Flip(DirectionForce * Power * -1);
+
+                    //---宮本加筆ここから------------------------------
+                    // ショットエフェクト発生
+                    Instantiate(ShotEffect, EffectPosition, Quaternion.identity);
+                    //---宮本加筆ここまで------------------------------
 
                     //矢印オフ
                     this.Direction.enabled = false;
@@ -264,6 +288,10 @@ public class CPlayerScript : MonoBehaviour
 
         if (TapFlag)
         {
+            //---宮本加筆ここから------------------------------
+            // 大砲発射エフェクト発生
+            Instantiate(GunShootEffect, EffectPosition, Quaternion.Euler(GunRotate.x, GunRotate.y, GunRotate.z * 100));
+            //---宮本加筆ここまで------------------------------
 
             SpriteRenderer.color = new Color(1, 1, 1, 1);
 
@@ -322,6 +350,11 @@ public class CPlayerScript : MonoBehaviour
         {
             GunFlag = true;
             GunTrophyFlag = true;
+
+            //---宮本加筆ここから------------------------------
+            // 大砲エントリーエフェクト発生
+            Instantiate(GunEnterEffect, EffectPosition, Quaternion.Euler(GunRotate.x, GunRotate.y, GunRotate.z * 100));
+            //---宮本加筆ここまで------------------------------
         }
 
         //トロフィーゲット
