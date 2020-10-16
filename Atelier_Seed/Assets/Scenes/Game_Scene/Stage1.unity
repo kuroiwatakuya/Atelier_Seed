@@ -417,6 +417,10 @@ PrefabInstance:
       propertyPath: TrophyObject
       value: 
       objectReference: {fileID: 1898392631}
+    - target: {fileID: 8482991219839084995, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: Player_GetTrophy
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
 --- !u!1 &325072134 stripped
