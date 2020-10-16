@@ -393,7 +393,6 @@ public class CPlayerScript : MonoBehaviour
         if (collider.gameObject.name == "Trophy")
         {
             audioSource.PlayOneShot(Player_GetTrophy);      //トロフィーをとった時のSE
-            Destroy(TrophyObject.gameObject);
             GetStageTrophy = true;
         }
     }
