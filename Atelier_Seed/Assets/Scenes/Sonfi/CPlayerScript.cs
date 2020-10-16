@@ -105,6 +105,14 @@ public class CPlayerScript : MonoBehaviour
     //アニメーション用変数
     private Animator anim = null;
 
+    //SE変数
+    [SerializeField] private AudioClip Player_Touch;      //プレイヤータッチ用SE変数
+    [SerializeField] private AudioClip Player_Jump;       //プレイヤーを飛ばしたときのSE変数
+    [SerializeField] private AudioClip Player_Hit;          //プレイヤーが壁に当たった時のSE変数
+    [SerializeField] private AudioClip Player_Pull;         //プレイヤーを引っ張るときのSE変数
+    [SerializeField] private AudioClip Player_Sit;           //プレイヤーがくっつく壁に当たった時のSE変数
+    AudioSource audioSource;            //オーディオソース
+    
     void Start()
     {
         Rbody = this.GetComponent<Rigidbody2D>();
@@ -115,6 +123,9 @@ public class CPlayerScript : MonoBehaviour
 
         //子のアニメーション取得
         anim = GameObject.Find("PlayerSprite").GetComponent<Animator>();
+
+        //オーディオソース取得
+        audioSource = GetComponent<AudioSource>();
         
         this.MainCamera = Camera.main;
         this.MainCameraTransform = this.MainCamera.transform;
@@ -180,6 +191,9 @@ public class CPlayerScript : MonoBehaviour
                 ClickFlag = true;
                 DragStart = GetMousePosition();
 
+                //プレイヤーをタップしたときに鳴らす
+                audioSource.PlayOneShot(Player_Touch);
+
                 //矢印フラグ
                 this.Direction.enabled = true;
                 this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
@@ -192,13 +206,14 @@ public class CPlayerScript : MonoBehaviour
             if (ClickFlag)
             {
                 Vector2 position = GetMousePosition();
-                DirectionForce = position - DragStart;      
+                DirectionForce = position - DragStart;
 
                 if (DirectionForce.magnitude > MaxMagnitude )
                 {
                     DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
+                    audioSource.PlayOneShot(Player_Pull);
                 }
-                
+
                 this.Direction.SetPosition(0, Rbody.position);//矢印の位置
                 this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
 
@@ -208,13 +223,18 @@ public class CPlayerScript : MonoBehaviour
         //マウスを離したとき
         if (Input.GetMouseButtonUp(0))
         {
+            //プレイヤーを飛ばすSE
+            audioSource.PlayOneShot(Player_Jump);
+
             //クリックフラグがオンなら
             if (ClickFlag)
             {
                 ClickFlag = false;
 
+                
                 if (DirectionForce.magnitude >= MinMagnitude)
                 {
+                    
                     PlayFlag = true;
 
                     StopFieldFlag = false;
@@ -350,6 +370,7 @@ public class CPlayerScript : MonoBehaviour
         if (collision.gameObject.tag == StopBlockTag && !StopFieldFlag)
         {
             StopFieldFlag = true;
+            audioSource.PlayOneShot(Player_Sit);
         }
     }
     void OnTriggerEnter2D(Collider2D collider)
