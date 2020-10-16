@@ -106,11 +106,12 @@ public class CPlayerScript : MonoBehaviour
     private Animator anim = null;
 
     //SE変数
-    [SerializeField] private AudioClip Player_Touch;      //プレイヤータッチ用SE変数
-    [SerializeField] private AudioClip Player_Jump;       //プレイヤーを飛ばしたときのSE変数
-    [SerializeField] private AudioClip Player_Hit;          //プレイヤーが壁に当たった時のSE変数
-    [SerializeField] private AudioClip Player_Pull;         //プレイヤーを引っ張るときのSE変数
-    [SerializeField] private AudioClip Player_Sit;           //プレイヤーがくっつく壁に当たった時のSE変数
+    [SerializeField] private AudioClip Player_Touch;          //プレイヤータッチ用SE変数
+    [SerializeField] private AudioClip Player_Jump;           //プレイヤーを飛ばしたときのSE変数
+    [SerializeField] private AudioClip Player_Hit;               //プレイヤーが壁に当たった時のSE変数
+    [SerializeField] private AudioClip Player_Pull;              //プレイヤーを引っ張るときのSE変数
+    [SerializeField] private AudioClip Player_Sit;               //プレイヤーがくっつく壁に当たった時のSE変数
+    [SerializeField] private AudioClip Player_GetTrophy;    //プレイヤーがトロフィーを取得したときのSE変数
     AudioSource audioSource;            //オーディオソース
     
     void Start()
@@ -367,10 +368,12 @@ public class CPlayerScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        audioSource.PlayOneShot(Player_Hit);        //プレイヤーが壁に当たったとき
+
         if (collision.gameObject.tag == StopBlockTag && !StopFieldFlag)
         {
             StopFieldFlag = true;
-            audioSource.PlayOneShot(Player_Sit);
+            audioSource.PlayOneShot(Player_Sit);        //くっつくSE
         }
     }
     void OnTriggerEnter2D(Collider2D collider)
@@ -389,6 +392,7 @@ public class CPlayerScript : MonoBehaviour
         //トロフィーゲット
         if (collider.gameObject.name == "Trophy")
         {
+            audioSource.PlayOneShot(Player_GetTrophy);      //トロフィーをとった時のSE
             Destroy(TrophyObject.gameObject);
             GetStageTrophy = true;
         }
