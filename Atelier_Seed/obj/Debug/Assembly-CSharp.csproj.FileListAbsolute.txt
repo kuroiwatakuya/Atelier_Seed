@@ -631,4 +631,3 @@ C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\Temp\bin\Debug\Unity
 C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\Temp\bin\Debug\UnityEditor.TestRunner.pdb
 C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\obj\Debug\Assembly-CSharp.pdb
-C:\Users\kuror\OneDrive\Documents\Atelier_Seed\Atelier_Seed\Temp\Bin\Debug\Assembly-CSharp-firstpass.pdb
