@@ -15,6 +15,10 @@ public class CStageSelect : MonoBehaviour
 
     bool OnlySelect = true;     // キーの多重処理防止
 
+    //ステージ決定SE変数
+    public AudioClip SelectSE;
+    AudioSource AudioSource;
+
     //ボタン
     public Button Stage1;
     public Button Stage2;
@@ -32,6 +36,9 @@ public class CStageSelect : MonoBehaviour
             Liberation_StageNum = BeforeStage;
             Liberation_StageNum++;
         }
+
+        //ステージ選択SE取得
+        AudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -87,9 +94,15 @@ public class CStageSelect : MonoBehaviour
     {
         if (OnlySelect == true)
         {
+            //SEを流す処理
+            AudioSource.PlayOneShot(SelectSE);
+
             PlayerPrefs.SetInt("LIBERATION_STAGENUM", Liberation_StageNum);
             SceneManager.LoadScene(StageNumber);
             OnlySelect = false;
+
+            //SEを破壊しないようにする
+            DontDestroyOnLoad(SelectSE);
         }
     }
 }
