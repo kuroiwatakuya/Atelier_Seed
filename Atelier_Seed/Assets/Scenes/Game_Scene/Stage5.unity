@@ -2059,6 +2059,10 @@ PrefabInstance:
       propertyPath: PlayCount
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8482991219839084995, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: GoalScript
+      value: 
+      objectReference: {fileID: 1892877178}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
 --- !u!1 &1209831706
@@ -4735,6 +4739,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Now_StageNum: 5
   Clear_Flag: 0
+  PlayerScript: {fileID: 607617563}
+  GetTrophy: 000000000000000000000000000000
 --- !u!58 &1892877179
 CircleCollider2D:
   m_ObjectHideFlags: 0
