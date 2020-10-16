@@ -114,7 +114,7 @@ public class CPlayerScript : MonoBehaviour
 
         //子のアニメーション取得
         anim = GameObject.Find("PlayerSprite").GetComponent<Animator>();
-
+        
         this.MainCamera = Camera.main;
         this.MainCameraTransform = this.MainCamera.transform;
 
