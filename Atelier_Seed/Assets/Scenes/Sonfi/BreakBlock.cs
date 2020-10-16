@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BreakBlock : MonoBehaviour
 {
 
     public GameObject Player;
-
+    //---宮本加筆ここから------------------------------
+    [SerializeField] private GameObject BreakEffect;
+    private Vector3 EffectPosition;
+    //---宮本加筆ここまで------------------------------
     public float Power;
 
     //プレイヤースクリプト
@@ -28,6 +32,22 @@ public class BreakBlock : MonoBehaviour
         {
             BreakFlag = false;
             PlayerScript.BreakBlockCount++;
+            //---宮本加筆ここから------------------------------
+            EffectPosition = this.transform.position;
+            if (SceneManager.GetActiveScene().name == "Stage3")
+            {
+                BreakEffect = (GameObject)Resources.Load("Effect_BreakCookies");
+            }
+            if (SceneManager.GetActiveScene().name == "Stage4")
+            {
+                BreakEffect = (GameObject)Resources.Load("Effect_BreakPipe");
+            }
+            if (SceneManager.GetActiveScene().name == "Stage5")
+            {
+                BreakEffect = (GameObject)Resources.Load("Effect_BreakTree");
+            }
+            Instantiate(BreakEffect, EffectPosition, Quaternion.identity);
+            //---宮本加筆ここから------------------------------
             Destroy(this.gameObject);
         }
     }

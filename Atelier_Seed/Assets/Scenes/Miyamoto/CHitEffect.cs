@@ -70,13 +70,13 @@ public class CHitEffect : MonoBehaviour
         // 普通の壁とか
         if (coll.gameObject.tag == "PlayerCrush")
         {
-            Instantiate(HitEffectObject, new Vector3(Effpos.x, Effpos.y, Effpos.z), Quaternion.identity);
+            Instantiate(HitEffectObject, Effpos, Quaternion.identity);
         }
 
         // 粘着質ブロック
         if (coll.gameObject.tag == "StopFieldTag")
         {
-            Instantiate(HitSplashObject, new Vector3(Effpos.x, Effpos.y, Effpos.z), Quaternion.identity);
+            Instantiate(HitSplashObject, Effpos, Quaternion.identity);
         }
     }
 }
