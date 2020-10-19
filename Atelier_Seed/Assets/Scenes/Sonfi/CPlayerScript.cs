@@ -24,6 +24,8 @@ public class CPlayerScript : MonoBehaviour
     private Vector3 EffectPosition;                         // エフェクト生成座標
     private GameObject GunFind;                             // Gun発見用オブジェクト
     private Transform ShotPool;                             // オブジェクト保存用空オブジェクトのtransform
+    private Transform GunEnterPool;                         // 同上（Gun進入用）
+    private Transform GunShootPool;                         // 同上（Gun発射用）
     //---宮本加筆ここまで------------------------------
 
 
@@ -151,7 +153,9 @@ public class CPlayerScript : MonoBehaviour
         {
             GunFind = GameObject.FindWithTag("Gun");                    // Gunオブジェクト検索
         }
-        ShotPool = new GameObject("Shot").transform;                    // ショット関係エフェクトオブジェクト生成
+        ShotPool = new GameObject("PlayerShot").transform;              // プレイヤーショットエフェクトオブジェクト生成
+        GunEnterPool = new GameObject("GunEntry").transform;            // Gunに入った時のエフェクトオブジェクト生成
+        GunShootPool = new GameObject("GunShoot").transform;            // Gun射出時のエフェクトオブジェクト生成
         //---宮本加筆ここまで------------------------------
 
     }
@@ -248,7 +252,7 @@ public class CPlayerScript : MonoBehaviour
 
                     //---宮本加筆ここから------------------------------
                     // ショットエフェクト発生
-                    GetObject(ShotEffect, EffectPosition, Quaternion.identity);
+                    GetPlayerShotObject(ShotEffect, EffectPosition, Quaternion.identity);
                     //---宮本加筆ここまで------------------------------
 
                     //矢印オフ
@@ -321,7 +325,7 @@ public class CPlayerScript : MonoBehaviour
         {
             //---宮本加筆ここから------------------------------
             // 大砲発射エフェクト発生
-            GetObject(GunShootEffect, EffectPosition, Quaternion.Euler(GunRotate.x, GunRotate.y, GunRotate.z * 100));
+            GetGunShootObject(GunShootEffect, EffectPosition, Quaternion.Euler(GunRotate.x, GunRotate.y, GunRotate.z * 100));
             //---宮本加筆ここまで------------------------------
 
             SpriteRenderer.color = new Color(1, 1, 1, 1);
@@ -387,7 +391,7 @@ public class CPlayerScript : MonoBehaviour
 
             //---宮本加筆ここから------------------------------
             // 大砲エントリーエフェクト発生
-            GetObject(GunEnterEffect, EffectPosition, Quaternion.Euler(GunRotate.x, GunRotate.y, GunRotate.z * 100));
+            GetGunEnterObject(GunEnterEffect, EffectPosition, Quaternion.Euler(GunRotate.x, GunRotate.y, GunRotate.z * 100));
             //---宮本加筆ここまで------------------------------
         }
 
@@ -401,7 +405,7 @@ public class CPlayerScript : MonoBehaviour
 
     //---宮本加筆ここから------------------------------
     // // ゲームオブジェクトのアクティブ判別と生成 // //
-    void GetObject(GameObject obj, Vector3 pos, Quaternion qua)
+    void GetPlayerShotObject(GameObject obj, Vector3 pos, Quaternion qua)
     {
         foreach (Transform transform in ShotPool)
         {
@@ -416,6 +420,40 @@ public class CPlayerScript : MonoBehaviour
 
         // 非アクティブなオブジェクトがなければ生成する
         Instantiate(obj, pos, qua, ShotPool);
+    }
+
+    void GetGunEnterObject(GameObject obj, Vector3 pos, Quaternion qua)
+    {
+        foreach (Transform transform in GunEnterPool)
+        {
+            // オブジェクトが非アクティブなら使いまわし
+            if (!transform.gameObject.activeSelf)
+            {
+                transform.SetPositionAndRotation(pos, qua);
+                transform.gameObject.SetActive(true);
+                return;
+            }
+        }
+
+        // 非アクティブなオブジェクトがなければ生成する
+        Instantiate(obj, pos, qua, GunEnterPool);
+    }
+
+    void GetGunShootObject(GameObject obj, Vector3 pos, Quaternion qua)
+    {
+        foreach (Transform transform in GunShootPool)
+        {
+            // オブジェクトが非アクティブなら使いまわし
+            if (!transform.gameObject.activeSelf)
+            {
+                transform.SetPositionAndRotation(pos, qua);
+                transform.gameObject.SetActive(true);
+                return;
+            }
+        }
+
+        // 非アクティブなオブジェクトがなければ生成する
+        Instantiate(obj, pos, qua, GunShootPool);
     }
     //---宮本加筆ここまで------------------------------
 }
