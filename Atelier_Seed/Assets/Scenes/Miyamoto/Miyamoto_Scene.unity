@@ -2508,9 +2508,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8482991219431080166, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8482991219431080185, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.6
+      value: 0.87
       objectReference: {fileID: 0}
     - target: {fileID: 8482991219431080185, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2564,6 +2568,30 @@ PrefabInstance:
       propertyPath: PlayCount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 8482991219839084995, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: Player_Touch
+      value: 
+      objectReference: {fileID: 8300000, guid: f92691ba9d8c85842a6a1d18dbbb7825, type: 3}
+    - target: {fileID: 8482991219839084995, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: Player_Jump
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b689ace435e0674e9290a0bdeac311d, type: 3}
+    - target: {fileID: 8482991219839084995, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: Player_Pull
+      value: 
+      objectReference: {fileID: 8300000, guid: e5dab2740cb5db74eaf188b7a98f4153, type: 3}
+    - target: {fileID: 8482991219839084995, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: Player_Sit
+      value: 
+      objectReference: {fileID: 8300000, guid: b27fa8037c36e124c8815aec1d4a6157, type: 3}
+    - target: {fileID: 8482991219839084995, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: Player_GetTrophy
+      value: 
+      objectReference: {fileID: 8300000, guid: cfaeb692bd2b88f4388a1dc07d3d3df4, type: 3}
+    - target: {fileID: 8482991219839084995, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: Player_Hit
+      value: 
+      objectReference: {fileID: 8300000, guid: af41f14738518804da8dbe9d857d70a7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
 --- !u!1 &594533197
