@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4093840180232369403}
   - component: {fileID: 8884523558321841914}
   - component: {fileID: 2115091040991801380}
+  - component: {fileID: 2380035179881662174}
   m_Layer: 0
-  m_Name: GunEnter
+  m_Name: Effect_GunEnter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +44,7 @@ ParticleSystem:
   serializedVersion: 6
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 3
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4871,6 +4872,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2380035179881662174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7505187921048583444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcb91a6fe9e7aa40ba532fc5dd61455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8026418908377108824
 GameObject:
   m_ObjectHideFlags: 0
@@ -4913,7 +4926,7 @@ ParticleSystem:
   serializedVersion: 6
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 3
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}

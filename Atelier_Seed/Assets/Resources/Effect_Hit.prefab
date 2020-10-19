@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8094350029990553572}
   - component: {fileID: 6553263634077207175}
   - component: {fileID: 2551310308357910011}
+  - component: {fileID: 1832207199092899402}
   m_Layer: 0
-  m_Name: HitEffect
+  m_Name: Effect_Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +43,7 @@ ParticleSystem:
   serializedVersion: 6
   lengthInSec: 0.5
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 3
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4870,3 +4871,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &1832207199092899402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3558793057052035132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcb91a6fe9e7aa40ba532fc5dd61455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
