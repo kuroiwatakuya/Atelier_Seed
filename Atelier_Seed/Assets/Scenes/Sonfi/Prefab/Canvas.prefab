@@ -148,6 +148,7 @@ MonoBehaviour:
   OptionFrag: 0
   Pause: {fileID: 5236168691594457477}
   OptionSE: {fileID: 8300000, guid: f82460c43eb51724e8c7ece2e348bd77, type: 3}
+  OptionCancelSE: {fileID: 0}
 --- !u!82 &7459915093860141500
 AudioSource:
   m_ObjectHideFlags: 0
