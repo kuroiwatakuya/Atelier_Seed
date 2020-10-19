@@ -37,13 +37,6 @@ public class CStageSelect : MonoBehaviour
             Liberation_StageNum++;
         }
 
-        //ステージ選択SE取得
-        AudioSource = GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         if (Liberation_StageNum >= 2)
         {
             Stage2.interactable = true;
@@ -85,6 +78,15 @@ public class CStageSelect : MonoBehaviour
             Stage5.image.color = new Color32(39, 39, 39, 255);
 
         }
+
+        //ステージ選択SE取得
+        AudioSource = GetComponent<AudioSource>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 
     //**********************************

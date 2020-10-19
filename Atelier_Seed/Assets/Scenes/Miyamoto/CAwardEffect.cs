@@ -28,16 +28,15 @@ public class CAwardEffect : MonoBehaviour
     // 拡大最大値
     [SerializeField] private float MaxScale = 1.0f;
 
-
-    // 仮・取得判定
-    private bool Get = false;
-    private bool EffectRun = false;
+    
+    private bool EffectRun;
 
 
     // // 初期化 // //
     void Start()
     {
         AwardEffectObject = (GameObject)Resources.Load("Effect_Award");
+        EffectRun = true;
     }
 
 
@@ -46,50 +45,31 @@ public class CAwardEffect : MonoBehaviour
     {
         // トランスフォーム取得
         Transform thisTransform = this.transform;
+        // 拡大させる
+        Scale.x += ExpandSpeed * Time.deltaTime;
+        Scale.y += ExpandSpeed * Time.deltaTime;
 
-        // 仮・取得判定ＯＦＦなら
-        if(!Get)
+
+        // エフェクト生成（一回だけ）
+        if (EffectRun)
         {
-            Scale = new Vector3(0.0f, 0.0f, 0.0f);
-            thisTransform.localScale = Scale;
+            Instantiate(AwardEffectObject, new Vector3(thisTransform.position.x, thisTransform.position.y, thisTransform.position.z), Quaternion.identity);
+            EffectRun = false;
         }
 
-        // 仮・取得判定ＯＮなら
-        else
+
+        // 拡大しすぎないように調整
+        if (Scale.x > MaxScale)
         {
-            // 拡大させる
-            Scale.x += ExpandSpeed * Time.deltaTime;
-            Scale.y += ExpandSpeed * Time.deltaTime;
-
-
-            // エフェクト生成（一回だけ）
-            if (EffectRun)
-            {
-                Instantiate(AwardEffectObject, new Vector3(thisTransform.position.x, thisTransform.position.y, thisTransform.position.z), Quaternion.identity);
-                EffectRun = false;
-            }
-
-
-            // 拡大しすぎないように調整
-            if(Scale.x > MaxScale)
-            {
-                Scale.x = MaxScale;
-            }
-
-            if (Scale.y > MaxScale)
-            {
-                Scale.y = MaxScale;
-            }
-
-            // 代入
-            thisTransform.localScale = Scale;
+            Scale.x = MaxScale;
         }
 
-        // 仮・取得判定ON
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Scale.y > MaxScale)
         {
-            Get = true;
-            EffectRun = true;
+            Scale.y = MaxScale;
         }
+
+        // 代入
+        thisTransform.localScale = Scale;
     }
 }

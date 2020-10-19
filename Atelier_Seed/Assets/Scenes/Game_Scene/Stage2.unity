@@ -1147,6 +1147,7 @@ MonoBehaviour:
   Clear_Flag: 0
   PlayerScript: {fileID: 316179359}
   GetTrophy: 000000000000000000000000000000
+  OldTrophy: 000000000000000000000000000000
 --- !u!4 &586433607
 Transform:
   m_ObjectHideFlags: 0
