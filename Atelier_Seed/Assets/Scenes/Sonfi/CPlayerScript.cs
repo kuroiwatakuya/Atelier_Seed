@@ -105,6 +105,9 @@ public class CPlayerScript : MonoBehaviour
     //アニメーション用変数
     private Animator anim = null;
 
+    //タッチ情報の管理
+    Touch touch;    
+
     //SE変数
     [SerializeField] private AudioClip Player_Touch;          //プレイヤータッチ用SE変数
     [SerializeField] private AudioClip Player_Jump;           //プレイヤーを飛ばしたときのSE変数
@@ -112,8 +115,13 @@ public class CPlayerScript : MonoBehaviour
     [SerializeField] private AudioClip Player_Pull;              //プレイヤーを引っ張るときのSE変数
     [SerializeField] private AudioClip Player_Sit;               //プレイヤーがくっつく壁に当たった時のSE変数
     [SerializeField] private AudioClip Player_GetTrophy;    //プレイヤーがトロフィーを取得したときのSE変数
-    AudioSource audioSource;            //オーディオソース
+
+    AudioSource audioSource;                                        //オーディオソース
+    AudioSource PlayerPull_Souce;                                 //プレイヤーを引っ張るSE用(指定したSEを止める)
     
+    //=============================================================
+    //スタート関数
+    //=============================================================
     void Start()
     {
         Rbody = this.GetComponent<Rigidbody2D>();
@@ -127,6 +135,7 @@ public class CPlayerScript : MonoBehaviour
 
         //オーディオソース取得
         audioSource = GetComponent<AudioSource>();
+        PlayerPull_Souce = GetComponent<AudioSource>();
         
         this.MainCamera = Camera.main;
         this.MainCameraTransform = this.MainCamera.transform;
@@ -151,7 +160,6 @@ public class CPlayerScript : MonoBehaviour
             GunFind = GameObject.FindWithTag("Gun");
         }
         //---宮本加筆ここまで------------------------------
-
     }
 
     //マウス座標をワールド座標に変換して取得
@@ -169,96 +177,210 @@ public class CPlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //---宮本加筆ここから------------------------------
-        EffectPosition = this.transform.position;
-        if (GunFind != null)
+        //==============================================
+        //エディターで実行しているとき
+        //==============================================
+        if(Application.isEditor)
         {
-            GunRotate = GunObject.transform.rotation;
-        }
-        //---宮本加筆ここまで------------------------------
-
-        if (Input.GetMouseButtonDown(0) && !TapFlag && GunFlag)
-        {
-            //大砲用タップ
-            TapFlag = true;
-        }
-
-        //マウス左クリック＆タップ
-        if (Input.GetMouseButtonDown(0))
-        {
-            //動いてないかつクリックしてない
-            if (!PlayFlag && !ClickFlag)
+            //---宮本加筆ここから------------------------------
+            EffectPosition = this.transform.position;
+            if (GunFind != null)
             {
-                ClickFlag = true;
-                DragStart = GetMousePosition();
-
-                //プレイヤーをタップしたときに鳴らす
-                audioSource.PlayOneShot(Player_Touch);
-
-                //矢印フラグ
-                this.Direction.enabled = true;
-                this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
-                this.Direction.SetPosition(1, Rbody.position);
+                GunRotate = GunObject.transform.rotation;
             }
-        }
-        if (ClickFlag == true)
-        {
-            //ドラッグ処理
-            if (ClickFlag)
+            //---宮本加筆ここまで------------------------------
+
+            if (Input.GetMouseButtonDown(0) && !TapFlag && GunFlag)
             {
-                Vector2 position = GetMousePosition();
-                DirectionForce = position - DragStart;
-
-                if (DirectionForce.magnitude > MaxMagnitude )
-                {
-                    DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
-                    audioSource.PlayOneShot(Player_Pull);
-                }
-
-                this.Direction.SetPosition(0, Rbody.position);//矢印の位置
-                this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
-
+                //大砲用タップ
+                TapFlag = true;
             }
-        }
-            
-        //マウスを離したとき
-        if (Input.GetMouseButtonUp(0))
-        {
-            //プレイヤーを飛ばすSE
-            audioSource.PlayOneShot(Player_Jump);
 
-            //クリックフラグがオンなら
-            if (ClickFlag)
-            {
-                ClickFlag = false;
-
-                
-                if (DirectionForce.magnitude >= MinMagnitude)
+            //マウス左クリック＆タップ
+            if (Input.GetMouseButtonDown(0))
+            { 
+                //動いてないかつクリックしてない
+                if (!PlayFlag && !ClickFlag)
                 {
-                    
-                    PlayFlag = true;
+                    //デバッグ用
+                    Debug.Log("クリック");
 
-                    StopFieldFlag = false;
+                    ClickFlag = true;
+                    DragStart = GetMousePosition();
 
-                    TurnCount--;
-                    //弾く
-                    Flip(DirectionForce * Power * -1);
+                    //プレイヤーをタップしたときに鳴らす
+                    audioSource.PlayOneShot(Player_Touch);
 
-                    //---宮本加筆ここから------------------------------
-                    // ショットエフェクト発生
-                    Instantiate(ShotEffect, EffectPosition, Quaternion.identity);
-                    //---宮本加筆ここまで------------------------------
-
-                    //矢印オフ
-                    this.Direction.enabled = false;
-
-
-                    //回転アニメーションオン
-                    anim.SetBool("Move", true);
+                    //矢印フラグ
+                    this.Direction.enabled = true;
+                    this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
+                    this.Direction.SetPosition(1, Rbody.position);
                 }
             }
+            if (ClickFlag == true)
+            {
+                //ドラッグ処理
+                if (ClickFlag)
+                {
+                    Vector2 position = GetMousePosition();
+                    DirectionForce = position - DragStart;
+                    Debug.Log("引っ張っています");
+                    if (DirectionForce.magnitude > MaxMagnitude)
+                    {
+                        DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
+                        PlayerPull_Souce.PlayOneShot(Player_Pull);
+                    }
+
+                    this.Direction.SetPosition(0, Rbody.position);//矢印の位置
+                    this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
+
+                }
+            }
+
+            //マウスを離したとき
+            if (Input.GetMouseButtonUp(0))
+            {
+
+                //クリックフラグがオンなら
+                if (ClickFlag)
+                {
+                    ClickFlag = false;
+
+                    PlayerPull_Souce.Stop();
+
+                    //プレイヤーを飛ばすSE
+                    audioSource.PlayOneShot(Player_Jump);
+
+                    if (DirectionForce.magnitude >= MinMagnitude)
+                    {
+
+                        PlayFlag = true;
+
+                        StopFieldFlag = false;
+
+                        TurnCount--;
+                        //弾く
+                        Flip(DirectionForce * Power * -1);
+
+                        //---宮本加筆ここから------------------------------
+                        // ショットエフェクト発生
+                        Instantiate(ShotEffect, EffectPosition, Quaternion.identity);
+                        //---宮本加筆ここまで------------------------------
+
+                        //矢印オフ
+                        this.Direction.enabled = false;
+
+
+                        //回転アニメーションオン
+                        anim.SetBool("Move", true);
+                    }
+                }
+            }
+
         }
-       
+        //================================================
+        //実機で実行しているとき
+        //================================================
+        else
+        {
+            //---宮本加筆ここから------------------------------
+            EffectPosition = this.transform.position;
+            if (GunFind != null)
+            {
+                GunRotate = GunObject.transform.rotation;
+            }
+            //---宮本加筆ここまで------------------------------
+
+            //一本指でのタッチ
+            if (touch.phase == TouchPhase.Began && !TapFlag && GunFlag)     
+            {
+                //大砲用タップ
+                TapFlag = true;
+            }
+
+            //タップ
+            if (touch.phase == TouchPhase.Began) //一本指でタップしているとき
+            {
+                //動いてないかつクリックしてない
+                if (!PlayFlag && !ClickFlag)
+                {
+                    //デバッグ用
+                    Debug.Log("タップしました");
+
+                    ClickFlag = true;
+                    DragStart = touch.position;     //タッチのポジション取得
+
+                    //プレイヤーをタップしたときに鳴らす
+                    audioSource.PlayOneShot(Player_Touch);
+
+                    //矢印フラグ
+                    this.Direction.enabled = true;
+                    this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
+                    this.Direction.SetPosition(1, Rbody.position);
+                }
+            }
+            if (ClickFlag == true)
+            {
+                //ドラッグ処理
+                if (touch.phase == TouchPhase.Moved)        //画面上で指が動いたら
+                {
+                    Vector2 position = touch.position;              //タッチした場所を取得
+                    DirectionForce = position - DragStart;
+
+                    if (DirectionForce.magnitude > MaxMagnitude)
+                    {
+                        DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
+                        PlayerPull_Souce.PlayOneShot(Player_Pull);
+                    }
+
+                    this.Direction.SetPosition(0, Rbody.position);//矢印の位置
+                    this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
+
+                }
+            }
+
+            //指を離したとき
+            if (touch.phase == TouchPhase.Ended)
+            {
+
+                //クリックフラグがオンなら
+                if (ClickFlag)
+                {
+                    ClickFlag = false;
+
+                    PlayerPull_Souce.Stop();
+
+                    //プレイヤーを飛ばすSE
+                    audioSource.PlayOneShot(Player_Jump);
+
+                    if (DirectionForce.magnitude >= MinMagnitude)
+                    {
+
+                        PlayFlag = true;
+
+                        StopFieldFlag = false;
+
+                        TurnCount--;
+                        //弾く
+                        Flip(DirectionForce * Power * -1);
+
+                        //---宮本加筆ここから------------------------------
+                        // ショットエフェクト発生
+                        Instantiate(ShotEffect, EffectPosition, Quaternion.identity);
+                        //---宮本加筆ここまで------------------------------
+
+                        //矢印オフ
+                        this.Direction.enabled = false;
+
+
+                        //回転アニメーションオン
+                        anim.SetBool("Move", true);
+                    }
+                }
+            }
+
+        }
+
     }
 
     void FixedUpdate()
