@@ -197,8 +197,8 @@ public class CPlayerScript : MonoBehaviour
             }
 
             //マウス左クリック＆タップ
-            if (Input.GetMouseButtonDown(0)) //一本指でタップしているとき
-            {
+            if (Input.GetMouseButtonDown(0))
+            { 
                 //動いてないかつクリックしてない
                 if (!PlayFlag && !ClickFlag)
                 {
@@ -224,7 +224,7 @@ public class CPlayerScript : MonoBehaviour
                 {
                     Vector2 position = GetMousePosition();
                     DirectionForce = position - DragStart;
-
+                    Debug.Log("引っ張っています");
                     if (DirectionForce.magnitude > MaxMagnitude)
                     {
                         DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
@@ -298,7 +298,7 @@ public class CPlayerScript : MonoBehaviour
                 TapFlag = true;
             }
 
-            //マウス左クリック＆タップ
+            //タップ
             if (touch.phase == TouchPhase.Began) //一本指でタップしているとき
             {
                 //動いてないかつクリックしてない
