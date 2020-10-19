@@ -17,12 +17,13 @@ public class CPlayerScript : MonoBehaviour
     public GameObject GunPlayerPosition;
     public GameObject TrophyObject;
     //---宮本加筆ここから------------------------------
-    [SerializeField] private GameObject ShotEffect;
-    [SerializeField] private GameObject GunEnterEffect;
-    [SerializeField] private GameObject GunShootEffect;
-    public Quaternion GunRotate;
-    private Vector3 EffectPosition;
-    private GameObject GunFind;
+    [SerializeField] private GameObject ShotEffect;         // プレイヤーショットのエフェクトオブジェクト
+    [SerializeField] private GameObject GunEnterEffect;     // Gunに入った時のエフェクトオブジェクト
+    [SerializeField] private GameObject GunShootEffect;     // Gunショットのエフェクトオブジェクト
+    public Quaternion GunRotate;                            // Gunの回転値
+    private Vector3 EffectPosition;                         // エフェクト生成座標
+    private GameObject GunFind;                             // Gun発見用オブジェクト
+    private Transform ShotPool;                             // オブジェクト保存用空オブジェクトのtransform
     //---宮本加筆ここまで------------------------------
 
 
@@ -143,13 +144,14 @@ public class CPlayerScript : MonoBehaviour
         GetStageTrophy = false;
 
         //---宮本加筆ここから------------------------------
-        ShotEffect = (GameObject)Resources.Load("Effect_PlayerShot");
-        GunEnterEffect = (GameObject)Resources.Load("Effect_GunEnter");
-        GunShootEffect = (GameObject)Resources.Load("Effect_GunShoot");
+        ShotEffect = (GameObject)Resources.Load("Effect_PlayerShot");   // プレイヤーショットエフェクトセット
+        GunEnterEffect = (GameObject)Resources.Load("Effect_GunEnter"); // Gunインエフェクトセット
+        GunShootEffect = (GameObject)Resources.Load("Effect_GunShoot"); // Gunショットエフェクトセット
         if (GunFind == null)
         {
-            GunFind = GameObject.FindWithTag("Gun");
+            GunFind = GameObject.FindWithTag("Gun");                    // Gunオブジェクト検索
         }
+        ShotPool = new GameObject("Shot").transform;                    // ショット関係エフェクトオブジェクト生成
         //---宮本加筆ここまで------------------------------
 
     }
@@ -170,10 +172,10 @@ public class CPlayerScript : MonoBehaviour
     void Update()
     {
         //---宮本加筆ここから------------------------------
-        EffectPosition = this.transform.position;
+        EffectPosition = this.transform.position;       // 現在座標をエフェクト座標として取得
         if (GunFind != null)
         {
-            GunRotate = GunObject.transform.rotation;
+            GunRotate = GunObject.transform.rotation;   // Gunオブジェクトの回転値取得
         }
         //---宮本加筆ここまで------------------------------
 
@@ -246,7 +248,7 @@ public class CPlayerScript : MonoBehaviour
 
                     //---宮本加筆ここから------------------------------
                     // ショットエフェクト発生
-                    Instantiate(ShotEffect, EffectPosition, Quaternion.identity);
+                    GetObject(ShotEffect, EffectPosition, Quaternion.identity);
                     //---宮本加筆ここまで------------------------------
 
                     //矢印オフ
@@ -319,7 +321,7 @@ public class CPlayerScript : MonoBehaviour
         {
             //---宮本加筆ここから------------------------------
             // 大砲発射エフェクト発生
-            Instantiate(GunShootEffect, EffectPosition, Quaternion.Euler(GunRotate.x, GunRotate.y, GunRotate.z * 100));
+            GetObject(GunShootEffect, EffectPosition, Quaternion.Euler(GunRotate.x, GunRotate.y, GunRotate.z * 100));
             //---宮本加筆ここまで------------------------------
 
             SpriteRenderer.color = new Color(1, 1, 1, 1);
@@ -385,7 +387,7 @@ public class CPlayerScript : MonoBehaviour
 
             //---宮本加筆ここから------------------------------
             // 大砲エントリーエフェクト発生
-            Instantiate(GunEnterEffect, EffectPosition, Quaternion.Euler(GunRotate.x, GunRotate.y, GunRotate.z * 100));
+            GetObject(GunEnterEffect, EffectPosition, Quaternion.Euler(GunRotate.x, GunRotate.y, GunRotate.z * 100));
             //---宮本加筆ここまで------------------------------
         }
 
@@ -396,4 +398,24 @@ public class CPlayerScript : MonoBehaviour
             GetStageTrophy = true;
         }
     }
+
+    //---宮本加筆ここから------------------------------
+    // // ゲームオブジェクトのアクティブ判別と生成 // //
+    void GetObject(GameObject obj, Vector3 pos, Quaternion qua)
+    {
+        foreach (Transform transform in ShotPool)
+        {
+            // オブジェクトが非アクティブなら使いまわし
+            if (!transform.gameObject.activeSelf)
+            {
+                transform.SetPositionAndRotation(pos, qua);
+                transform.gameObject.SetActive(true);
+                return;
+            }
+        }
+
+        // 非アクティブなオブジェクトがなければ生成する
+        Instantiate(obj, pos, qua, ShotPool);
+    }
+    //---宮本加筆ここまで------------------------------
 }

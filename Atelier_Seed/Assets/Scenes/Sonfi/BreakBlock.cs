@@ -8,8 +8,8 @@ public class BreakBlock : MonoBehaviour
 
     public GameObject Player;
     //---宮本加筆ここから------------------------------
-    [SerializeField] private GameObject BreakEffect;
-    private Vector3 EffectPosition;
+    [SerializeField] private GameObject BreakEffect;    // 破壊エフェクトオブジェクト
+    private Vector3 EffectPosition;                     // エフェクト座標
     //---宮本加筆ここまで------------------------------
     public float Power;
 
@@ -23,6 +23,21 @@ public class BreakBlock : MonoBehaviour
     {
         PlayerScript = Player.GetComponent<CPlayerScript>();
         BreakFlag = false;
+
+        //---宮本加筆ここから------------------------------
+        if (SceneManager.GetActiveScene().name == "Stage3")
+        {
+            BreakEffect = (GameObject)Resources.Load("Effect_BreakCookies");
+        }
+        if (SceneManager.GetActiveScene().name == "Stage4")
+        {
+            BreakEffect = (GameObject)Resources.Load("Effect_BreakPipe");
+        }
+        if (SceneManager.GetActiveScene().name == "Stage5")
+        {
+            BreakEffect = (GameObject)Resources.Load("Effect_BreakTree");
+        }
+        //---宮本加筆ここまで------------------------------
     }
 
     // Update is called once per frame
@@ -34,20 +49,8 @@ public class BreakBlock : MonoBehaviour
             PlayerScript.BreakBlockCount++;
             //---宮本加筆ここから------------------------------
             EffectPosition = this.transform.position;
-            if (SceneManager.GetActiveScene().name == "Stage3")
-            {
-                BreakEffect = (GameObject)Resources.Load("Effect_BreakCookies");
-            }
-            if (SceneManager.GetActiveScene().name == "Stage4")
-            {
-                BreakEffect = (GameObject)Resources.Load("Effect_BreakPipe");
-            }
-            if (SceneManager.GetActiveScene().name == "Stage5")
-            {
-                BreakEffect = (GameObject)Resources.Load("Effect_BreakTree");
-            }
             Instantiate(BreakEffect, EffectPosition, Quaternion.identity);
-            //---宮本加筆ここから------------------------------
+            //---宮本加筆ここまで------------------------------
             Destroy(this.gameObject);
         }
     }

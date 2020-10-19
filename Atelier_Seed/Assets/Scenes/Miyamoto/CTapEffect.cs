@@ -79,6 +79,7 @@ public class CTapEffect : MonoBehaviour
 
     }
 
+    // // ゲームオブジェクトのアクティブ判別と生成 // //
     void GetObject(GameObject obj, Vector3 pos, Quaternion qua)
     {
         foreach (Transform transform in Tapool)
