@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Common;
 
 public class CGoal : MonoBehaviour
 {
@@ -13,15 +14,15 @@ public class CGoal : MonoBehaviour
     public CPlayerScript PlayerScript;
 
     //トロフィー獲得済みか
-    public bool[] GetTrophy;
-    public bool[] OldTrophy;
+    public bool[] GetTrophy = new bool[CConst.TROPHY_MAX];
+    public bool[] OldTrophy = new bool[CConst.TROPHY_MAX];
 
     // Start is called before the first frame update
     void Start()
     {
         Clear_Flag = false;
 
-        for (int i = 0; i <= 14; i++)
+        for (int i = 0; i <= CConst.TROPHY_MAX - 1; i++)
         {
             GetTrophy[i] = CSaveBool.GetBool("Trophy" + i, false);
             OldTrophy[i] = GetTrophy[i];
@@ -131,11 +132,11 @@ public class CGoal : MonoBehaviour
             //PlayerPrefsの解放ステージ数に現在クリアしたステージをいれる
             PlayerPrefs.SetInt("STAGENUM", Now_StageNum);
 
-            for(int i = 0; i <= 14; i++)
+            for(int i = 0; i <= CConst.TROPHY_MAX - 1; i++)
             {
                 CSaveBool.SetBool("Trophy"+i, GetTrophy[i]);
             }
-            for (int i = 0; i <= 14; i++)
+            for (int i = 0; i <= CConst.TROPHY_MAX - 1; i++)
             {
                 CSaveBool.SetBool("OldTrophy" + i, OldTrophy[i]);
             }
