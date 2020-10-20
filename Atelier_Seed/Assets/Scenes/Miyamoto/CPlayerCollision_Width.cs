@@ -25,21 +25,16 @@ public class CPlayerCollision_Width : MonoBehaviour
     Vector2 PlayerVelocity;         // プレイヤーのVelocity
     Vector3 PlayerScale;            // プレイヤーのScale
     Vector3 PlayerInitialScale;     // プレイヤーの初期Scale記憶用
-
-
-    // 速度調整用
-//    [SerializeField] private float Velocity_Max_Plus = 3.0f;    // 速度が大きい値（正方向）
-//    [SerializeField] private float Velocity_Max_Minus = -3.0f;  // 速度が大きい値（負方向）
-//    [SerializeField] private float Velocity_Min_Plus = 1.0f;    // 速度が小さい値（正方向）
-//    [SerializeField] private float Velocity_Min_Minus = -1.0f;  // 速度が小さい値（負方向）
+    
 
 
     // 潰す大きさ調整用
     [SerializeField] private float CrushPower = 25.0f;  // 一度に潰す量
-    [SerializeField] private float CrushMin = 1.0f;     // 大きく潰すときの最低値
-//    [SerializeField] private float CrushMin_Smaller = 1.0f;     // あまり潰さないときの最低値
+    [SerializeField] private float CrushMin = 1.0f;     // 潰す最低値
 
-    float count;
+
+    // 変形時間
+    float Count;
 
 
     // // 初期化 // //
@@ -51,7 +46,6 @@ public class CPlayerCollision_Width : MonoBehaviour
         // CPlayerScript を取得
         PlayerScript = Player.GetComponent<CPlayerScript>();
 
-
         // プレイヤーの初期拡大縮小値記憶
         PlayerInitialScale = this.transform.parent.localScale;
 
@@ -59,84 +53,50 @@ public class CPlayerCollision_Width : MonoBehaviour
         // 変形フラグＯＦＦ
         Crush_Flag_Width = false;
 
-        count = 0;
+
+        // 変形時間リセット
+        Count = 0;
     }
 
 
     // // 更新 // //
     void Update()
     {
-        // プレイヤーの速度を取得
-//        PlayerVelocity = PlayerScript.Velocity;
-
         // プレイヤーの拡大縮小を取得
         PlayerScale = this.transform.parent.localScale;
 
+
+        // 変形フラグがONなら
         if (Crush_Flag_Width)
         {
+            // スピードが遅くないとき
             if (PlayerVelocity.y > 1.0f || PlayerVelocity.y < -1.0f)
             {
+                // 変形する
                 PlayerScale = CJellyBound.Crush_Width(PlayerScale, CrushMin, CrushPower);
             }
 
-            count += 1.0f * Time.deltaTime;
+            // 変形時間
+            Count += 1.0f * Time.deltaTime;
 
-            if (count > 0.1)
+            // 変形時間が終わったら
+            if (Count > 0.1f)
             {
+                // 変形フラグOFF
                 Crush_Flag_Width = false;
-                count = 0;
+
+                // 変形時間リセット
+                Count = 0;
             }
         }
+
+        // 変形フラグOFFの時
         else
         {
+            // 元に戻す
             PlayerScale = CJellyBound.Expand_Width(PlayerScale, PlayerInitialScale.x, CrushPower);
         }
 
-/*
-        // 変形フラグがＯＮになっていたら
-        if (Crush_Flag_Width)
-        {
-            // プレイヤーの速度が大きかったとき
-            if (PlayerVelocity.x >= Velocity_Max_Plus || PlayerVelocity.x <= Velocity_Max_Minus ||
-                PlayerVelocity.y >= Velocity_Max_Plus || PlayerVelocity.y <= Velocity_Max_Minus)
-            {
-                // 大きく変形する
-                PlayerScale = CJellyBound.Crush_Width(PlayerScale, CrushMin_Larger, CrushPower);
-                Debug.Log("変形：横：大");
-            }
-
-
-            // プレイヤーの速度がほぼなかったとき
-            else if (PlayerVelocity.x < Velocity_Min_Plus && PlayerVelocity.x > Velocity_Min_Minus ||
-                     PlayerVelocity.y < Velocity_Min_Plus && PlayerVelocity.y > Velocity_Min_Minus)
-            {
-                // 変形フラグをＯＦＦにする
-                Crush_Flag_Width = false;
-            }
-
-
-            // プレイヤーの速度が小さかったとき
-            else if (PlayerVelocity.x < Velocity_Max_Plus && PlayerVelocity.x > Velocity_Max_Minus ||
-                     PlayerVelocity.y < Velocity_Max_Plus && PlayerVelocity.y > Velocity_Max_Minus)
-            {
-                // 小さく変形する
-                PlayerScale = CJellyBound.Crush_Width(PlayerScale, CrushMin_Smaller, CrushPower);
-                Debug.Log("変形：横：小");
-            }
-        }
-
-        // 変形フラグがＯＦＦになっていたら
-        else
-        {
-            // 元の大きさに戻る
-            PlayerScale = CJellyBound.Expand_Width(PlayerScale, PlayerInitialScale.x, CrushPower);
-            if (PlayerScale.x > PlayerInitialScale.x)
-            {
-                PlayerScale = CJellyBound.Expand_Width(PlayerScale, PlayerInitialScale.x, CrushPower);
-                Debug.Log("変形：横：戻る");
-            }
-        }
-*/
 
         // 変形した（しなかった）ものをプレイヤーの拡大縮小として代入
         this.transform.parent.localScale = PlayerScale;
@@ -146,19 +106,7 @@ public class CPlayerCollision_Width : MonoBehaviour
     // // 当たったとき // //
     void OnTriggerEnter2D(Collider2D coll)
     {
-        // 当たった先のタグが PlayerCrush なら
-   //     if (coll.gameObject.tag == "PlayerCrush")
-        {
-            // 変形フラグＯＮ
-            Crush_Flag_Width = true;
-        }
-    }
-
-
-    // // 当たっていないとき // //
-    void OnTriggerExit2D(Collider2D coll)
-    {
-        // 変形フラグＯＦＦ
-   //     Crush_Flag_Width = false;
-    }
+        // 変形フラグＯＮ
+        Crush_Flag_Width = true;
+    }    
 }
