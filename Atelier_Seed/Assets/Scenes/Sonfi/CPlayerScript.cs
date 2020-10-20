@@ -280,20 +280,20 @@ public class CPlayerScript : MonoBehaviour
             }
             //---宮本加筆ここまで------------------------------
 
-            if (touch.phase == TouchPhase.Began && !TapFlag && GunFlag)
+            if (Input.GetMouseButtonDown(0) && !TapFlag && GunFlag)
             {
                 //大砲用タップ
                 TapFlag = true;
             }
 
             //マウス左クリック＆タップ
-            if (touch.phase == TouchPhase.Began)
+            if (Input.GetMouseButtonDown(0))
             {
                 //動いてないかつクリックしてない
                 if (!PlayFlag && !ClickFlag)
                 {
                     ClickFlag = true;
-                    DragStart = touch.position;
+                    DragStart = GetMousePosition();
 
                     //プレイヤーをタップしたときに鳴らす
                     audioSource.PlayOneShot(Player_Touch);
@@ -307,7 +307,7 @@ public class CPlayerScript : MonoBehaviour
             if (ClickFlag == true)
             {
                 //ドラッグ処理
-                if (touch.phase == TouchPhase.Began)
+                if (Input.GetMouseButtonDown(0))
                 {
                     Vector2 position = touch.position;
                     DirectionForce = position - DragStart;
@@ -325,7 +325,7 @@ public class CPlayerScript : MonoBehaviour
             }
 
             //マウスを離したとき
-            if (touch.phase == TouchPhase.Ended)
+            if (Input.GetMouseButtonUp(0))
             {
                 //プレイヤーを飛ばすSE
                 audioSource.PlayOneShot(Player_Jump);
