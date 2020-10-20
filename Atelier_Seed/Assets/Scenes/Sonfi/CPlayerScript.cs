@@ -454,6 +454,6 @@ public class CPlayerScript : MonoBehaviour
 
         // 非アクティブなオブジェクトがなければ生成する
         Instantiate(obj, pos, qua, GunShootPool);
-    }
+    }    
     //---宮本加筆ここまで------------------------------
 }
