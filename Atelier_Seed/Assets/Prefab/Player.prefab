@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6167197476590110200}
-  - component: {fileID: 7131161585133333142}
   - component: {fileID: 4247551374859874011}
   - component: {fileID: 6543753418154215622}
   - component: {fileID: 7648603592799547288}
@@ -34,57 +33,6 @@ Transform:
   m_Father: {fileID: 8482991219431080185}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7131161585133333142
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1922876317837039147}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 53db73328eed5aa4db3afc639133362b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!70 &4247551374859874011
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -114,13 +62,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crush_Flag_Width: 0
-  Velocity_Max_Plus: 3
-  Velocity_Max_Minus: -3
-  Velocity_Min_Plus: 1
-  Velocity_Min_Minus: -1
-  CrushPower: 50
-  CrushMin_Larger: 0.75
-  CrushMin_Smaller: 1
+  CrushPower: 25
+  CrushMin: 1
 --- !u!50 &7648603592799547288
 Rigidbody2D:
   serializedVersion: 4
@@ -151,7 +94,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 978837174869443155}
-  - component: {fileID: 7914999643944776908}
   - component: {fileID: 4586358145724039442}
   - component: {fileID: 5246577492399162927}
   - component: {fileID: 471169441419116174}
@@ -176,57 +118,6 @@ Transform:
   m_Father: {fileID: 8482991219431080185}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7914999643944776908
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7700684205095642135}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 53db73328eed5aa4db3afc639133362b, type: 3}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!70 &4586358145724039442
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -256,13 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crush_Flag_Height: 0
-  Velocity_Max_Plus: 3
-  Velocity_Max_Minus: -3
-  Velocity_Min_Plus: 1
-  Velocity_Min_Minus: -1
-  CrushPower: 50
-  CrushMin_Larger: 0.75
-  CrushMin_Smaller: 1
+  CrushPower: 25
+  CrushMin: 1
 --- !u!50 &471169441419116174
 Rigidbody2D:
   serializedVersion: 4
@@ -502,6 +388,12 @@ MonoBehaviour:
   BreakBlockCount: 0
   GetStageTrophy: 0
   GunTrophyFlag: 0
+  Player_Touch: {fileID: 0}
+  Player_Jump: {fileID: 0}
+  Player_Hit: {fileID: 0}
+  Player_Pull: {fileID: 0}
+  Player_Sit: {fileID: 0}
+  Player_GetTrophy: {fileID: 0}
 --- !u!212 &8482991219431080184
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -703,7 +595,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3103056429595273832}
-  - component: {fileID: 6564250327006188735}
   - component: {fileID: 1468302318915996195}
   - component: {fileID: 7020334164978666436}
   - component: {fileID: 6613912593923637502}
@@ -728,57 +619,6 @@ Transform:
   m_Father: {fileID: 8482991219431080185}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6564250327006188735
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9078499091773824461}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 53db73328eed5aa4db3afc639133362b, type: 3}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!70 &1468302318915996195
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -808,13 +648,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crush_Flag_Width: 0
-  Velocity_Max_Plus: 3
-  Velocity_Max_Minus: -3
-  Velocity_Min_Plus: 1
-  Velocity_Min_Minus: -1
-  CrushPower: 50
-  CrushMin_Larger: 0.75
-  CrushMin_Smaller: 1
+  CrushPower: 25
+  CrushMin: 1
 --- !u!50 &6613912593923637502
 Rigidbody2D:
   serializedVersion: 4
@@ -845,7 +680,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3573613252254364713}
-  - component: {fileID: 4867308285113957864}
   - component: {fileID: 1428561812756063625}
   - component: {fileID: 9157293408250984673}
   - component: {fileID: 6314889077725062776}
@@ -870,57 +704,6 @@ Transform:
   m_Father: {fileID: 8482991219431080185}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4867308285113957864
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9106722730637154278}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 53db73328eed5aa4db3afc639133362b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!70 &1428561812756063625
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -950,13 +733,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crush_Flag_Height: 0
-  Velocity_Max_Plus: 3
-  Velocity_Max_Minus: -3
-  Velocity_Min_Plus: 1
-  Velocity_Min_Minus: -1
-  CrushPower: 50
-  CrushMin_Larger: 0.75
-  CrushMin_Smaller: 1
+  CrushPower: 25
+  CrushMin: 1
 --- !u!50 &6314889077725062776
 Rigidbody2D:
   serializedVersion: 4
