@@ -26,7 +26,6 @@ public class CHitEffect : MonoBehaviour
 
     // オブジェクト保存用空オブジェクトのtransform
     private Transform EffectPool;
-    private Transform SplashPool;
 
 
     // // 初期化 // //
@@ -59,8 +58,7 @@ public class CHitEffect : MonoBehaviour
 
 
         // 衝突エフェクトのオブジェクトを生成する
-        EffectPool = new GameObject("Hit").transform;
-        SplashPool = new GameObject("Splash").transform;
+        EffectPool = new GameObject("Hit").transform;        
     }
 
 
@@ -109,7 +107,7 @@ public class CHitEffect : MonoBehaviour
 
     void GetSplashObject(GameObject obj, Vector3 pos, Quaternion qua)
     {
-        foreach (Transform transform in SplashPool)
+        foreach (Transform transform in EffectPool)
         {
             // オブジェクトが非アクティブなら使いまわし
             if (!transform.gameObject.activeSelf)
@@ -121,6 +119,6 @@ public class CHitEffect : MonoBehaviour
         }
 
         // 非アクティブなオブジェクトがなければ生成する
-        Instantiate(obj, pos, qua, SplashPool);
+        Instantiate(obj, pos, qua, EffectPool);
     }
 }

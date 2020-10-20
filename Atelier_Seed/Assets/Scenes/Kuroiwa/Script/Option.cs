@@ -8,7 +8,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;  //DotWeenを使用する
-using Common;
 
 //=====================================================
 //オプション表示クラス
@@ -29,7 +28,6 @@ public class Option : MonoBehaviour
         OptionFrag = false;
         //Componentを取得
         audioSource = GetComponent<AudioSource>();
-
     }
 
     // Update is called once per frame
@@ -47,7 +45,6 @@ public class Option : MonoBehaviour
         
         if (Pause.activeSelf)
         {
-
             audioSource.PlayOneShot(OptionSE);      //オプション押したとき
             Time.timeScale = 0f;
         }
