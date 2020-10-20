@@ -28,18 +28,16 @@ public class CPlayerCollision_Height : MonoBehaviour
 
 
     // 速度調整用
-//    [SerializeField] private float Velocity_Max_Plus = 3.0f;    // 速度が大きい値（正方向）
-//    [SerializeField] private float Velocity_Max_Minus = -3.0f;  // 速度が大きい値（負方向）
-//    [SerializeField] private float Velocity_Min_Plus = 1.0f;    // 速度が小さい値（正方向）
-//    [SerializeField] private float Velocity_Min_Minus = -1.0f;  // 速度が小さい値（負方向）
+    [SerializeField] private float Velocity_Max_Plus = 3.0f;    // 速度が大きい値（正方向）
+    [SerializeField] private float Velocity_Max_Minus = -3.0f;  // 速度が大きい値（負方向）
+    [SerializeField] private float Velocity_Min_Plus = 1.0f;    // 速度が小さい値（正方向）
+    [SerializeField] private float Velocity_Min_Minus = -1.0f;  // 速度が小さい値（負方向）
 
 
     // 潰す大きさ調整用
-    [SerializeField] private float CrushPower = 25.0f;         // 一度に潰す量
-    [SerializeField] private float CrushMin = 1.0f;     // 潰れる最低値
-                                                               //    [SerializeField] private float CrushMin_Smaller = 1.0f;     // あまり潰さないときの最低値
-
-    float count;
+    [SerializeField] private float CrushPower = 50.0f;          // 一度に潰す量
+    [SerializeField] private float CrushMin_Larger = 0.75f;     // 大きく潰すときの最低値
+    [SerializeField] private float CrushMin_Smaller = 1.0f;     // あまり潰さないときの最低値
 
 
     // // 初期化 // //
@@ -58,41 +56,12 @@ public class CPlayerCollision_Height : MonoBehaviour
 
         // 変形フラグＯＦＦ
         Crush_Flag_Height = false;
-
-        count = 0;
     }
 
 
     // // 更新 // //
     void Update()
     {
-        // プレイヤーの速度を取得
-        PlayerVelocity = PlayerScript.Velocity;
-
-        // プレイヤーの拡大縮小を取得
-        PlayerScale = this.transform.parent.localScale;
-
-        if (Crush_Flag_Height)
-        {
-            if (PlayerVelocity.y > 1.0f || PlayerVelocity.y < -1.0f)
-            {
-                PlayerScale = CJellyBound.Crush_Height(PlayerScale, CrushMin, CrushPower);
-            }
-
-            count += 1.0f * Time.deltaTime;
-
-            if (count > 0.1)
-            {
-                Crush_Flag_Height = false;
-                count = 0;
-            }
-        }
-        else
-        {
-            PlayerScale = CJellyBound.Expand_Height(PlayerScale, PlayerInitialScale.y, CrushPower);
-        }
-
-        /*
         // プレイヤーの速度を取得
         PlayerVelocity = PlayerScript.Velocity;
 
@@ -109,7 +78,6 @@ public class CPlayerCollision_Height : MonoBehaviour
             {
                 // 大きく変形する
                 PlayerScale = CJellyBound.Crush_Height(PlayerScale, CrushMin_Larger, CrushPower);
-                Debug.Log("変形：縦：大");
             }
 
 
@@ -136,9 +104,8 @@ public class CPlayerCollision_Height : MonoBehaviour
         {
             // 元の大きさに戻る
             PlayerScale = CJellyBound.Expand_Height(PlayerScale, PlayerInitialScale.y, CrushPower);
-            Debug.Log("変形：縦：戻る");
         }
-        */
+
 
         // 変形した（しなかった）ものをプレイヤーの拡大縮小として代入
         this.transform.parent.localScale = PlayerScale;
@@ -149,7 +116,7 @@ public class CPlayerCollision_Height : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll)
     {
         // 当たった先が PlayerCrush だったら
-     //   if (coll.gameObject.tag == "PlayerCrush")
+        if (coll.gameObject.tag == "PlayerCrush")
         {
             // 変形フラグＯＮ
             Crush_Flag_Height = true;
@@ -161,6 +128,6 @@ public class CPlayerCollision_Height : MonoBehaviour
     void OnTriggerExit2D(Collider2D coll)
     {
         // 変形フラグＯＦＦ
-      //  Crush_Flag_Height = false;
+        Crush_Flag_Height = false;
     }
 }
