@@ -10,6 +10,7 @@ TagManager:
   - PlayerCrush
   - Trophy
   - BreakFlag
+  - Coin
   layers:
   - Default
   - TransparentFX
