@@ -5419,6 +5419,10 @@ PrefabInstance:
       propertyPath: PlayerScript
       value: 
       objectReference: {fileID: 1398414606}
+    - target: {fileID: 2818721990069343251, guid: 8f2b2dc541706504d9eb70abeb4c23db, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 1398414606}
     - target: {fileID: 6624181759319768145, guid: 8f2b2dc541706504d9eb70abeb4c23db, type: 3}
       propertyPath: Pause
       value: 

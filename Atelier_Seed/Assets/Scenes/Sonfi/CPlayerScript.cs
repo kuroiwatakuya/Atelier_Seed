@@ -65,7 +65,7 @@ public class CPlayerScript : MonoBehaviour
     public bool GunFlag;
 
     //回数制限
-    public int PlayCount = 3;
+    public static int PlayCount = 3;
 
     //止まるフラグ
     public bool StopFlag;
@@ -116,7 +116,7 @@ public class CPlayerScript : MonoBehaviour
     public bool Wind;
 
     //取得コイン
-    public int GetCoin;
+    public static int GetCoin;
 
     // Start is called before the first frame update
 
@@ -622,4 +622,13 @@ public class CPlayerScript : MonoBehaviour
         Instantiate(obj, pos, qua, GunShootPool);
     }
     //---宮本加筆ここまで------------------------------
+
+    public static int GetCoinNum()
+    {
+        return GetCoin;
+    }
+    public static int GetPlayCount()
+    {
+        return PlayCount;
+    }
 }

@@ -608,6 +608,10 @@ PrefabInstance:
       propertyPath: PlayCountUI.Array.data[9]
       value: 
       objectReference: {fileID: 1536892923}
+    - target: {fileID: 2818721990069343251, guid: 8f2b2dc541706504d9eb70abeb4c23db, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 1331368123}
     - target: {fileID: 6624181759319768147, guid: 8f2b2dc541706504d9eb70abeb4c23db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.12300426
@@ -2435,7 +2439,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1216166907}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 55146a0aee8724a4995065cfdecb4fdb, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2492,7 +2496,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1242748109}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 55146a0aee8724a4995065cfdecb4fdb, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3031,7 +3035,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1739956142}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 55146a0aee8724a4995065cfdecb4fdb, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3443,7 +3447,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1923913877}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 55146a0aee8724a4995065cfdecb4fdb, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

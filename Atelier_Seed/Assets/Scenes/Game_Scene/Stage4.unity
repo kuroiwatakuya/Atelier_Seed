@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: PlayCountUI.Array.data[9]
       value: 
       objectReference: {fileID: 1085484327}
+    - target: {fileID: 2818721990069343251, guid: 8f2b2dc541706504d9eb70abeb4c23db, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 402273369}
     - target: {fileID: 6624181759319768147, guid: 8f2b2dc541706504d9eb70abeb4c23db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.12300426
@@ -988,10 +992,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Now_StageNum: 4
+  MaxCoin: 0
   Clear_Flag: 0
   PlayerScript: {fileID: 402273369}
   GetTrophy: 000000000000000000000000000000
   OldTrophy: 000000000000000000000000000000
+  GetBatch: 000000000000000000000000000000
+  OldBatch: 000000000000000000000000000000
+  AllCoin: 0000000000
 --- !u!61 &769798544
 BoxCollider2D:
   m_ObjectHideFlags: 0
