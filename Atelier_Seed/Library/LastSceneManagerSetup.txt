@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Sonfi/Sonfi_Scene.unity
+- path: Assets/Scenes/Game_Scene/Stage1_Ending.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
