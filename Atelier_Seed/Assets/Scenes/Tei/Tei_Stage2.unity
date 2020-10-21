@@ -1969,10 +1969,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Now_StageNum: 2
+  MaxCoin: 0
   Clear_Flag: 0
   PlayerScript: {fileID: 1936826106}
   GetTrophy: 000000000000000000000000000000
   OldTrophy: 000000000000000000000000000000
+  GetBatch: 000000000000000000000000000000
+  OldBatch: 000000000000000000000000000000
+  AllCoin: 0000000000
 --- !u!61 &1165769771
 BoxCollider2D:
   m_ObjectHideFlags: 0

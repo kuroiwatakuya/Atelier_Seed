@@ -5,8 +5,6 @@ using UnityEngine;
 public class CPlayCount : MonoBehaviour
 {
     
-    public CPlayerScript PlayerScript;
-
     public GameObject[] PlayCountUI;
 
     private int PlayCount;
@@ -23,12 +21,8 @@ public class CPlayCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayCount = PlayerScript.PlayCount;
-
-        if(PlayerScript.PlayCount == PlayCount)
-        {
-            PlayCountUI[PlayCount].SetActive(true);
-            PlayCountUI[PlayCount + 1].SetActive(false);
-        }
+        PlayCount = CPlayerScript.GetPlayCount();
+        PlayCountUI[PlayCount].SetActive(true);
+        PlayCountUI[PlayCount + 1].SetActive(false);
     }
 }

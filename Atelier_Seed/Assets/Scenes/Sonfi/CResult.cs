@@ -15,6 +15,14 @@ public class CResult : MonoBehaviour
 
     private int StageNum;
 
+    private int Score;
+    private int CoinNum;
+    private int CountNum;
+    public GameObject[] ScoreSprite1000 = new GameObject[CConst.NUMBER];
+    public GameObject[] ScoreSprite100 = new GameObject[CConst.NUMBER];
+    public GameObject[] ScoreSprite10 = new GameObject[CConst.NUMBER];
+    public GameObject[] ScoreSprite1 = new GameObject[CConst.NUMBER];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -101,6 +109,43 @@ public class CResult : MonoBehaviour
             }
         }
 
+        for (int i = 0; i <= 9; i++)
+        {
+            ScoreSprite1000[i].SetActive(false);
+            ScoreSprite100[i].SetActive(false);
+            ScoreSprite10[i].SetActive(false);
+            ScoreSprite1[i].SetActive(false);
+        }
+
+        CoinNum = CPlayerScript.GetCoinNum();
+        CountNum = CPlayerScript.GetPlayCount();
+
+        Score = CoinNum * 100 + CountNum * 200;
+
+        int Score1000 = (Score - (Score % 1000)) / 1000;
+        int Score100 = ((Score % 1000) - (Score % 100)) / 100;
+        int Score10 = (((Score % 1000) % 100) - (Score % 10)) / 10;
+        int Score1 = Score % 10;
+
+        for (int i = 0; i <= 9; i++)
+        {
+            if (i == Score1000)
+            {
+                ScoreSprite1000[i].SetActive(true);
+            }
+            if (i == Score100)
+            {
+                ScoreSprite100[i].SetActive(true);
+            }
+            if (i == Score10)
+            {
+                ScoreSprite10[i].SetActive(true);
+            }
+            if (i == Score1)
+            {
+                ScoreSprite1[i].SetActive(true);
+            }
+        }
     }
 
     // Update is called once per frame

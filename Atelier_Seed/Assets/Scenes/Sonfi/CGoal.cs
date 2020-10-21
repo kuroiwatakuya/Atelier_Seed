@@ -14,6 +14,9 @@ public class CGoal : MonoBehaviour
 
     public CPlayerScript PlayerScript;
 
+    private int PlayCount;
+    private int Coin;
+
     private int Liberation_StageNum;
 
     //トロフィー獲得済みか
@@ -62,16 +65,19 @@ public class CGoal : MonoBehaviour
         if (Clear_Flag)
         {
 
+            PlayCount = CPlayerScript.GetPlayCount();
+            Coin = CPlayerScript.GetCoinNum();
+
             //********************
             // トロフィー、コイン
             //********************
             //ステージ１クリア条件
-            if(Now_StageNum == 1)
+            if (Now_StageNum == 1)
             {
                 //クリアしたらゲット
                 GetTrophy[0] = true;
                 //３回以内にクリア
-                if(PlayerScript.PlayCount >= 3)
+                if(PlayCount >= 3)
                 {
                     GetTrophy[1] = true;
                 }
@@ -90,7 +96,7 @@ public class CGoal : MonoBehaviour
                     GetTrophy[3] = true;
                 }
                 //３回以内にクリア
-                if (PlayerScript.PlayCount >= 3)
+                if (PlayCount >= 3)
                 {
                     GetTrophy[4] = true;
                 }
@@ -103,7 +109,7 @@ public class CGoal : MonoBehaviour
             if (Now_StageNum == 3)
             {
                 //３回以内にクリア
-                if (PlayerScript.PlayCount >= 1)
+                if (PlayCount >= 1)
                 {
                     GetTrophy[6] = true;
                 }
@@ -126,7 +132,7 @@ public class CGoal : MonoBehaviour
                     GetTrophy[9] = true;
                 }
                 //5回以内にクリア
-                if (PlayerScript.PlayCount >= 3)
+                if (PlayCount >= 3)
                 {
                     GetTrophy[10] = true;
                 }
@@ -139,7 +145,7 @@ public class CGoal : MonoBehaviour
             if (Now_StageNum == 5)
             {
                 //4回以内にクリア
-                if (PlayerScript.PlayCount >= 4)
+                if (PlayCount >= 4)
                 {
                     GetTrophy[12] = true;
                 }
@@ -204,7 +210,7 @@ public class CGoal : MonoBehaviour
             {
                 GetBatch[11] = true;
             }
-            else if (PlayerScript.GetCoin >= MaxCoin)
+            else if (Coin >= MaxCoin)
             {
                 AllCoin[Now_StageNum - 1] = true;
                 if(AllCoin[0]&& AllCoin[1]&& AllCoin[2]&& AllCoin[3]&& AllCoin[4])
