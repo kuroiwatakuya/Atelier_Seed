@@ -154,10 +154,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Now_StageNum: 5
+  MaxCoin: 0
   Clear_Flag: 0
   PlayerScript: {fileID: 271992815}
   GetTrophy: 000000000000000000000000000000
   OldTrophy: 000000000000000000000000000000
+  GetBatch: 000000000000000000000000000000
+  OldBatch: 000000000000000000000000000000
+  AllCoin: 0000000000
 --- !u!58 &171021421
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -364,7 +368,7 @@ GameObject:
   - component: {fileID: 346408097}
   m_Layer: 0
   m_Name: 4 (1)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -859,7 +863,7 @@ GameObject:
   - component: {fileID: 557380107}
   m_Layer: 0
   m_Name: 1
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1068,7 +1072,7 @@ GameObject:
   - component: {fileID: 642187844}
   m_Layer: 0
   m_Name: BlockColl
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3522,7 +3526,7 @@ GameObject:
   - component: {fileID: 822955671}
   m_Layer: 4
   m_Name: 2 (2)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3703,7 +3707,7 @@ GameObject:
   - component: {fileID: 1046201250}
   m_Layer: 0
   m_Name: 1 (1)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3802,7 +3806,7 @@ GameObject:
   - component: {fileID: 1093796387}
   m_Layer: 0
   m_Name: 5 (2)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3911,7 +3915,7 @@ GameObject:
   - component: {fileID: 1098329821}
   m_Layer: 0
   m_Name: 2 (1)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4242,7 +4246,7 @@ GameObject:
   - component: {fileID: 1207685019}
   m_Layer: 0
   m_Name: 5
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4448,7 +4452,7 @@ GameObject:
   - component: {fileID: 1287015651}
   m_Layer: 0
   m_Name: 3
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4686,7 +4690,7 @@ GameObject:
   - component: {fileID: 1528557166}
   m_Layer: 0
   m_Name: 6 (1)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5104,7 +5108,7 @@ GameObject:
   - component: {fileID: 1692294905}
   m_Layer: 0
   m_Name: 5 (1)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5411,7 +5415,7 @@ GameObject:
   - component: {fileID: 1752256569}
   m_Layer: 0
   m_Name: 4
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6201,7 +6205,7 @@ GameObject:
   - component: {fileID: 2045375820}
   m_Layer: 0
   m_Name: 6 (2)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6366,7 +6370,7 @@ GameObject:
   - component: {fileID: 2119764269}
   m_Layer: 0
   m_Name: 1 (2)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
