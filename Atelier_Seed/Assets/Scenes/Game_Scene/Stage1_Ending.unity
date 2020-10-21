@@ -286,7 +286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5636637022347080151, guid: e5092698227069f45ab881f9c5c8e3c8, type: 3}
       propertyPath: StageName
-      value: Stage_Select
+      value: Result
       objectReference: {fileID: 0}
     - target: {fileID: 5636637022347080154, guid: e5092698227069f45ab881f9c5c8e3c8, type: 3}
       propertyPath: m_Name

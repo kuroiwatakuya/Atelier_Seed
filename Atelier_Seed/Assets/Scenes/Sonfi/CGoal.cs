@@ -242,7 +242,15 @@ public class CGoal : MonoBehaviour
             //PlayerPrefsをセーブする         
             PlayerPrefs.Save();
 
-            SceneManager.LoadScene("Result");
+            if(Now_StageNum == 1)
+            {
+                SceneManager.LoadScene("Stage1_Ending");
+            }
+            if(Now_StageNum == 2)
+            {
+                SceneManager.LoadScene("Stage2_Ending");
+            }
+            //SceneManager.LoadScene("Result");
 
         }
     }
