@@ -302,10 +302,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Now_StageNum: 1
+  MaxCoin: 0
   Clear_Flag: 0
   PlayerScript: {fileID: 1398414606}
   GetTrophy: 000000000000000000000000000000
   OldTrophy: 000000000000000000000000000000
+  GetBatch: 000000000000000000000000000000
+  OldBatch: 000000000000000000000000000000
+  AllCoin: 0000000000
 --- !u!61 &101727027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -712,6 +716,10 @@ PrefabInstance:
     - target: {fileID: 2225105293416955549, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225105293416955549, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: m_TagString
+      value: Coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
@@ -1282,7 +1290,7 @@ GameObject:
   - component: {fileID: 703049299}
   m_Layer: 0
   m_Name: Block_Table_1st
-  m_TagString: Untagged
+  m_TagString: PlayerCrush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1535,7 +1543,7 @@ SpriteRenderer:
   m_Size: {x: 14.4, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &820337965
@@ -2279,6 +2287,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2225105293416955549, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1 &1349841341
@@ -2849,7 +2861,7 @@ SpriteRenderer:
   m_Size: {x: 3.16, y: 3.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1691324932
@@ -4108,7 +4120,7 @@ SpriteRenderer:
   m_Size: {x: 3.16, y: 3.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1791501355
@@ -4190,7 +4202,7 @@ SpriteRenderer:
   m_Size: {x: 4, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1793151372
@@ -4272,7 +4284,7 @@ SpriteRenderer:
   m_Size: {x: 4, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1798437722
@@ -5147,6 +5159,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2225105293416955549, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
       propertyPath: m_Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225105293416955549, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: m_TagString
       value: Coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []

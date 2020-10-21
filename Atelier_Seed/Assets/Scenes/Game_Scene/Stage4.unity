@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 110539837}
   m_Layer: 0
   m_Name: wind (1)
-  m_TagString: Untagged
+  m_TagString: Wind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1462,7 +1462,7 @@ GameObject:
   - component: {fileID: 1063678149}
   m_Layer: 0
   m_Name: wind (3)
-  m_TagString: Untagged
+  m_TagString: Wind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1941,6 +1941,10 @@ PrefabInstance:
     - target: {fileID: 6930621407543200124, guid: aded52972dc0fbd42bbcbde52fa6b6f2, type: 3}
       propertyPath: m_Name
       value: wind
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930621407543200124, guid: aded52972dc0fbd42bbcbde52fa6b6f2, type: 3}
+      propertyPath: m_TagString
+      value: Wind
       objectReference: {fileID: 0}
     - target: {fileID: 6930621407543200125, guid: aded52972dc0fbd42bbcbde52fa6b6f2, type: 3}
       propertyPath: m_ForceMagnitude
@@ -2451,7 +2455,7 @@ GameObject:
   - component: {fileID: 1706312386}
   m_Layer: 0
   m_Name: wind (2)
-  m_TagString: Untagged
+  m_TagString: Wind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

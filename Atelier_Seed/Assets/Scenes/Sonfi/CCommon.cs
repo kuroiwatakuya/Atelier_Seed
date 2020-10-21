@@ -13,7 +13,10 @@ namespace Common
         public const int STAGENUM = 5; //ステージ数
         public const int TROPHY_MAX = 15; //全トロフィー
         public const int TROPHY_STAGE = 3; //1ステージトロフィー
-        public const int COLLECTION_NUM = 15; //全コレクション
+        public const int BATCH_NUM = 15; //全コレクション
+
+        public const float FLY_DISTANCE = 20.0f;
+
     }
 
 }
