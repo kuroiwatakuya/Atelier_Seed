@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 73548095}
   m_Layer: 0
   m_Name: hanntei (2)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -865,7 +865,7 @@ GameObject:
   - component: {fileID: 565424314}
   m_Layer: 0
   m_Name: blockcoll
-  m_TagString: PlayerCrush
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -907,7 +907,7 @@ GameObject:
   - component: {fileID: 597538326}
   m_Layer: 0
   m_Name: hanntei (4)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1121,7 +1121,7 @@ GameObject:
   - component: {fileID: 632147644}
   m_Layer: 0
   m_Name: hanntei
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1634,7 +1634,7 @@ GameObject:
   - component: {fileID: 846152225}
   m_Layer: 0
   m_Name: hanntei (6)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2149,7 +2149,7 @@ GameObject:
   - component: {fileID: 1291937773}
   m_Layer: 0
   m_Name: hanntei (3)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2711,7 +2711,7 @@ GameObject:
   - component: {fileID: 1644784330}
   m_Layer: 0
   m_Name: hanntei (8)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4506,7 +4506,7 @@ GameObject:
   - component: {fileID: 1913328995}
   m_Layer: 0
   m_Name: hanntei (1)
-  m_TagString: PlayerCrush
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4654,7 +4654,7 @@ GameObject:
   - component: {fileID: 2009597448}
   m_Layer: 0
   m_Name: hanntei (7)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4884,7 +4884,7 @@ GameObject:
   - component: {fileID: 2037707750}
   m_Layer: 0
   m_Name: hanntei (5)
-  m_TagString: PlayerCrush
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,6 +12,8 @@ TagManager:
   - BreakFlag
   - Coin
   - Wind
+  - Wall
+  - Floor
   layers:
   - Default
   - TransparentFX
