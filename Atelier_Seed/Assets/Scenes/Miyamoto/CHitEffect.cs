@@ -27,6 +27,8 @@ public class CHitEffect : MonoBehaviour
     // オブジェクト保存用空オブジェクトのtransform
     private Transform EffectPool;
 
+    private Transform SplashPool;
+
 
     // // 初期化 // //
     void Start()
@@ -58,7 +60,8 @@ public class CHitEffect : MonoBehaviour
 
 
         // 衝突エフェクトのオブジェクトを生成する
-        EffectPool = new GameObject("Hit").transform;        
+        EffectPool = new GameObject("Hit").transform;
+        SplashPool = new GameObject("Splash").transform;
     }
 
 
@@ -73,17 +76,18 @@ public class CHitEffect : MonoBehaviour
     // // 当たった時 // //
     void OnCollisionEnter2D(Collision2D coll)
     {
-        // 普通の壁とか
-        if (coll.gameObject.tag == "PlayerCrush")
-        {
-            GetHitObject(HitEffectObject, Effpos, Quaternion.identity);            
-        }
-
         // 粘着質ブロック
         if (coll.gameObject.tag == "StopFieldTag")
         {
             GetSplashObject(HitSplashObject, Effpos, Quaternion.identity);
         }
+
+        // 普通の壁とか
+        else
+        {
+            GetHitObject(HitEffectObject, Effpos, Quaternion.identity);            
+        }
+
     }
 
 
@@ -107,7 +111,7 @@ public class CHitEffect : MonoBehaviour
 
     void GetSplashObject(GameObject obj, Vector3 pos, Quaternion qua)
     {
-        foreach (Transform transform in EffectPool)
+        foreach (Transform transform in SplashPool)
         {
             // オブジェクトが非アクティブなら使いまわし
             if (!transform.gameObject.activeSelf)
@@ -119,6 +123,6 @@ public class CHitEffect : MonoBehaviour
         }
 
         // 非アクティブなオブジェクトがなければ生成する
-        Instantiate(obj, pos, qua, EffectPool);
+        Instantiate(obj, pos, qua, SplashPool);
     }
 }
