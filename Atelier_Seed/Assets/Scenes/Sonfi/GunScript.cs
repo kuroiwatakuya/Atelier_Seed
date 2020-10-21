@@ -32,11 +32,11 @@ public class GunScript : MonoBehaviour
             Quaternion Rot = Quaternion.AngleAxis(Angle, Vector3.forward);
             Quaternion NowRot = this.transform.rotation;
             this.transform.rotation = NowRot * Rot;
-            if (Angle == 1 && gameObject.transform.eulerAngles.z >= 90)
+            if (Angle == 1 && /*gameObject.transform.eulerAngles.z*/NowRot.z > 0.75f)
             {
                 Angle *= -1;
             }
-            if (Angle == -1 && gameObject.transform.eulerAngles.z <= -90)
+            if (Angle == -1 && /*gameObject.transform.eulerAngles.z*/NowRot.z < -0.75f)
             {
                 Angle *= -1;
             }
