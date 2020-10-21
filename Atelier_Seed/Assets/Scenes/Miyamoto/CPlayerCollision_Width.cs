@@ -62,6 +62,8 @@ public class CPlayerCollision_Width : MonoBehaviour
     // // 更新 // //
     void Update()
     {
+        // プレイヤーの速度を取得
+        PlayerVelocity = PlayerScript.Velocity;
         // プレイヤーの拡大縮小を取得
         PlayerScale = this.transform.parent.localScale;
 
