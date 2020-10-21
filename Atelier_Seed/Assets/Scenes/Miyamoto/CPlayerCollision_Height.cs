@@ -40,7 +40,7 @@ public class CPlayerCollision_Height : MonoBehaviour
     void Start()
     {
         // プレイヤーのオブジェクトを検索して代入
-        Player = GameObject.Find("Player");
+        Player = transform.parent.gameObject;
 
         // CPlayerScript を取得
         PlayerScript = Player.GetComponent<CPlayerScript>();

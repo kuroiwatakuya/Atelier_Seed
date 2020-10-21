@@ -15,7 +15,7 @@ using UnityEngine;
 public class CAwardEffect : MonoBehaviour
 {
     // 達成エフェクト格納用
-    private GameObject AwardEffectObject;
+    public GameObject AwardEffectObject;
 
 
     // 変形用拡大縮小値
@@ -23,10 +23,10 @@ public class CAwardEffect : MonoBehaviour
 
 
     // 広がる速度
-    [SerializeField] float ExpandSpeed = 2.0f;
+    public float ExpandSpeed = 2.0f;
 
     // 拡大最大値
-    [SerializeField] private float MaxScale = 1.0f;
+    public  float MaxScale = 1.0f;
 
     
     private bool EffectRun;
@@ -35,8 +35,10 @@ public class CAwardEffect : MonoBehaviour
     // // 初期化 // //
     void Start()
     {
-        AwardEffectObject = (GameObject)Resources.Load("Effect_Award");
-        EffectRun = true;
+        if (AwardEffectObject != null)
+        {
+            EffectRun = true;
+        }
     }
 
 

@@ -706,6 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e121e4e0aaadd2489b4397cd81d8a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AwardEffectObject: {fileID: 7697406170446253361, guid: a9a9dd1337f120644be58cfc374b5b32, type: 3}
   ExpandSpeed: 2
   MaxScale: 1
 --- !u!212 &295353752
@@ -2083,6 +2084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e121e4e0aaadd2489b4397cd81d8a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AwardEffectObject: {fileID: 7697406170446253361, guid: a9a9dd1337f120644be58cfc374b5b32, type: 3}
   ExpandSpeed: 2
   MaxScale: 1
 --- !u!212 &1353298368
@@ -2483,6 +2485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e121e4e0aaadd2489b4397cd81d8a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AwardEffectObject: {fileID: 7697406170446253361, guid: a9a9dd1337f120644be58cfc374b5b32, type: 3}
   ExpandSpeed: 2
   MaxScale: 1
 --- !u!212 &1516244848

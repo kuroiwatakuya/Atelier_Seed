@@ -41,7 +41,7 @@ public class CPlayerCollision_Width : MonoBehaviour
     void Start()
     {
         // プレイヤーのオブジェクトを検索して代入
-        Player = GameObject.Find("Player");
+        Player = transform.parent.gameObject;
 
         // CPlayerScript を取得
         PlayerScript = Player.GetComponent<CPlayerScript>();
@@ -64,6 +64,7 @@ public class CPlayerCollision_Width : MonoBehaviour
     {
         // プレイヤーの速度を取得
         PlayerVelocity = PlayerScript.Velocity;
+
         // プレイヤーの拡大縮小を取得
         PlayerScale = this.transform.parent.localScale;
 
