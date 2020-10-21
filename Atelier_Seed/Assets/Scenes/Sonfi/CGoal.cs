@@ -30,10 +30,13 @@ public class CGoal : MonoBehaviour
     //コイン全ゲット
     public bool[] AllCoin = new bool[CConst.STAGENUM];
 
+    private bool EndFrag;
+
     // Start is called before the first frame update
     void Start()
     {
         Clear_Flag = false;
+        EndFrag = false;
 
         for (int i = 0; i <= CConst.TROPHY_MAX - 1; i++)
         {
@@ -248,15 +251,31 @@ public class CGoal : MonoBehaviour
             //PlayerPrefsをセーブする         
             PlayerPrefs.Save();
 
+            //ステージ1
             if(Now_StageNum == 1)
             {
                 SceneManager.LoadScene("Stage1_Ending");
             }
+            //ステージ2
             if(Now_StageNum == 2)
             {
                 SceneManager.LoadScene("Stage2_Ending");
             }
-            //SceneManager.LoadScene("Result");
+            //ステージ3
+            if(Now_StageNum == 3)
+            {
+                SceneManager.LoadScene("Stage3_Ending");
+            }
+            //ステージ4
+            if(Now_StageNum == 4)
+            {
+                SceneManager.LoadScene("Stage4_Ending");
+            }
+            //ステージ5
+            if(Now_StageNum == 5)
+            {
+                SceneManager.LoadScene("Stage5_Ending");
+            }
 
         }
     }
