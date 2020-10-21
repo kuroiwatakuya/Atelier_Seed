@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Game_Scene/Collection.unity
-=======
-- path: Assets/Scenes/Game_Scene/Stage_Select.unity
->>>>>>> 黒岩：シーン作成
   isLoaded: 1
   isActive: 1
   isSubScene: 0
