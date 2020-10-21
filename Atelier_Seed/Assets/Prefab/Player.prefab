@@ -588,6 +588,11 @@ MonoBehaviour:
   BreakBlockCount: 0
   GetStageTrophy: 0
   GunTrophyFlag: 0
+  WallFlag: 0
+  WallCount: 0
+  Fly: 0
+  Wind: 0
+  GetCoin: 0
   Player_Touch: {fileID: 0}
   Player_Jump: {fileID: 0}
   Player_Hit: {fileID: 0}
