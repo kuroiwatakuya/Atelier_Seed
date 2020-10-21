@@ -35,7 +35,6 @@ public class CTapEffect : MonoBehaviour
     // // 更新 // //
     void Update()
     {
-
         // エディタで実行中
         if(Application.isEditor)
         {

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Common;
 
 //**************************************
 // プレイヤー全般のスクリプト
@@ -102,27 +101,10 @@ public class CPlayerScript : MonoBehaviour
     //大砲入る条件用
     public bool GunTrophyFlag;
 
-    //かべぶつかったか
-    public bool WallFlag;
-    //壁にぶつかった回数
-    public int WallCount;
-    //飛ぶ
-    public bool Fly;
-    //飛び始めた座標
-    private Vector2 StartPosition;
-    //風衝突
-    public bool Wind;
-
-    //取得コイン
-    public int GetCoin;
-
     // Start is called before the first frame update
 
     //アニメーション用変数
     private Animator anim = null;
-
-    //タッチ用変数
-    Touch touch;
 
     //SE変数
     [SerializeField] private AudioClip Player_Touch;          //プレイヤータッチ用SE変数
@@ -132,7 +114,7 @@ public class CPlayerScript : MonoBehaviour
     [SerializeField] private AudioClip Player_Sit;               //プレイヤーがくっつく壁に当たった時のSE変数
     [SerializeField] private AudioClip Player_GetTrophy;    //プレイヤーがトロフィーを取得したときのSE変数
     AudioSource audioSource;            //オーディオソース
-    
+
     void Start()
     {
         Rbody = this.GetComponent<Rigidbody2D>();
@@ -146,7 +128,7 @@ public class CPlayerScript : MonoBehaviour
 
         //オーディオソース取得
         audioSource = GetComponent<AudioSource>();
-        
+
         this.MainCamera = Camera.main;
         this.MainCameraTransform = this.MainCamera.transform;
 
@@ -159,11 +141,7 @@ public class CPlayerScript : MonoBehaviour
 
         StopFieldCount = 0;
 
-        WallCount = 0;
-
         GetStageTrophy = false;
-
-        Fly = false;
 
         //---宮本加筆ここから------------------------------
         ShotEffect = (GameObject)Resources.Load("Effect_PlayerShot");   // プレイヤーショットエフェクトセット
@@ -189,7 +167,7 @@ public class CPlayerScript : MonoBehaviour
 
         return position;
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -251,9 +229,6 @@ public class CPlayerScript : MonoBehaviour
             //マウスを離したとき
             if (Input.GetMouseButtonUp(0))
             {
-
-                StartPosition = transform.position;
-
                 //プレイヤーを飛ばすSE
                 audioSource.PlayOneShot(Player_Jump);
 
@@ -294,126 +269,106 @@ public class CPlayerScript : MonoBehaviour
         //=================================
         else
         {
-            //---宮本加筆ここから------------------------------
-            EffectPosition = this.transform.position;       // 現在座標をエフェクト座標として取得
-            if (GunFind != null)
+            if (Input.touchCount > 0)
             {
-                GunRotate = GunObject.transform.rotation;   // Gunオブジェクトの回転値取得
-            }
-            //---宮本加筆ここまで------------------------------
+                Touch touch = Input.GetTouch(0);
 
-<<<<<<< HEAD
-            if (Input.GetMouseButtonDown(0) && !TapFlag && GunFlag)
-=======
-            if (touch.phase == TouchPhase.Began && !TapFlag && GunFlag)
->>>>>>> parent of 2f1009fe... 黒岩：プレイヤー挙動途中
-            {
-                //大砲用タップ
-                TapFlag = true;
-            }
-
-            //マウス左クリック＆タップ
-<<<<<<< HEAD
-            if (Input.GetMouseButtonDown(0))
-=======
-            if (touch.phase == TouchPhase.Began)
->>>>>>> parent of 2f1009fe... 黒岩：プレイヤー挙動途中
-            {
-                //動いてないかつクリックしてない
-                if (!PlayFlag && !ClickFlag)
+                //---宮本加筆ここから------------------------------
+                EffectPosition = this.transform.position;       // 現在座標をエフェクト座標として取得
+                if (GunFind != null)
                 {
-                    ClickFlag = true;
-<<<<<<< HEAD
-                    DragStart = GetMousePosition();
-
-                    //プレイヤーをタップしたときに鳴らす
-                    audioSource.PlayOneShot(Player_Touch);
-
-=======
-                    DragStart = touch.position;
-
-                    //プレイヤーをタップしたときに鳴らす
-                    audioSource.PlayOneShot(Player_Touch);
-
->>>>>>> parent of 2f1009fe... 黒岩：プレイヤー挙動途中
-                    //矢印フラグ
-                    this.Direction.enabled = true;
-                    this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
-                    this.Direction.SetPosition(1, Rbody.position);
+                    GunRotate = GunObject.transform.rotation;   // Gunオブジェクトの回転値取得
                 }
-            }
-            if (ClickFlag == true)
-            {
-                //ドラッグ処理
-<<<<<<< HEAD
+                //---宮本加筆ここまで------------------------------
+
+                if (Input.GetMouseButtonDown(0) && !TapFlag && GunFlag)
+                {
+                    //大砲用タップ
+                    TapFlag = true;
+                }
+
+                //マウス左クリック＆タップ
                 if (Input.GetMouseButtonDown(0))
                 {
-                    Vector2 position = touch.position;
-                    DirectionForce = position - DragStart;
-
-                    if (DirectionForce.magnitude > MaxMagnitude)
+                    //動いてないかつクリックしてない
+                    if (!PlayFlag && !ClickFlag)
                     {
-                        DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
-                        audioSource.PlayOneShot(Player_Pull);
+                        Debug.Log("タップしてますuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
+                        ClickFlag = true;
+                        //DragStart = GetMousePosition();
+                        DragStart = touch.position;
+                        
+                        //プレイヤーをタップしたときに鳴らす
+                        audioSource.PlayOneShot(Player_Touch);
+
+                        //矢印フラグ
+                        this.Direction.enabled = true;
+                        this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
+                        this.Direction.SetPosition(1, Rbody.position);
                     }
-
-=======
-                if (touch.phase == TouchPhase.Began)
-                {
-                    Vector2 position = touch.position;
-                    DirectionForce = position - DragStart;
-
-                    if (DirectionForce.magnitude > MaxMagnitude)
-                    {
-                        DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
-                        audioSource.PlayOneShot(Player_Pull);
-                    }
-
->>>>>>> parent of 2f1009fe... 黒岩：プレイヤー挙動途中
-                    this.Direction.SetPosition(0, Rbody.position);//矢印の位置
-                    this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
-
                 }
-            }
-
-            //マウスを離したとき
-<<<<<<< HEAD
-            if (Input.GetMouseButtonUp(0))
-=======
-            if (touch.phase == TouchPhase.Ended)
->>>>>>> parent of 2f1009fe... 黒岩：プレイヤー挙動途中
-            {
-                //プレイヤーを飛ばすSE
-                audioSource.PlayOneShot(Player_Jump);
-
-                //クリックフラグがオンなら
-                if (ClickFlag)
+                if (ClickFlag == true)
                 {
-                    ClickFlag = false;
-
-
-                    if (DirectionForce.magnitude >= MinMagnitude)
+                    //ドラッグ処理
+                    if (ClickFlag)
                     {
+                        Vector2 position = touch.position;
+                        DirectionForce = position - DragStart;
 
-                        PlayFlag = true;
+                        Debug.Log("ドラッグキめてるuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
 
-                        StopFieldFlag = false;
+                        if (DirectionForce.magnitude > MaxMagnitude)
+                        {
+                            DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
+                            audioSource.PlayOneShot(Player_Pull);
+                        }
 
-                        TurnCount--;
-                        //弾く
-                        Flip(DirectionForce * Power * -1);
+                        this.Direction.SetPosition(0, Rbody.position);//矢印の位置
+                        this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
+                    }
+                }
 
-                        //---宮本加筆ここから------------------------------
-                        // ショットエフェクト発生
-                        GetObject(ShotEffect, EffectPosition, Quaternion.identity);
-                        //---宮本加筆ここまで------------------------------
+                if(touch.phase == TouchPhase.Moved)
+                {
+                    Debug.Log("うべえああああああああああああああああああああああああああああああああああああああああああああ");
+                }
 
-                        //矢印オフ
-                        this.Direction.enabled = false;
+                //マウスを離したとき
+                if (Input.GetMouseButtonUp(0))
+                {
+                    //プレイヤーを飛ばすSE
+                    audioSource.PlayOneShot(Player_Jump);
+
+                    Debug.Log("離した");
+
+                    //クリックフラグがオンなら
+                    if (ClickFlag)
+                    {
+                        ClickFlag = false;
+
+                        if (DirectionForce.magnitude >= MinMagnitude)
+                        {
+
+                            PlayFlag = true;
+
+                            StopFieldFlag = false;
+
+                            TurnCount--;
+                            //弾く
+                            Flip(DirectionForce * Power * -1);
+
+                            //---宮本加筆ここから------------------------------
+                            // ショットエフェクト発生
+                            GetObject(ShotEffect, EffectPosition, Quaternion.identity);
+                            //---宮本加筆ここまで------------------------------
+
+                            //矢印オフ
+                            this.Direction.enabled = false;
 
 
-                        //回転アニメーションオン
-                        anim.SetBool("Move", true);
+                            //回転アニメーションオン
+                            anim.SetBool("Move", true);
+                        }
                     }
                 }
             }
@@ -425,21 +380,11 @@ public class CPlayerScript : MonoBehaviour
         Velocity.y = Rbody.velocity.y;
         Velocity.x = Rbody.velocity.x;
 
-        //*********************************************************
         //遅くなったらとめる
-<<<<<<< HEAD
-        //*********************************************************
-        if (Velocity.y == 0 &&Velocity.x <= 12 && Velocity.x >= -12 && PlayFlag && !GunFlag)
+        if (Velocity.y == 0 && Velocity.x <= 12 && Velocity.x >= -12 && PlayFlag && !GunFlag)
         {
-            //連続壁激突
-            WallCount = 0;
-
-=======
-        if (Velocity.y == 0 &&Velocity.x <= 12 && Velocity.x >= -12 && PlayFlag && !GunFlag)
-        {
->>>>>>> parent of 2f1009fe... 黒岩：プレイヤー挙動途中
             Rbody.velocity = new Vector2(0, 0);
-            
+
             //プレイヤ―を正しい向きで止める
             Rbody.rotation = 0.0f;
 
@@ -453,14 +398,6 @@ public class CPlayerScript : MonoBehaviour
 
             //全てのリジッドボディを止める
             Rbody.constraints = RigidbodyConstraints2D.FreezeAll;
-
-            //飛び始めと比較
-            Vector2 NowPosition = transform.position;
-            var diff = NowPosition - StartPosition;
-            if(diff.magnitude > CConst.FLY_DISTANCE)
-            {
-                Fly = true;
-            }
         }
 
         //********************************************************************
@@ -468,7 +405,7 @@ public class CPlayerScript : MonoBehaviour
         //********************************************************************
         if (StopFieldFlag)
         {
-            if(!OnlyStopCount)
+            if (!OnlyStopCount)
             {
                 StopFieldCount++;
             }
@@ -529,7 +466,7 @@ public class CPlayerScript : MonoBehaviour
         }
 
         //ゲームオーバー
-        if(PlayCount <= 0)
+        if (PlayCount <= 0)
         {
             SceneManager.LoadScene("GameOver");
         }
@@ -552,14 +489,6 @@ public class CPlayerScript : MonoBehaviour
             StopFieldFlag = true;
             audioSource.PlayOneShot(Player_Sit);        //くっつくSE
         }
-
-        // 壁にぶつかる
-        if (collision.gameObject.tag == "PlayerCrush")
-        {
-            WallFlag = true;
-            WallCount++;
-        }
-
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -579,19 +508,6 @@ public class CPlayerScript : MonoBehaviour
         {
             audioSource.PlayOneShot(Player_GetTrophy);      //トロフィーをとった時のSE
             GetStageTrophy = true;
-        }
-
-        //風
-        if (collider.gameObject.name == "Wind")
-        {
-            Wind = true;
-        }
-
-        //コイン
-        //風
-        if (collider.gameObject.name == "Coin")
-        {
-            GetCoin++;
         }
     }
 
