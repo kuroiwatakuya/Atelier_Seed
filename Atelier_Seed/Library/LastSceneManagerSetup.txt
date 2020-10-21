@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Sonfi/Sonfi_Scene.unity
+- path: Assets/Scenes/Tei/Tet_Stage4.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
