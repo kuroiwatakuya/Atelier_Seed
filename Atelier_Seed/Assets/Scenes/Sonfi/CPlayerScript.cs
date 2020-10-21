@@ -302,24 +302,40 @@ public class CPlayerScript : MonoBehaviour
             }
             //---宮本加筆ここまで------------------------------
 
+<<<<<<< HEAD
             if (Input.GetMouseButtonDown(0) && !TapFlag && GunFlag)
+=======
+            if (touch.phase == TouchPhase.Began && !TapFlag && GunFlag)
+>>>>>>> parent of 2f1009fe... 黒岩：プレイヤー挙動途中
             {
                 //大砲用タップ
                 TapFlag = true;
             }
 
             //マウス左クリック＆タップ
+<<<<<<< HEAD
             if (Input.GetMouseButtonDown(0))
+=======
+            if (touch.phase == TouchPhase.Began)
+>>>>>>> parent of 2f1009fe... 黒岩：プレイヤー挙動途中
             {
                 //動いてないかつクリックしてない
                 if (!PlayFlag && !ClickFlag)
                 {
                     ClickFlag = true;
+<<<<<<< HEAD
                     DragStart = GetMousePosition();
 
                     //プレイヤーをタップしたときに鳴らす
                     audioSource.PlayOneShot(Player_Touch);
 
+=======
+                    DragStart = touch.position;
+
+                    //プレイヤーをタップしたときに鳴らす
+                    audioSource.PlayOneShot(Player_Touch);
+
+>>>>>>> parent of 2f1009fe... 黒岩：プレイヤー挙動途中
                     //矢印フラグ
                     this.Direction.enabled = true;
                     this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
@@ -329,6 +345,7 @@ public class CPlayerScript : MonoBehaviour
             if (ClickFlag == true)
             {
                 //ドラッグ処理
+<<<<<<< HEAD
                 if (Input.GetMouseButtonDown(0))
                 {
                     Vector2 position = touch.position;
@@ -340,6 +357,19 @@ public class CPlayerScript : MonoBehaviour
                         audioSource.PlayOneShot(Player_Pull);
                     }
 
+=======
+                if (touch.phase == TouchPhase.Began)
+                {
+                    Vector2 position = touch.position;
+                    DirectionForce = position - DragStart;
+
+                    if (DirectionForce.magnitude > MaxMagnitude)
+                    {
+                        DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
+                        audioSource.PlayOneShot(Player_Pull);
+                    }
+
+>>>>>>> parent of 2f1009fe... 黒岩：プレイヤー挙動途中
                     this.Direction.SetPosition(0, Rbody.position);//矢印の位置
                     this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
 
@@ -347,7 +377,11 @@ public class CPlayerScript : MonoBehaviour
             }
 
             //マウスを離したとき
+<<<<<<< HEAD
             if (Input.GetMouseButtonUp(0))
+=======
+            if (touch.phase == TouchPhase.Ended)
+>>>>>>> parent of 2f1009fe... 黒岩：プレイヤー挙動途中
             {
                 //プレイヤーを飛ばすSE
                 audioSource.PlayOneShot(Player_Jump);
@@ -393,12 +427,17 @@ public class CPlayerScript : MonoBehaviour
 
         //*********************************************************
         //遅くなったらとめる
+<<<<<<< HEAD
         //*********************************************************
         if (Velocity.y == 0 &&Velocity.x <= 12 && Velocity.x >= -12 && PlayFlag && !GunFlag)
         {
             //連続壁激突
             WallCount = 0;
 
+=======
+        if (Velocity.y == 0 &&Velocity.x <= 12 && Velocity.x >= -12 && PlayFlag && !GunFlag)
+        {
+>>>>>>> parent of 2f1009fe... 黒岩：プレイヤー挙動途中
             Rbody.velocity = new Vector2(0, 0);
             
             //プレイヤ―を正しい向きで止める
