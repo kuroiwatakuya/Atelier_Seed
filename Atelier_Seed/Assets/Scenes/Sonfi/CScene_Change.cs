@@ -44,6 +44,17 @@ public class CScene_Change : MonoBehaviour
             OnlySelect = false;
         }
     }
+
+    public void Go_End()
+    {
+        if (OnlySelect == true)
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("Ending");
+            OnlySelect = false;
+        }
+    }
+
     public void Go_Album()
     {
         if (OnlySelect == true)

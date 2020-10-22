@@ -23,6 +23,8 @@ public class CResult : MonoBehaviour
     public GameObject[] ScoreSprite10 = new GameObject[CConst.NUMBER];
     public GameObject[] ScoreSprite1 = new GameObject[CConst.NUMBER];
 
+    public GameObject[] Button = new GameObject[2];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,15 @@ public class CResult : MonoBehaviour
             if (Stage == StageNum)
             {
                 StageConditions[i].SetActive(true);
+            }
+
+            if(Stage == 5)
+            {
+                Button[1].SetActive(true);
+            }
+            else
+            {
+                Button[0].SetActive(true);
             }
         }
 
@@ -117,8 +128,8 @@ public class CResult : MonoBehaviour
             ScoreSprite1[i].SetActive(false);
         }
 
-        CoinNum = CPlayerScript.GetCoinNum();
-        CountNum = CPlayerScript.GetPlayCount();
+        CoinNum = CGoal.GetCoinNum();
+        CountNum = CGoal.GetPlayCount();
 
         Score = CoinNum * 100 + CountNum * 200;
 
@@ -146,11 +157,5 @@ public class CResult : MonoBehaviour
                 ScoreSprite1[i].SetActive(true);
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
