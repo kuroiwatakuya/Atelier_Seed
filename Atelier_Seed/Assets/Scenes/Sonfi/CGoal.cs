@@ -14,10 +14,10 @@ public class CGoal : MonoBehaviour
 
     public CPlayerScript PlayerScript;
 
-    private int PlayCount;
-    private int Coin;
-
     private int Liberation_StageNum;
+
+    public static int PlayCount;
+    public static int Coin;
 
     //トロフィー獲得済みか
     public bool[] GetTrophy = new bool[CConst.TROPHY_MAX];
@@ -68,8 +68,8 @@ public class CGoal : MonoBehaviour
         if (Clear_Flag)
         {
 
-            PlayCount = CPlayerScript.GetPlayCount();
-            Coin = CPlayerScript.GetCoinNum();
+            PlayCount = PlayerScript.PlayCount;
+            Coin = PlayerScript.GetCoin;
 
             //********************
             // トロフィー、コイン
@@ -251,31 +251,7 @@ public class CGoal : MonoBehaviour
             //PlayerPrefsをセーブする         
             PlayerPrefs.Save();
 
-            //ステージ1
-            if(Now_StageNum == 1)
-            {
-                SceneManager.LoadScene("Stage1_Ending");
-            }
-            //ステージ2
-            if(Now_StageNum == 2)
-            {
-                SceneManager.LoadScene("Stage2_Ending");
-            }
-            //ステージ3
-            if(Now_StageNum == 3)
-            {
-                SceneManager.LoadScene("Stage3_Ending");
-            }
-            //ステージ4
-            if(Now_StageNum == 4)
-            {
-                SceneManager.LoadScene("Stage4_Ending");
-            }
-            //ステージ5
-            if(Now_StageNum == 5)
-            {
-                SceneManager.LoadScene("Stage5_Ending");
-            }
+            SceneManager.LoadScene("Result");
 
         }
     }
@@ -288,5 +264,14 @@ public class CGoal : MonoBehaviour
             Clear_Flag = true;
 
         }
+    }
+
+    public static int GetCoinNum()
+    {
+        return Coin;
+    }
+    public static int GetPlayCount()
+    {
+        return PlayCount;
     }
 }

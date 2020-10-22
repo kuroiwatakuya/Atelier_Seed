@@ -9,6 +9,8 @@ public class CPlayCount : MonoBehaviour
 
     private int PlayCount;
 
+    public CPlayerScript PlayerScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class CPlayCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayCount = CPlayerScript.GetPlayCount();
+        PlayCount = PlayerScript.PlayCount;
         PlayCountUI[PlayCount].SetActive(true);
         PlayCountUI[PlayCount + 1].SetActive(false);
     }

@@ -65,7 +65,7 @@ public class CPlayerScript : MonoBehaviour
     public bool GunFlag;
 
     //回数制限
-    public static int PlayCount = 3;
+    public int PlayCount = 3;
 
     //止まるフラグ
     public bool StopFlag;
@@ -78,8 +78,6 @@ public class CPlayerScript : MonoBehaviour
     private Transform MainCameraTransform;
     //ドラッグ開始点
     private Vector2 DragStart;
-    //残りターン
-    private int TurnCount = 3;
     //弾いてるか
     public bool PlayFlag;
     //クリックしたか
@@ -116,7 +114,7 @@ public class CPlayerScript : MonoBehaviour
     public bool Wind;
 
     //取得コイン
-    public static int GetCoin;
+    public int GetCoin;
 
     // Start is called before the first frame update
 
@@ -281,8 +279,6 @@ public class CPlayerScript : MonoBehaviour
                         PlayFlag = true;
 
                         StopFieldFlag = false;
-
-                        TurnCount--;
                         //弾く
                         Flip(DirectionForce * Power * -1);
 
@@ -393,7 +389,6 @@ public class CPlayerScript : MonoBehaviour
 
                             StopFieldFlag = false;
 
-                            TurnCount--;
                             //弾く
                             Flip(DirectionForce * Power * -1);
 
@@ -635,13 +630,4 @@ public class CPlayerScript : MonoBehaviour
         Instantiate(obj, pos, qua, GunShootPool);
     }
     //---宮本加筆ここまで------------------------------
-
-    public static int GetCoinNum()
-    {
-        return GetCoin;
-    }
-    public static int GetPlayCount()
-    {
-        return PlayCount;
-    }
 }
