@@ -156,7 +156,7 @@ MonoBehaviour:
   Now_StageNum: 5
   MaxCoin: 0
   Clear_Flag: 0
-  PlayerScript: {fileID: 0}
+  PlayerScript: {fileID: 804129067}
   GetTrophy: 000000000000000000000000000000
   OldTrophy: 000000000000000000000000000000
   GetBatch: 000000000000000000000000000000
@@ -264,8 +264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c3ff7f6ca20efc42a8b811dd82f4d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 672626767}
-  PlayerScript: {fileID: 672626771}
+  Player: {fileID: 804129066}
+  PlayerScript: {fileID: 804129067}
 --- !u!1 &346408096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,22 +1277,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 60.93098, y: 2.625173}
   m_EdgeRadius: 0
---- !u!1 &672626767 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2131334010473050553, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
-  m_PrefabInstance: {fileID: 809296024}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &672626771 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2131334010473050549, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
-  m_PrefabInstance: {fileID: 809296024}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672626767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba524e58a23d88945babdb30404a649c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &679569515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1502,7 +1486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233605fa97a6fbd45b4fdb349edc1130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 672626767}
+  Player: {fileID: 804129066}
   BreakEffect: {fileID: 2975096857167911585, guid: 83f0046cca59b2a43ab24cbd1171afac, type: 3}
   Power: 0
 --- !u!70 &743189563
@@ -1901,6 +1885,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &804129066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1268777862898698587, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+  m_PrefabInstance: {fileID: 809296024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &804129067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+  m_PrefabInstance: {fileID: 809296024}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804129066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba524e58a23d88945babdb30404a649c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &809296024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1964,6 +1964,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: GunObject
+      value: 
+      objectReference: {fileID: 293146658}
+    - target: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: GunPlayerPosition
+      value: 
+      objectReference: {fileID: 465852264}
+    - target: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: GoalScript
+      value: 
+      objectReference: {fileID: 171021420}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
 --- !u!1 &817969904
@@ -3811,15 +3823,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 522740d63f048704cb9d1d3d2de6f674, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d718e701e0a4b6048acbba8e48791a15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &822955673
@@ -4200,7 +4212,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 522740d63f048704cb9d1d3d2de6f674, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d718e701e0a4b6048acbba8e48791a15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4208,7 +4220,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1098329823
@@ -4347,7 +4359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233605fa97a6fbd45b4fdb349edc1130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 672626767}
+  Player: {fileID: 804129066}
   BreakEffect: {fileID: 2975096857167911585, guid: 83f0046cca59b2a43ab24cbd1171afac, type: 3}
   Power: 0
 --- !u!70 &1170091781
@@ -4384,7 +4396,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2, y: 3}
-    newSize: {x: 2, y: 3}
+    newSize: {x: 1, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4432,15 +4444,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: af4c30f1413c9c14e9aea6aa1a6d81b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99438b4ad322da342a443e3115601aa7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 3}
+  m_Size: {x: 1, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1170091784
@@ -4452,7 +4464,7 @@ Transform:
   m_GameObject: {fileID: 1170091779}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 27.8, y: 2.53, z: 0}
-  m_LocalScale: {x: 0.97469425, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
@@ -5145,7 +5157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233605fa97a6fbd45b4fdb349edc1130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 672626767}
+  Player: {fileID: 0}
   BreakEffect: {fileID: 2975096857167911585, guid: 83f0046cca59b2a43ab24cbd1171afac, type: 3}
   Power: 0
 --- !u!61 &1532690308
@@ -5673,7 +5685,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 522740d63f048704cb9d1d3d2de6f674, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d718e701e0a4b6048acbba8e48791a15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5681,7 +5693,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1700714278
@@ -5795,7 +5807,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1752256568
 GameObject:
@@ -6493,7 +6505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233605fa97a6fbd45b4fdb349edc1130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 672626767}
+  Player: {fileID: 804129066}
   BreakEffect: {fileID: 2975096857167911585, guid: 83f0046cca59b2a43ab24cbd1171afac, type: 3}
   Power: 0
 --- !u!61 &1977745024

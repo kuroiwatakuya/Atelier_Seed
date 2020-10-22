@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7553660643503420092, guid: 8f2b2dc541706504d9eb70abeb4c23db, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f2b2dc541706504d9eb70abeb4c23db, type: 3}
 --- !u!114 &10537692 stripped
@@ -1130,6 +1134,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 167650397443582742, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 167650397443582742, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2131334010473050544, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -1178,8 +1190,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: TrophyObject
+      value: 
+      objectReference: {fileID: 4892719686143137025}
+    - target: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: GoalScript
+      value: 
+      objectReference: {fileID: 586433606}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+--- !u!114 &286090084 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+  m_PrefabInstance: {fileID: 286090083}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba524e58a23d88945babdb30404a649c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &377811112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,7 +1374,7 @@ MonoBehaviour:
   Now_StageNum: 2
   MaxCoin: 0
   Clear_Flag: 0
-  PlayerScript: {fileID: 0}
+  PlayerScript: {fileID: 286090084}
   GetTrophy: 000000000000000000000000000000
   OldTrophy: 000000000000000000000000000000
   GetBatch: 000000000000000000000000000000
@@ -2615,7 +2646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6484542898897956247, guid: f142828049274974ea5fcdd443c9eddb, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6484542898897956247, guid: f142828049274974ea5fcdd443c9eddb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2771,3 +2802,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 454fa70cc36ae17429c7dfac3e5fe50e, type: 3}
+--- !u!1 &4892719686143137025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4892719686368691588, guid: 454fa70cc36ae17429c7dfac3e5fe50e, type: 3}
+  m_PrefabInstance: {fileID: 4892719686143137024}
+  m_PrefabAsset: {fileID: 0}

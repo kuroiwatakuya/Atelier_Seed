@@ -609,7 +609,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 10b2d66ce205527478e8590a0c2b1f12, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5f4260d96252d540851bc6a06c0530e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -973,7 +973,7 @@ MonoBehaviour:
   Now_StageNum: 4
   MaxCoin: 0
   Clear_Flag: 0
-  PlayerScript: {fileID: 0}
+  PlayerScript: {fileID: 1507070084}
   GetTrophy: 000000000000000000000000000000
   OldTrophy: 000000000000000000000000000000
   GetBatch: 000000000000000000000000000000
@@ -2296,6 +2296,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 167650397443582742, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 167650397443582742, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7
+      objectReference: {fileID: 0}
     - target: {fileID: 2131334010473050544, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.58371
@@ -2344,8 +2352,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: TrophyObject
+      value: 
+      objectReference: {fileID: 2129251209}
+    - target: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: GoalScript
+      value: 
+      objectReference: {fileID: 769798543}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+--- !u!114 &1507070084 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+  m_PrefabInstance: {fileID: 1507070083}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba524e58a23d88945babdb30404a649c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1605015709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4401,6 +4428,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 454fa70cc36ae17429c7dfac3e5fe50e, type: 3}
+--- !u!1 &2129251209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4892719686368691588, guid: 454fa70cc36ae17429c7dfac3e5fe50e, type: 3}
+  m_PrefabInstance: {fileID: 2129251208}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2142888603
 GameObject:
   m_ObjectHideFlags: 0
@@ -4497,7 +4529,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e2cbedbc7604f074da39730f2ba7ff1e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f5afd3814016f8b4db0e4d928de12126, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
