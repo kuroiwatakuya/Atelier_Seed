@@ -184,11 +184,21 @@ public class CPlayerScript : MonoBehaviour
     private Vector3 GetMousePosition()
     {
         // マウスから取得できないZ座標を補完する
-        var position = Input.mousePosition;
+        Vector3 position = Input.mousePosition;
         position.z = this.MainCameraTransform.position.z;
         position = this.MainCamera.ScreenToWorldPoint(position);
         position.z = 0;
 
+        return position;
+    }
+    //タッチ座標をワールド座標に変換して取得
+    private Vector3 GetTouchPosition()
+    {
+        Touch touch = Input.GetTouch(0);
+        Vector3 position = touch.position;
+        position.z = this.MainCameraTransform.position.z;
+        position = this.MainCamera.ScreenToWorldPoint(position);
+        position.z = 0;
         return position;
     }
 
@@ -219,6 +229,7 @@ public class CPlayerScript : MonoBehaviour
                 if (!PlayFlag && !ClickFlag)
                 {
                     ClickFlag = true;
+                    //マウスを左クリックした位置の取得
                     DragStart = GetMousePosition();
 
                     //プレイヤーをタップしたときに鳴らす
@@ -314,7 +325,7 @@ public class CPlayerScript : MonoBehaviour
                 }
 
                 //マウス左クリック＆タップ
-                if (Input.GetMouseButtonDown(0))
+                if (touch.phase == TouchPhase.Moved)
                 {
                     //動いてないかつクリックしてない
                     if (!PlayFlag && !ClickFlag)
@@ -322,7 +333,8 @@ public class CPlayerScript : MonoBehaviour
                         Debug.Log("タップしてますuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
                         ClickFlag = true;
                         //DragStart = GetMousePosition();
-                        DragStart = touch.position;
+                        //タップ開始した位置
+                        DragStart = GetTouchPosition();
                         
                         //プレイヤーをタップしたときに鳴らす
                         audioSource.PlayOneShot(Player_Touch);
@@ -338,7 +350,8 @@ public class CPlayerScript : MonoBehaviour
                     //ドラッグ処理
                     if (ClickFlag)
                     {
-                        Vector2 position = touch.position;
+                        //ドラッグした後のポジション取得
+                        Vector2 position = GetTouchPosition();
                         DirectionForce = position - DragStart;
 
                         Debug.Log("ドラッグキめてるuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
@@ -360,7 +373,7 @@ public class CPlayerScript : MonoBehaviour
                 }
 
                 //マウスを離したとき
-                if (Input.GetMouseButtonUp(0))
+                if (touch.phase == TouchPhase.Ended)
                 {
                     //プレイヤーを飛ばすSE
                     audioSource.PlayOneShot(Player_Jump);
