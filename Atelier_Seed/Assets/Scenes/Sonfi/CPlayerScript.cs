@@ -38,6 +38,7 @@ public class CPlayerScript : MonoBehaviour
 
     //他スクリプト
     public CGoal GoalScript;
+    public Banner BannerScript;
 
     //********************
     // コンポーネント
@@ -510,6 +511,63 @@ public class CPlayerScript : MonoBehaviour
         if (PlayCount <= 0)
         {
             SceneManager.LoadScene("GameOver");
+        }
+
+        //***********************************************
+        //バッチの初獲得
+        //***********************************************
+
+        if (WallFlag && !GoalScript.GetBatch[0])
+        {
+            BannerScript.Get = true;
+        }
+        else if (WallCount >= 2 && !GoalScript.GetBatch[1])
+        {
+            BannerScript.Get = true;
+        }
+        else if (Fly && !GoalScript.GetBatch[2])
+        {
+            BannerScript.Get = true;
+        }
+        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 1 && !GoalScript.GetBatch[3])
+        {
+            BannerScript.Get = true;
+        }
+        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 2 && !GoalScript.GetBatch[4])
+        {
+            BannerScript.Get = true;
+        }
+        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 3 && !GoalScript.GetBatch[5])
+        {
+            BannerScript.Get = true;
+        }
+        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 4 && !GoalScript.GetBatch[6])
+        {
+            BannerScript.Get = true;
+        }
+        else if (Wind && !GoalScript.GetBatch[7])
+        {
+            BannerScript.Get = true;
+        }
+        else if (GunTrophyFlag && !GoalScript.GetBatch[8])
+        {
+            BannerScript.Get = true;
+        }
+        else if (BreakBlockCount >= 1 && !GoalScript.GetBatch[9])
+        {
+            BannerScript.Get = true;
+        }
+        else if (GetStageTrophy && !GoalScript.GetBatch[10])
+        {
+            BannerScript.Get = true;
+        }
+        else if (GetCoin >= GoalScript.MaxCoin && !GoalScript.GetBatch[12])
+        {
+            GoalScript.AllCoin[GoalScript.Now_StageNum - 1] = true;
+            if (GoalScript.AllCoin[0] && GoalScript.AllCoin[1] && GoalScript.AllCoin[2] && GoalScript.AllCoin[3] && GoalScript.AllCoin[4])
+            {
+                BannerScript.Get = true;
+            }
         }
 
     }
