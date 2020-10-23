@@ -44,4 +44,19 @@ public class CPopUp : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
             }
         }
     }
+    public void OnMouseDown()
+    {
+        if(Input.GetMouseButton(0))
+        {
+            Hint.SetActive(true);
+        }
+    }
+
+    public void OnMouseUp()
+    {
+        if(Input.GetMouseButtonUp(0))
+        {
+            Hint.SetActive(false);
+        }
+    }
 }
