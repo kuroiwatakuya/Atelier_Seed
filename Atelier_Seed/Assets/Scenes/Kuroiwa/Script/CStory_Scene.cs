@@ -10,6 +10,7 @@ public class CStory_Scene : MonoBehaviour
 {
     //名前格納
     public string StageName;
+    public int StageNumber;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class CStory_Scene : MonoBehaviour
 
     public void Scene_Change()
     {
-        SceneManager.LoadScene(StageName);
+        CFadeManager.FadeOut(StageNumber);
+//        SceneManager.LoadScene(StageName);
     }
 }

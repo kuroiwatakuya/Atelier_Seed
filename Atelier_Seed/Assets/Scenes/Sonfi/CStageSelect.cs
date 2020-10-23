@@ -92,15 +92,15 @@ public class CStageSelect : MonoBehaviour
     //**********************************
     // ボタンが呼ばれたら呼び出す関数
     //**********************************
-    public void StageSelect(string StageNumber)
+    public void StageSelect(int StageNumber)
     {
-        if (OnlySelect == true)
+        if (OnlySelect)
         {
             //SEを流す処理
             AudioSource.PlayOneShot(SelectSE);
 
             PlayerPrefs.SetInt("LIBERATION_STAGENUM", Liberation_StageNum);
-            SceneManager.LoadScene(StageNumber);
+            CFadeManager.FadeOut(StageNumber);
             OnlySelect = false;
 
             //SEを破壊しないようにする
