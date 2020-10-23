@@ -86,6 +86,7 @@ public class CFadeManager : MonoBehaviour
     {
         if (FadeImage == null) Initialize();    // フェードイメージがなければ初期化
         FadeImage.color = Color.black;          // フェードカラー設定
+        FadeCanvas.enabled = true;              // フェードキャンバス有効化
         isFadeIn = true;                        // フェードインフラグＯＮ
         Alpha = 1.0f;                           // α値を1.0fにして開始
     }
@@ -115,7 +116,7 @@ public class CFadeManager : MonoBehaviour
             if (Alpha <= 0.0f)
             {
                 isFadeIn = false;           // フェードインフラグＯＦＦ
-                Alpha = 0.0f;               // α値０設定
+               // Alpha = 0.0f;               // α値０設定
                 FadeCanvas.enabled = false;  // フェードキャンバス無効化
             }
 
@@ -134,7 +135,7 @@ public class CFadeManager : MonoBehaviour
             if (Alpha >= 1.0f)
             {
                 isFadeOut = false;  // フェードアウト
-                Alpha = 1.0f;       // α値１設定
+               // Alpha = 1.0f;       // α値１設定
 
                 // 次のシーンへ遷移
                 SceneManager.LoadScene(NextScene);
