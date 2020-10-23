@@ -211,6 +211,10 @@ public class CGoal : MonoBehaviour
             }
             else if (Now_StageNum == 1)
             {
+                if (!GetBatch[11])
+                {
+
+                }
                 GetBatch[11] = true;
             }
             else if (Coin >= MaxCoin)
@@ -223,6 +227,10 @@ public class CGoal : MonoBehaviour
             }
             else if (Now_StageNum == 5)
             {
+                if(!GetBatch[13])
+                {
+
+                }
                 GetBatch[13] = true;
             }
             /*else if (Now_StageNum == 5)写真とる
