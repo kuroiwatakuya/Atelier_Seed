@@ -4,6 +4,7 @@ using UnityEngine;
 
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Common;
 
 //*********************************************
 // ステージ選択、タイトルへの遷移用スクリプト
@@ -27,40 +28,40 @@ public class CScene_Change : MonoBehaviour
 
     public void Go_StageSelect()
     {
-        if (OnlySelect == true)
+        if (OnlySelect)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("Stage_Select");
+            CFadeManager.FadeOut(CConst.SCENE_STAGE_SELECT);
             OnlySelect = false;
         }
     }
 
     public void Go_Title()
     {
-        if (OnlySelect == true)
+        if (OnlySelect)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("Title");
+            CFadeManager.FadeOut(CConst.SCENE_TITLE);
             OnlySelect = false;
         }
     }
 
     public void Go_End()
     {
-        if (OnlySelect == true)
+        if (OnlySelect)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("Ending");
+            CFadeManager.FadeOut(CConst.SCENE_ENDING);
             OnlySelect = false;
         }
     }
 
     public void Go_Album()
     {
-        if (OnlySelect == true)
+        if (OnlySelect)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("Collection");
+            CFadeManager.FadeOut(CConst.SCENE_COLLECTION);
             OnlySelect = false;
         }
     }
