@@ -239,24 +239,21 @@ public class CPlayerScript : MonoBehaviour
                     this.Direction.SetPosition(1, Rbody.position);
                 }
             }
-            if (ClickFlag == true)
+            //ドラッグ処理
+            if (ClickFlag)
             {
-                //ドラッグ処理
-                if (ClickFlag)
+                Vector2 position = GetMousePosition();
+                DirectionForce = position - DragStart;
+
+                if (DirectionForce.magnitude > MaxMagnitude)
                 {
-                    Vector2 position = GetMousePosition();
-                    DirectionForce = position - DragStart;
-
-                    if (DirectionForce.magnitude > MaxMagnitude)
-                    {
-                        DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
-                        audioSource.PlayOneShot(Player_Pull);
-                    }
-
-                    this.Direction.SetPosition(0, Rbody.position);//矢印の位置
-                    this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
-
+                    DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
+                    audioSource.PlayOneShot(Player_Pull);
                 }
+
+                this.Direction.SetPosition(0, Rbody.position);//矢印の位置
+                this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
+
             }
 
             //マウスを離したとき
@@ -341,27 +338,25 @@ public class CPlayerScript : MonoBehaviour
                         this.Direction.SetPosition(1, Rbody.position);
                     }
                 }
-                if (ClickFlag == true)
+                //ドラッグ処理
+                if (ClickFlag)
                 {
-                    //ドラッグ処理
-                    if (ClickFlag)
+                    //ドラッグした後のポジション取得
+                    Vector2 position = GetTouchPosition();
+                    DirectionForce = position - DragStart;
+
+                    Debug.Log("ドラッグキめてるuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
+
+                    if (DirectionForce.magnitude > MaxMagnitude)
                     {
-                        //ドラッグした後のポジション取得
-                        Vector2 position = GetTouchPosition();
-                        DirectionForce = position - DragStart;
-
-                        Debug.Log("ドラッグキめてるuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
-
-                        if (DirectionForce.magnitude > MaxMagnitude)
-                        {
-                            DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
-                            audioSource.PlayOneShot(Player_Pull);
-                        }
-
-                        this.Direction.SetPosition(0, Rbody.position);//矢印の位置
-                        this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
+                        DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
+                        audioSource.PlayOneShot(Player_Pull);
                     }
+
+                    this.Direction.SetPosition(0, Rbody.position);//矢印の位置
+                    this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
                 }
+                
 
                 if(touch.phase == TouchPhase.Moved)
                 {
@@ -537,7 +532,7 @@ public class CPlayerScript : MonoBehaviour
         }
 
         // 壁にぶつかる
-        if (collision.gameObject.tag == "PlayerCrush")
+        if (collision.gameObject.tag == "Wall")
         {
             WallFlag = true;
             WallCount++;
