@@ -610,7 +610,6 @@ MonoBehaviour:
   - {fileID: 1607846574}
   - {fileID: 633475510}
   - {fileID: 1834907258}
-  flame: 1
   NextScene: 2
 --- !u!1 &1607846574
 GameObject:
@@ -746,7 +745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6702ddb2939bda42854882cb471bc3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flame: 0
   Endcard:
   - {fileID: 0}
   - {fileID: 0}
@@ -972,7 +970,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 550, y: 250}
+  m_AnchoredPosition: {x: 650, y: 335}
   m_SizeDelta: {x: 72, y: 72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2014847921
