@@ -117,6 +117,9 @@ public class CPlayerScript : MonoBehaviour
     //取得コイン
     public int GetCoin;
 
+    //バッチ獲得バナー済か
+    private bool[] OnlyBanner = new bool[CConst.BATCH_NUM];
+
     // Start is called before the first frame update
 
     //アニメーション用変数
@@ -163,6 +166,10 @@ public class CPlayerScript : MonoBehaviour
 
         Fly = false;
 
+        for(int i = 0 ; i <= CConst.BATCH_NUM - 1 ; i++)
+        {
+            OnlyBanner[i] = false;
+        }
 
         //---宮本加筆ここから------------------------------
         ShotEffect = (GameObject)Resources.Load("Effect_PlayerShot");   // プレイヤーショットエフェクトセット
@@ -517,55 +524,67 @@ public class CPlayerScript : MonoBehaviour
         //バッチの初獲得
         //***********************************************
 
-        if (WallFlag && !GoalScript.GetBatch[0])
+        if (WallFlag && !GoalScript.GetBatch[0] && !OnlyBanner[0])
         {
+            OnlyBanner[0] = true;
             BannerScript.Get = true;
         }
-        else if (WallCount >= 2 && !GoalScript.GetBatch[1])
+        else if (WallCount >= 2 && !GoalScript.GetBatch[1] && !OnlyBanner[1])
         {
+            OnlyBanner[1] = true;
             BannerScript.Get = true;
         }
-        else if (Fly && !GoalScript.GetBatch[2])
+        else if (Fly && !GoalScript.GetBatch[2] && !OnlyBanner[2])
         {
+            OnlyBanner[2] = true;
             BannerScript.Get = true;
         }
-        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 1 && !GoalScript.GetBatch[3])
+        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 1 && !GoalScript.GetBatch[3] && !OnlyBanner[3])
         {
+            OnlyBanner[3] = true;
             BannerScript.Get = true;
         }
-        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 2 && !GoalScript.GetBatch[4])
+        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 2 && !GoalScript.GetBatch[4] && !OnlyBanner[4])
         {
+            OnlyBanner[4] = true;
             BannerScript.Get = true;
         }
-        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 3 && !GoalScript.GetBatch[5])
+        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 3 && !GoalScript.GetBatch[5] && !OnlyBanner[5])
         {
+            OnlyBanner[5] = true;
             BannerScript.Get = true;
         }
-        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 4 && !GoalScript.GetBatch[6])
+        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 4 && !GoalScript.GetBatch[6] && !OnlyBanner[6])
         {
+            OnlyBanner[6] = true;
             BannerScript.Get = true;
         }
-        else if (Wind && !GoalScript.GetBatch[7])
+        else if (Wind && !GoalScript.GetBatch[7] && !OnlyBanner[7])
         {
+            OnlyBanner[7] = true;
             BannerScript.Get = true;
         }
-        else if (GunTrophyFlag && !GoalScript.GetBatch[8])
+        else if (GunTrophyFlag && !GoalScript.GetBatch[8] && !OnlyBanner[8])
         {
+            OnlyBanner[8] = true;
             BannerScript.Get = true;
         }
-        else if (BreakBlockCount >= 1 && !GoalScript.GetBatch[9])
+        else if (BreakBlockCount >= 1 && !GoalScript.GetBatch[9] && !OnlyBanner[9])
         {
+            OnlyBanner[9] = true;
             BannerScript.Get = true;
         }
-        else if (GetStageTrophy && !GoalScript.GetBatch[10])
+        else if (GetStageTrophy && !GoalScript.GetBatch[10] && !OnlyBanner[10])
         {
+            OnlyBanner[10] = true;
             BannerScript.Get = true;
         }
-        else if (GetCoin >= GoalScript.MaxCoin && !GoalScript.GetBatch[12])
+        else if (GetCoin >= GoalScript.MaxCoin && !GoalScript.GetBatch[12] && !OnlyBanner[12])
         {
             GoalScript.AllCoin[GoalScript.Now_StageNum - 1] = true;
             if (GoalScript.AllCoin[0] && GoalScript.AllCoin[1] && GoalScript.AllCoin[2] && GoalScript.AllCoin[3] && GoalScript.AllCoin[4])
             {
+                OnlyBanner[12] = true;
                 BannerScript.Get = true;
             }
         }
@@ -614,6 +633,8 @@ public class CPlayerScript : MonoBehaviour
         {
             audioSource.PlayOneShot(Player_GetTrophy);      //トロフィーをとった時のSE
             GetStageTrophy = true;
+            TrophyObject.SetActive(false);
+
         }
 
         //風
