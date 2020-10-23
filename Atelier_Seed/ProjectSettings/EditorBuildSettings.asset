@@ -5,76 +5,76 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Title.unity
     guid: 2ce3d264e3aef754c8e45e01dff21c5a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Opening.unity
     guid: 646b65bc993a2d5428b068ad12828970
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Stage_Select.unity
     guid: 6e85817ab7c78bd44be697daf640e5de
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Stage1_Story.unity
     guid: d58fee23f061a90408f7155dd881f4ad
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Stage1.unity
     guid: 4d2b85a1a72c6444f94ffb7e3e8ee923
   - enabled: 0
     path: Assets/Scenes/Game_Scene/Stage1_Ending.unity
     guid: 98cb26e8019beb341a8c90f6d8faf5ff
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Stage2_Story.unity
     guid: 96834df6f748e6544a9d0af8c4b9d55e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Stage2.unity
     guid: 6cec7d5af50a082498ff7890f6775603
   - enabled: 0
     path: Assets/Scenes/Game_Scene/Stage2_Ending.unity
     guid: b4f043022212ef448bf4b13fb824da91
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Stage3_Story.unity
     guid: d201c1be620d90040920b96a7947a832
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Stage3.unity
     guid: 1ddb871f1d5f6d14dbddd998cf112b8a
   - enabled: 0
     path: Assets/Scenes/Game_Scene/Stage3_Ending.unity
     guid: 5858116c316b7794189ac9d0bb62dbbe
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Stage4_Story.unity
     guid: d5da910d27148a6468c142b762aedc47
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Stage4.unity
     guid: 517277b76364a414ab218538b64a3c70
   - enabled: 0
     path: Assets/Scenes/Game_Scene/Stage4_Ending.unity
     guid: 3a3c8c1cf9cf8fc4fb212f464aba4a6f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Stage5_Story.unity
     guid: 897cab4d8cc4ce2448874106a242e5ce
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Stage5.unity
     guid: a1d2eac40a7bd8a4e90789a1103c09ec
   - enabled: 0
     path: Assets/Scenes/Game_Scene/Stage5_Ending.unity
     guid: e83e8e03aedaaa142b303c4066552c42
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Ending.unity
     guid: 02e749f462d184d489a310f1568f3c1a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Result.unity
     guid: f6881fb604698d54a82cbf3c89293469
   - enabled: 0
     path: Assets/Scenes/Kuroiwa/Player_Debug.unity
     guid: 5b34eb460fb0e0a46af710fd9ff9abc8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Kuroiwa/Kuroiwa_Scene.unity
     guid: 683248ee3e2083449aaf9b5940cc76b3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/GameOver.unity
     guid: 898e8b81ad2e87c4cac27e223a63a6ff
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game_Scene/Collection.unity
     guid: bb200e8268016a445ae1c677b86b9830
   m_configObjects: {}

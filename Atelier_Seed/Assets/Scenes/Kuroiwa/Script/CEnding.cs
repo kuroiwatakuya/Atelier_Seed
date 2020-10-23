@@ -5,16 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class CEnding : MonoBehaviour
 {
-    public float flame;
+    private float flame;
     public GameObject[] Endcard;
+
+    public int NextScene;
 
     // Start is called before the first frame update
     void Start()
     {
-        for(int i=0;i<5;i++)
+        for (int i = 0; i < 5; i++)
         {
             Endcard[i].SetActive(false);
         }
+
+        flame = 0;
     }
 
     // Update is called once per frame
@@ -34,19 +38,20 @@ public class CEnding : MonoBehaviour
             Endcard[1].SetActive(false);
             Endcard[2].SetActive(true);
         }
-        if(flame >= 8)
+        if(flame >= 9)
         {
-            Endcard[2].SetActive(true);
+            Endcard[2].SetActive(false);
             Endcard[3].SetActive(true);
         }
-        if(flame >= 10)
+        if(flame >= 12)
         {
             Endcard[3].SetActive(false);
             Endcard[4].SetActive(true);
         }
-        if(flame >= 12)
+        if(flame >= 15)
         {
-            SceneManager.LoadScene("Title");
+            Endcard[4].SetActive(false);
+            SceneManager.LoadScene(NextScene);
         }
     }
 }
