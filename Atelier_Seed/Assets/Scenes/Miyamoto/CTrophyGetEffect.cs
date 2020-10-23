@@ -146,7 +146,7 @@ public class CTrophyGetEffect : MonoBehaviour
                     Tate = false;
                     Yoko = false;
                     Hit = false;
-                    GameObject.Destroy(gameObject);
+//                    GameObject.Destroy(gameObject);
                     return;
                 }
             }

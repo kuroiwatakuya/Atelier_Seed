@@ -22,22 +22,7 @@ public class BreakBlock : MonoBehaviour
     void Start()
     {
         PlayerScript = Player.GetComponent<CPlayerScript>();
-        BreakFlag = false;
-
-        //---宮本加筆ここから------------------------------
-        if (SceneManager.GetActiveScene().name == "Stage3")
-        {
-            BreakEffect = (GameObject)Resources.Load("Effect_BreakCookies");
-        }
-        if (SceneManager.GetActiveScene().name == "Stage4")
-        {
-            BreakEffect = (GameObject)Resources.Load("Effect_BreakPipe");
-        }
-        if (SceneManager.GetActiveScene().name == "Stage5")
-        {
-            BreakEffect = (GameObject)Resources.Load("Effect_BreakTree");
-        }
-        //---宮本加筆ここまで------------------------------
+        BreakFlag = false;        
     }
 
     // Update is called once per frame

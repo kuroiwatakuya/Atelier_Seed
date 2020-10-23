@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Common;
 
 public class CEnding : MonoBehaviour
 {
@@ -51,7 +52,8 @@ public class CEnding : MonoBehaviour
         if(flame >= 15)
         {
             Endcard[4].SetActive(false);
-            SceneManager.LoadScene(NextScene);
+            CFadeManager.FadeOut(NextScene);
+//            SceneManager.LoadScene(NextScene);
         }
     }
 }
