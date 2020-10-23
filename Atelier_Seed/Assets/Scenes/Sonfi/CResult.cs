@@ -49,15 +49,16 @@ public class CResult : MonoBehaviour
             {
                 StageConditions[i].SetActive(true);
             }
-
-            if(Stage == 5)
-            {
-                Button[1].SetActive(true);
-            }
-            else
-            {
-                Button[0].SetActive(true);
-            }
+        }
+        Button[0].SetActive(false);
+        Button[1].SetActive(false);
+        if (StageNum == 5)
+        {
+            Button[1].SetActive(true);
+        }
+        else
+        {
+            Button[0].SetActive(true);
         }
 
         for (int i = 0; i <= CConst.TROPHY_STAGE - 1; i++)
