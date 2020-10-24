@@ -117,6 +117,13 @@ public class CPlayerScript : MonoBehaviour
     //取得コイン
     public int GetCoin;
 
+    //写真取得
+    public bool GetPhoto;
+    public bool[] StagePhoto = new bool[CConst.STAGENUM];
+    public static int PhotoNum;
+    public GameObject PhotoSprite;
+
+
     //バッチ獲得バナー済か
     private bool[] OnlyBanner = new bool[CConst.BATCH_NUM];
 
@@ -169,6 +176,14 @@ public class CPlayerScript : MonoBehaviour
         for(int i = 0 ; i <= CConst.BATCH_NUM - 1 ; i++)
         {
             OnlyBanner[i] = false;
+        }
+        for (int i = 0; i <= CConst.STAGENUM - 1; i++)
+        {
+            StagePhoto[i] = CSaveBool.GetBool("Photo" + i, false);
+        }
+        if (StagePhoto[GoalScript.Now_StageNum - 1])
+        {
+            PhotoSprite.SetActive(false);
         }
 
         //---宮本加筆ここから------------------------------
@@ -524,6 +539,14 @@ public class CPlayerScript : MonoBehaviour
         //バッチの初獲得
         //***********************************************
 
+        if (PhotoSprite.activeSelf)
+        {
+            if (StagePhoto[GoalScript.Now_StageNum - 1])
+            {
+                PhotoSprite.SetActive(false);
+            }
+        }
+
         if (WallFlag && !GoalScript.GetBatch[0] && !OnlyBanner[0])
         {
             OnlyBanner[0] = true;
@@ -644,7 +667,6 @@ public class CPlayerScript : MonoBehaviour
         }
 
         //コイン
-        //風
         if (collider.gameObject.name == "Coin")
         {
             GetCoin++;

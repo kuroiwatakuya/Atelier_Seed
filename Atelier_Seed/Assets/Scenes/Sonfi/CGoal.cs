@@ -169,47 +169,47 @@ public class CGoal : MonoBehaviour
             {
                 GetBatch[0] = true;
             }
-            else if (PlayerScript.WallCount >= 2)
+            if (PlayerScript.WallCount >= 2)
             {
                 GetBatch[1] = true;
             }
-            else if (PlayerScript.Fly)
+            if (PlayerScript.Fly)
             {
                 GetBatch[2] = true;
             }
-            else if (PlayerScript.StopFieldCount >= 1 && Now_StageNum == 1)
+            if (PlayerScript.StopFieldCount >= 1 && Now_StageNum == 1)
             {
                 GetBatch[3] = true;
             }
-            else if (PlayerScript.StopFieldCount >= 1 && Now_StageNum == 2)
+            if (PlayerScript.StopFieldCount >= 1 && Now_StageNum == 2)
             {
                 GetBatch[4] = true;
             }
-            else if (PlayerScript.StopFieldCount >= 1 && Now_StageNum == 3)
+            if (PlayerScript.StopFieldCount >= 1 && Now_StageNum == 3)
             {
                 GetBatch[5] = true;
             }
-            else if (PlayerScript.StopFieldCount >= 1 && Now_StageNum == 4)
+            if (PlayerScript.StopFieldCount >= 1 && Now_StageNum == 4)
             {
                 GetBatch[6] = true;
             }
-            else if (PlayerScript.Wind)
+            if (PlayerScript.Wind)
             {
                 GetBatch[7] = true;
             }
-            else if (PlayerScript.GunTrophyFlag)
+            if (PlayerScript.GunTrophyFlag)
             {
                 GetBatch[8] = true;
             }
-            else if (PlayerScript.BreakBlockCount >= 1)
+            if (PlayerScript.BreakBlockCount >= 1)
             {
                 GetBatch[9] = true;
             }
-            else if (PlayerScript.GetStageTrophy)
+            if (PlayerScript.GetStageTrophy)
             {
                 GetBatch[10] = true;
             }
-            else if (Now_StageNum == 1)
+            if (Now_StageNum == 1)
             {
                 if (!GetBatch[11])
                 {
@@ -217,7 +217,7 @@ public class CGoal : MonoBehaviour
                 }
                 GetBatch[11] = true;
             }
-            else if (Coin >= MaxCoin)
+            if (Coin >= MaxCoin)
             {
                 AllCoin[Now_StageNum - 1] = true;
                 if(AllCoin[0]&& AllCoin[1]&& AllCoin[2]&& AllCoin[3]&& AllCoin[4])
@@ -225,7 +225,7 @@ public class CGoal : MonoBehaviour
                     GetBatch[12] = true;
                 }
             }
-            else if (Now_StageNum == 5)
+            if (Now_StageNum == 5)
             {
                 if(!GetBatch[13])
                 {
@@ -233,10 +233,10 @@ public class CGoal : MonoBehaviour
                 }
                 GetBatch[13] = true;
             }
-            /*else if (Now_StageNum == 5)写真とる
+            if (PlayerScript.StagePhoto[0]&& PlayerScript.StagePhoto[1] && PlayerScript.StagePhoto[2] && PlayerScript.StagePhoto[3] && PlayerScript.StagePhoto[4])
             {
                 GetBatch[14] = true;
-            }*/
+            }
 
             //PlayerPrefsの解放ステージ数に現在クリアしたステージをいれる
             PlayerPrefs.SetInt("STAGENUM", Now_StageNum);
@@ -254,6 +254,10 @@ public class CGoal : MonoBehaviour
             {
                 CSaveBool.SetBool("Batch" + i, GetBatch[i]);
                 CSaveBool.SetBool("OldBatch" + i, OldBatch[i]);
+            }
+            for (int i = 0; i <= CConst.STAGENUM - 1; i++)
+            {
+                CSaveBool.SetBool("Photo" + i, PlayerScript.StagePhoto[i]);
             }
 
             //PlayerPrefsをセーブする         
