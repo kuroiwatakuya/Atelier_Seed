@@ -14,6 +14,7 @@ TagManager:
   - Wind
   - Wall
   - Floor
+  - Photo
   layers:
   - Default
   - TransparentFX
