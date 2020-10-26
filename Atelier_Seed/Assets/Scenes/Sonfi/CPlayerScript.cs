@@ -141,6 +141,8 @@ public class CPlayerScript : MonoBehaviour
     [SerializeField] private AudioClip Player_Sit;               //プレイヤーがくっつく壁に当たった時のSE変数
     [SerializeField] private AudioClip Player_GetTrophy;    //プレイヤーがトロフィーを取得したときのSE変数
     [SerializeField] private AudioClip Player_Coin;             //コイン取得
+    [SerializeField] private AudioClip Player_Gun_In;        //大砲入る
+    [SerializeField] private AudioClip Player_Gun_Out;      //大砲発射
 
     AudioSource audioSource;            //オーディオソース
     AudioSource PlayerPull_audio;      //プレイヤーを引っ張った時のオーディオ取得
@@ -252,6 +254,7 @@ public class CPlayerScript : MonoBehaviour
             {
                 //大砲用タップ
                 TapFlag = true;
+                audioSource.PlayOneShot(Player_Gun_Out);
             }
 
             //マウス左クリック＆タップ
@@ -402,12 +405,12 @@ public class CPlayerScript : MonoBehaviour
                 //指を離したとき
                 if (touch.phase == TouchPhase.Ended)
                 {
-                    PlayerPull_audio.Stop();
-                    audioSource.PlayOneShot(Player_Jump);
-
                     //クリックフラグがオンなら
                     if (ClickFlag)
                     {
+                        PlayerPull_audio.Stop();
+                        audioSource.PlayOneShot(Player_Jump);
+
                         StartPosition = transform.position;
                         ClickFlag = false;
 

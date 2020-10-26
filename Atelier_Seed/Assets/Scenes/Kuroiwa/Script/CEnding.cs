@@ -34,22 +34,22 @@ public class CEnding : MonoBehaviour
             Endcard[0].SetActive(false);
             Endcard[1].SetActive(true);
         }
-        if(flame >= 6)
+        if (flame >= 3 && flame >= 6)
         {
             Endcard[1].SetActive(false);
             Endcard[2].SetActive(true);
         }
-        if(flame >= 9)
+        if(flame >= 6 && flame >= 9)
         {
             Endcard[2].SetActive(false);
             Endcard[3].SetActive(true);
         }
-        if(flame >= 12)
+        if(flame >= 9 && flame >= 12)
         {
             Endcard[3].SetActive(false);
             Endcard[4].SetActive(true);
         }
-        if(flame >= 15)
+        if(flame >= 12 && flame >= 15)
         {
             Endcard[4].SetActive(false);
             SceneManager.LoadScene(NextScene);
