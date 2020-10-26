@@ -13,7 +13,7 @@ using Common;
 public class CScene_Change : MonoBehaviour
 {
     bool OnlySelect = true;     // キーの多重処理防止
-
+    
     // Start is called before the first frame update
     void Start()
     {

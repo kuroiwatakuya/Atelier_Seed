@@ -18,7 +18,7 @@ public class CGoal : MonoBehaviour
 
     public static int PlayCount;
     public static int Coin;
-
+    
     //トロフィー獲得済みか
     public bool[] GetTrophy = new bool[CConst.TROPHY_MAX];
     public bool[] OldTrophy = new bool[CConst.TROPHY_MAX];
@@ -32,12 +32,17 @@ public class CGoal : MonoBehaviour
 
     private bool EndFrag;
 
+    [SerializeField] private AudioClip GoalSE;
+    AudioSource audioSource;
+
+    public GameObject Goal;
+
     // Start is called before the first frame update
     void Start()
     {
         Clear_Flag = false;
         EndFrag = false;
-
+        
         for (int i = 0; i <= CConst.TROPHY_MAX - 1; i++)
         {
             GetTrophy[i] = CSaveBool.GetBool("Trophy" + i, false);
@@ -54,7 +59,7 @@ public class CGoal : MonoBehaviour
             AllCoin[i] = CSaveBool.GetBool("Coin" + i, false);
         }
 
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -260,11 +265,10 @@ public class CGoal : MonoBehaviour
                 CSaveBool.SetBool("Photo" + i, PlayerScript.StagePhoto[i]);
             }
 
-            //PlayerPrefsをセーブする         
+            //PlayerPrefsをセーブする   
             PlayerPrefs.Save();
-
+            
             SceneManager.LoadScene("Result");
-
         }
     }
 
@@ -272,9 +276,8 @@ public class CGoal : MonoBehaviour
     {
         if (collider.gameObject.name == "Player")
         {
-
+            audioSource.PlayOneShot(GoalSE);
             Clear_Flag = true;
-
         }
     }
 

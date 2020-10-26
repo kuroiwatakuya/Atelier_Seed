@@ -140,8 +140,14 @@ public class CPlayerScript : MonoBehaviour
     [SerializeField] private AudioClip Player_Pull;              //プレイヤーを引っ張るときのSE変数
     [SerializeField] private AudioClip Player_Sit;               //プレイヤーがくっつく壁に当たった時のSE変数
     [SerializeField] private AudioClip Player_GetTrophy;    //プレイヤーがトロフィーを取得したときのSE変数
-    AudioSource audioSource;            //オーディオソース
+    [SerializeField] private AudioClip Player_Coin;             //コイン取得
 
+    AudioSource audioSource;            //オーディオソース
+    AudioSource PlayerPull_audio;      //プレイヤーを引っ張った時のオーディオ取得
+    AudioSource PlayerJump_audio;   //プレイヤーを離したときのSE
+    AudioSource PlayerCoin_Source;
+
+   
     void Start()
     {
         Rbody = this.GetComponent<Rigidbody2D>();
@@ -155,6 +161,8 @@ public class CPlayerScript : MonoBehaviour
 
         //オーディオソース取得
         audioSource = GetComponent<AudioSource>();
+        PlayerPull_audio = GetComponent<AudioSource>();
+        PlayerCoin_Source = GetComponent<AudioSource>();
 
         this.MainCamera = Camera.main;
         this.MainCameraTransform = this.MainCamera.transform;
@@ -256,9 +264,6 @@ public class CPlayerScript : MonoBehaviour
                     //マウスを左クリックした位置の取得
                     DragStart = GetMousePosition();
 
-                    //プレイヤーをタップしたときに鳴らす
-                    audioSource.PlayOneShot(Player_Touch);
-
                     //矢印フラグ
                     this.Direction.enabled = true;
                     this.Direction.SetPosition(0, Rbody.position);  //矢印の位置
@@ -271,10 +276,14 @@ public class CPlayerScript : MonoBehaviour
                 Vector2 position = GetMousePosition();
                 DirectionForce = position - DragStart;
 
+                //プレイヤーをタップしたときに鳴らす
+                //audioSource.PlayOneShot(Player_Touch);
+
+
                 if (DirectionForce.magnitude > MaxMagnitude)
                 {
                     DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
-                    audioSource.PlayOneShot(Player_Pull);
+                    PlayerPull_audio.PlayOneShot(Player_Pull);
                 }
 
                 this.Direction.SetPosition(0, Rbody.position);//矢印の位置
@@ -285,9 +294,9 @@ public class CPlayerScript : MonoBehaviour
             //マウスを離したとき
             if (Input.GetMouseButtonUp(0))
             {
-                //プレイヤーを飛ばすSE
-                audioSource.PlayOneShot(Player_Jump);
-
+                //引っ張るSEを止める
+                PlayerPull_audio.Stop();
+                
                 //クリックフラグがオンなら
                 if (ClickFlag)
                 {
@@ -295,9 +304,10 @@ public class CPlayerScript : MonoBehaviour
 
                     ClickFlag = false;
 
-
                     if (DirectionForce.magnitude >= MinMagnitude)
                     {
+                        //プレイヤーを飛ばすSE
+                        audioSource.PlayOneShot(Player_Jump);
 
                         PlayFlag = true;
 
@@ -376,7 +386,7 @@ public class CPlayerScript : MonoBehaviour
                     if (DirectionForce.magnitude > MaxMagnitude)
                     {
                         DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
-                        audioSource.PlayOneShot(Player_Pull);
+                        PlayerPull_audio.PlayOneShot(Player_Pull);
                     }
 
                     this.Direction.SetPosition(0, Rbody.position);//矢印の位置
@@ -389,13 +399,11 @@ public class CPlayerScript : MonoBehaviour
                     Debug.Log("うべえああああああああああああああああああああああああああああああああああああああああああああ");
                 }
 
-                //マウスを離したとき
+                //指を離したとき
                 if (touch.phase == TouchPhase.Ended)
                 {
-                    //プレイヤーを飛ばすSE
+                    PlayerPull_audio.Stop();
                     audioSource.PlayOneShot(Player_Jump);
-
-                    Debug.Log("離した");
 
                     //クリックフラグがオンなら
                     if (ClickFlag)
@@ -405,6 +413,8 @@ public class CPlayerScript : MonoBehaviour
 
                         if (DirectionForce.magnitude >= MinMagnitude)
                         {
+                            //プレイヤーを飛ばすSE
+                            PlayerJump_audio.PlayOneShot(Player_Jump);
 
                             PlayFlag = true;
 
@@ -687,9 +697,9 @@ public class CPlayerScript : MonoBehaviour
         }
 
         //コイン
-        if (collider.gameObject.name == "Coin")
+        if (collider.gameObject.tag == "Coin")
         {
-            GetCoin++;
+            audioSource.PlayOneShot(Player_Coin);
         }
     }
 
