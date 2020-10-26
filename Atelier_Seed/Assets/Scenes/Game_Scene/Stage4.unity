@@ -1328,6 +1328,8 @@ MonoBehaviour:
   GetBatch: 000000000000000000000000000000
   OldBatch: 000000000000000000000000000000
   AllCoin: 0000000000
+  GoalSE: {fileID: 0}
+  Goal: {fileID: 0}
 --- !u!61 &769798544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4558,7 +4560,7 @@ MonoBehaviour:
   Player: {fileID: 103978240}
   BreakEffect: {fileID: 1936170838643997066, guid: 5d3400c4479e0b04ab1cea465085e9ed, type: 3}
   Power: 0
-  BreakBlock_SE: {fileID: 8300000, guid: 0a1c2abcd397f7e4aa7e68467fd943ab, type: 3}
+  BreakBlock_SE: {fileID: 8300000, guid: e79120d262cb3b74783b5d7e12f92b2b, type: 3}
 --- !u!61 &1895066770
 BoxCollider2D:
   m_ObjectHideFlags: 0
