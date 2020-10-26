@@ -45,8 +45,8 @@ public class Opening : MonoBehaviour
         if (flame >= 12)
         {
             OpeningObj[3].SetActive(false);
-            CFadeManager.FadeOut(NextScene);
-//            SceneManager.LoadScene(NextScene);
+ //           CFadeManager.FadeOut(NextScene);
+            SceneManager.LoadScene(NextScene);
         }
     }
 }
