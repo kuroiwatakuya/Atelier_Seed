@@ -1377,6 +1377,10 @@ PrefabInstance:
       propertyPath: PhotoSprite
       value: 
       objectReference: {fileID: 1800344693}
+    - target: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: Player_Coin
+      value: 
+      objectReference: {fileID: 8300000, guid: 7db4ac894559a10468524b7c525df3a7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
 --- !u!114 &286090084 stripped
@@ -1854,6 +1858,8 @@ MonoBehaviour:
   GetBatch: 000000000000000000000000000000
   OldBatch: 000000000000000000000000000000
   AllCoin: 0000000000
+  GoalSE: {fileID: 0}
+  Goal: {fileID: 0}
 --- !u!4 &586433607
 Transform:
   m_ObjectHideFlags: 0
@@ -3284,6 +3290,14 @@ PrefabInstance:
     - target: {fileID: 1586145212599948797, guid: f30343dd118a3844886bfe3f768218bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586145212599948797, guid: f30343dd118a3844886bfe3f768218bb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586145212599948797, guid: f30343dd118a3844886bfe3f768218bb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 1586145212599948798, guid: f30343dd118a3844886bfe3f768218bb, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key2.a

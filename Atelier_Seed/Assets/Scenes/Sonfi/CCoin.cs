@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class CCoin : MonoBehaviour
 {
-
+    public CPlayerScript PlayerScript;
+    
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -20,8 +22,8 @@ public class CCoin : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player")
         {
+            PlayerScript.GetCoin++;
             this.gameObject.SetActive(false);
         }
     }
-
 }
