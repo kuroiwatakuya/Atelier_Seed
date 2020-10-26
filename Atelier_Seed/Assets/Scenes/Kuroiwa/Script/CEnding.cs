@@ -52,8 +52,7 @@ public class CEnding : MonoBehaviour
         if(flame >= 15)
         {
             Endcard[4].SetActive(false);
-            CFadeManager.FadeOut(NextScene);
-//            SceneManager.LoadScene(NextScene);
+            SceneManager.LoadScene(NextScene);
         }
     }
 }
