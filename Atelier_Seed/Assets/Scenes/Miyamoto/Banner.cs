@@ -27,15 +27,19 @@ public class Banner : MonoBehaviour
     // バッジ取得フラグ
     public bool Get;
 
-
     // バナー移動フラグ
     private bool Down;
     private bool Up;
+
+    [SerializeField] private AudioClip banner_SE;
+    AudioSource audioSource;
 
 
     // // 初期化 // //
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        
         // 取得フラグＯＦＦ
         Get = false;
 
@@ -70,6 +74,8 @@ public class Banner : MonoBehaviour
         // 取得したら
         if (Get)
         {
+            audioSource.PlayOneShot(banner_SE);
+
             // 下に動くＯＮ
             Down = true;
 
