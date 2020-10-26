@@ -101,7 +101,6 @@ MonoBehaviour:
   StopBlockTag: StopFieldTag
   GunTag: Gun
   GoalScript: {fileID: 0}
-  BannerScript: {fileID: 0}
   Direction: {fileID: 4529534935467692857}
   Power: 20
   MaxMagnitude: 5
@@ -109,7 +108,6 @@ MonoBehaviour:
   VelocityMin: 8
   Velocity: {x: 0, y: 0}
   GunFlag: 0
-  PlayCount: 3
   StopFlag: 0
   PlayFlag: 0
   ClickFlag: 0
@@ -120,22 +118,14 @@ MonoBehaviour:
   GunTrophyFlag: 0
   WallFlag: 0
   WallCount: 0
-  WallCountBath: 0
   Fly: 0
   Wind: 0
-  GetCoin: 0
-  GetPhoto: 0
-  StagePhoto: 0000000000
-  PhotoSprite: {fileID: 0}
   Player_Touch: {fileID: 8300000, guid: f92691ba9d8c85842a6a1d18dbbb7825, type: 3}
   Player_Jump: {fileID: 8300000, guid: 8b689ace435e0674e9290a0bdeac311d, type: 3}
   Player_Hit: {fileID: 8300000, guid: af41f14738518804da8dbe9d857d70a7, type: 3}
   Player_Pull: {fileID: 8300000, guid: e5dab2740cb5db74eaf188b7a98f4153, type: 3}
   Player_Sit: {fileID: 8300000, guid: af41f14738518804da8dbe9d857d70a7, type: 3}
   Player_GetTrophy: {fileID: 8300000, guid: cfaeb692bd2b88f4388a1dc07d3d3df4, type: 3}
-  Player_Coin: {fileID: 8300000, guid: 7db4ac894559a10468524b7c525df3a7, type: 3}
-  Player_Gun_In: {fileID: 8300000, guid: 3846b660832a771479789b82f1c60277, type: 3}
-  Player_Gun_Out: {fileID: 8300000, guid: 02d7ec57a39fa8d4f93b50078c47439a, type: 3}
 --- !u!212 &1535846944235735134
 SpriteRenderer:
   m_ObjectHideFlags: 0

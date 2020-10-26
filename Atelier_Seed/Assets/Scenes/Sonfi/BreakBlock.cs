@@ -18,10 +18,14 @@ public class BreakBlock : MonoBehaviour
 
     private bool BreakFlag;
 
+    [SerializeField] private AudioClip BreakBlock_SE;   //破壊壁SE
+    AudioSource BreakBlocl_Source;
+
     // Start is called before the first frame update
     void Start()
     {
         PlayerScript = Player.GetComponent<CPlayerScript>();
+        BreakBlocl_Source = GetComponent<AudioSource>();
         BreakFlag = false;        
     }
 
@@ -43,6 +47,7 @@ public class BreakBlock : MonoBehaviour
     {
         if (collision.gameObject.name == "Player" && (PlayerScript.Velocity.x >= Power || PlayerScript.Velocity.x >= Power))
         {
+            BreakBlocl_Source.PlayOneShot(BreakBlock_SE);
             BreakFlag = true;
         }
     }

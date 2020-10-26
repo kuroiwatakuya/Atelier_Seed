@@ -141,13 +141,12 @@ public class CPlayerScript : MonoBehaviour
     [SerializeField] private AudioClip Player_Sit;               //プレイヤーがくっつく壁に当たった時のSE変数
     [SerializeField] private AudioClip Player_GetTrophy;    //プレイヤーがトロフィーを取得したときのSE変数
     [SerializeField] private AudioClip Player_Coin;             //コイン取得
-    [SerializeField] private AudioClip Player_Gun_In;        //大砲入る
-    [SerializeField] private AudioClip Player_Gun_Out;      //大砲出る
 
     AudioSource audioSource;            //オーディオソース
     AudioSource PlayerPull_audio;      //プレイヤーを引っ張った時のオーディオ取得
-    AudioSource PlayerJump_audio;   //プレイヤーを離したときのオーディオ取得
-    AudioSource PlayerCoin_Source;  //コインを取得したとき
+    AudioSource PlayerJump_audio;   //プレイヤーを離したときのSE
+    AudioSource PlayerCoin_Source;
+
    
     void Start()
     {
@@ -344,7 +343,6 @@ public class CPlayerScript : MonoBehaviour
                 EffectPosition = this.transform.position;       // 現在座標をエフェクト座標として取得
                 if (GunFind != null)
                 {
-                    audioSource.PlayOneShot(Player_Gun_In);
                     GunRotate = GunObject.transform.rotation;   // Gunオブジェクトの回転値取得
                 }
                 //---宮本加筆ここまで------------------------------
@@ -353,7 +351,6 @@ public class CPlayerScript : MonoBehaviour
                 {
                     //大砲用タップ
                     TapFlag = true;
-                    audioSource.PlayOneShot(Player_Gun_Out);
                 }
 
                 //マウス左クリック＆タップ
@@ -405,19 +402,20 @@ public class CPlayerScript : MonoBehaviour
                 //指を離したとき
                 if (touch.phase == TouchPhase.Ended)
                 {
-                   
+                    PlayerPull_audio.Stop();
+                    audioSource.PlayOneShot(Player_Jump);
+
                     //クリックフラグがオンなら
                     if (ClickFlag)
                     {
-                        PlayerPull_audio.Stop();
-                        audioSource.PlayOneShot(Player_Jump);
-
                         StartPosition = transform.position;
                         ClickFlag = false;
 
                         if (DirectionForce.magnitude >= MinMagnitude)
                         {
-                            
+                            //プレイヤーを飛ばすSE
+                            PlayerJump_audio.PlayOneShot(Player_Jump);
+
                             PlayFlag = true;
 
                             StopFieldFlag = false;
@@ -436,8 +434,6 @@ public class CPlayerScript : MonoBehaviour
 
                             //回転アニメーションオン
                             anim.SetBool("Move", true);
-
-
                         }
                     }
                 }
