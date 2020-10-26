@@ -15,15 +15,20 @@ using UnityEngine.UI;
 // // クラス // //
 public class CuvScroll : MonoBehaviour
 {
+    RawImage Bg;
     GameObject rawImage;
     float move;
+    Rect scroll;
 
     // // 初期化 // /
     void Start()
     {
         rawImage = GameObject.Find("Background");
+        Bg = rawImage.GetComponent<RawImage>();
 
         move = 0.0f;
+
+        Bg.uvRect = new Rect(0.0f, 0.0f, 1.0f, 1.0f);
     }
 
 
@@ -36,6 +41,6 @@ public class CuvScroll : MonoBehaviour
             move = 0.0f;
         }
 
-        rawImage.GetComponent<RawImage>().uvRect = new Rect(move, move, 1.0f, 1.0f);
+        Bg.uvRect = new Rect(move, move, 1.0f, 1.0f);
     }
 }

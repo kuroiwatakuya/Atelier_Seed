@@ -42,6 +42,9 @@ public class Banner : MonoBehaviour
         // 移動用リセット
         Move = new Vector3(0.0f, 0.0f, 0.0f);
 
+        // RectTransform取得
+        thisTransform = GameObject.Find("Banner").GetComponent<RectTransform>();
+
 
         // 移動フラグＯＦＦ
         Down = false;
@@ -52,8 +55,6 @@ public class Banner : MonoBehaviour
     // // 更新 // //
     void Update()
     {
-        // RectTransform取得
-        thisTransform = GameObject.Find("Banner").GetComponent<RectTransform>();
 
         // 座標取得
         Move = thisTransform.localPosition;
