@@ -107,6 +107,7 @@ public class CPlayerScript : MonoBehaviour
     public bool WallFlag;
     //壁にぶつかった回数
     public int WallCount;
+    public bool WallCountBath;
     //飛ぶ
     public bool Fly;
     //飛び始めた座標
@@ -172,6 +173,8 @@ public class CPlayerScript : MonoBehaviour
         GetStageTrophy = false;
 
         Fly = false;
+
+        WallCountBath = false;
 
         for(int i = 0 ; i <= CConst.BATCH_NUM - 1 ; i++)
         {
@@ -433,11 +436,16 @@ public class CPlayerScript : MonoBehaviour
         Velocity.y = Rbody.velocity.y;
         Velocity.x = Rbody.velocity.x;
 
+        //***********************
         //遅くなったらとめる
+        //***********************
         if (Velocity.y == 0 && Velocity.x <= 12 && Velocity.x >= -12 && PlayFlag && !GunFlag)
         {
-            //連続壁激突
-            WallCount = 0;
+            if (!WallCountBath)
+            {
+                //連続壁激突
+                WallCount = 0;
+            }
 
             Rbody.velocity = new Vector2(0, 0);
 
@@ -535,6 +543,15 @@ public class CPlayerScript : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
 
+        //*****************
+        // 壁衝突カウント
+        //*****************
+        if(WallCount >= 2)
+        {
+            WallCountBath = true;
+            WallCount = 2;
+        }
+
         //***********************************************
         //バッチの初獲得
         //***********************************************
@@ -552,57 +569,57 @@ public class CPlayerScript : MonoBehaviour
             OnlyBanner[0] = true;
             BannerScript.Get = true;
         }
-        else if (WallCount >= 2 && !GoalScript.GetBatch[1] && !OnlyBanner[1])
+        if (WallCount >= 2 && !GoalScript.GetBatch[1] && !OnlyBanner[1])
         {
             OnlyBanner[1] = true;
             BannerScript.Get = true;
         }
-        else if (Fly && !GoalScript.GetBatch[2] && !OnlyBanner[2])
+        if (Fly && !GoalScript.GetBatch[2] && !OnlyBanner[2])
         {
             OnlyBanner[2] = true;
             BannerScript.Get = true;
         }
-        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 1 && !GoalScript.GetBatch[3] && !OnlyBanner[3])
+        if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 1 && !GoalScript.GetBatch[3] && !OnlyBanner[3])
         {
             OnlyBanner[3] = true;
             BannerScript.Get = true;
         }
-        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 2 && !GoalScript.GetBatch[4] && !OnlyBanner[4])
+        if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 2 && !GoalScript.GetBatch[4] && !OnlyBanner[4])
         {
             OnlyBanner[4] = true;
             BannerScript.Get = true;
         }
-        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 3 && !GoalScript.GetBatch[5] && !OnlyBanner[5])
+        if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 3 && !GoalScript.GetBatch[5] && !OnlyBanner[5])
         {
             OnlyBanner[5] = true;
             BannerScript.Get = true;
         }
-        else if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 4 && !GoalScript.GetBatch[6] && !OnlyBanner[6])
+        if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 4 && !GoalScript.GetBatch[6] && !OnlyBanner[6])
         {
             OnlyBanner[6] = true;
             BannerScript.Get = true;
         }
-        else if (Wind && !GoalScript.GetBatch[7] && !OnlyBanner[7])
+        if (Wind && !GoalScript.GetBatch[7] && !OnlyBanner[7])
         {
             OnlyBanner[7] = true;
             BannerScript.Get = true;
         }
-        else if (GunTrophyFlag && !GoalScript.GetBatch[8] && !OnlyBanner[8])
+        if (GunTrophyFlag && !GoalScript.GetBatch[8] && !OnlyBanner[8])
         {
             OnlyBanner[8] = true;
             BannerScript.Get = true;
         }
-        else if (BreakBlockCount >= 1 && !GoalScript.GetBatch[9] && !OnlyBanner[9])
+        if (BreakBlockCount >= 1 && !GoalScript.GetBatch[9] && !OnlyBanner[9])
         {
             OnlyBanner[9] = true;
             BannerScript.Get = true;
         }
-        else if (GetStageTrophy && !GoalScript.GetBatch[10] && !OnlyBanner[10])
+        if (GetStageTrophy && !GoalScript.GetBatch[10] && !OnlyBanner[10])
         {
             OnlyBanner[10] = true;
             BannerScript.Get = true;
         }
-        else if (GetCoin >= GoalScript.MaxCoin && !GoalScript.GetBatch[12] && !OnlyBanner[12])
+        if (GetCoin >= GoalScript.MaxCoin && !GoalScript.GetBatch[12] && !OnlyBanner[12])
         {
             GoalScript.AllCoin[GoalScript.Now_StageNum - 1] = true;
             if (GoalScript.AllCoin[0] && GoalScript.AllCoin[1] && GoalScript.AllCoin[2] && GoalScript.AllCoin[3] && GoalScript.AllCoin[4])
@@ -635,7 +652,10 @@ public class CPlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "Wall")
         {
             WallFlag = true;
-            WallCount++;
+            if(!WallCountBath)
+            {
+                WallCount++;
+            }
         }
     }
     void OnTriggerEnter2D(Collider2D collider)
