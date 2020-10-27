@@ -29,19 +29,13 @@ public class CGoal : MonoBehaviour
 
     //コイン全ゲット
     public bool[] AllCoin = new bool[CConst.STAGENUM];
-
-    private bool EndFrag;
-
-    [SerializeField] private AudioClip GoalSE;
-    AudioSource audioSource;
-
+    
     public GameObject Goal;
 
     // Start is called before the first frame update
     void Start()
     {
         Clear_Flag = false;
-        EndFrag = false;
         
         for (int i = 0; i <= CConst.TROPHY_MAX - 1; i++)
         {
@@ -58,8 +52,7 @@ public class CGoal : MonoBehaviour
         {
             AllCoin[i] = CSaveBool.GetBool("Coin" + i, false);
         }
-
-        audioSource = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -276,7 +269,6 @@ public class CGoal : MonoBehaviour
     {
         if (collider.gameObject.name == "Player")
         {
-            audioSource.PlayOneShot(GoalSE);
             Clear_Flag = true;
         }
     }

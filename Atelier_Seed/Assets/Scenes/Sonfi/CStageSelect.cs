@@ -102,9 +102,6 @@ public class CStageSelect : MonoBehaviour
             PlayerPrefs.SetInt("LIBERATION_STAGENUM", Liberation_StageNum);
             CFadeManager.FadeOut(StageNumber);
             OnlySelect = false;
-
-            //SEを破壊しないようにする
-            DontDestroyOnLoad(SelectSE);
         }
     }
 }

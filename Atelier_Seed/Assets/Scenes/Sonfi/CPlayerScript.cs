@@ -134,15 +134,17 @@ public class CPlayerScript : MonoBehaviour
     private Animator anim = null;
 
     //SE変数
-    [SerializeField] private AudioClip Player_Touch;          //プレイヤータッチ用SE変数
-    [SerializeField] private AudioClip Player_Jump;           //プレイヤーを飛ばしたときのSE変数
-    [SerializeField] private AudioClip Player_Hit;               //プレイヤーが壁に当たった時のSE変数
-    [SerializeField] private AudioClip Player_Pull;              //プレイヤーを引っ張るときのSE変数
-    [SerializeField] private AudioClip Player_Sit;               //プレイヤーがくっつく壁に当たった時のSE変数
-    [SerializeField] private AudioClip Player_GetTrophy;    //プレイヤーがトロフィーを取得したときのSE変数
-    [SerializeField] private AudioClip Player_Coin;             //コイン取得
-    [SerializeField] private AudioClip Player_Gun_In;        //大砲入る
-    [SerializeField] private AudioClip Player_Gun_Out;      //大砲発射
+    public AudioClip Player_Touch;          //プレイヤータッチ用SE変数
+    public AudioClip Player_Jump;           //プレイヤーを飛ばしたときのSE変数
+    public AudioClip Player_Hit;               //プレイヤーが壁に当たった時のSE変数
+    public AudioClip Player_Pull;              //プレイヤーを引っ張るときのSE変数
+    public AudioClip Player_Sit;               //プレイヤーがくっつく壁に当たった時のSE変数
+    public AudioClip Player_GetTrophy;    //プレイヤーがトロフィーを取得したときのSE変数
+    public AudioClip Player_Coin;             //コイン取得
+    public AudioClip Player_Gun_In;        //大砲入る
+    public AudioClip Player_Gun_Out;      //大砲発射
+    public AudioClip Player_Wind;            //風の当たり判定
+    public AudioClip Player_BannerGet;    //バナー獲得SE
 
     AudioSource audioSource;            //オーディオソース
     AudioSource PlayerPull_audio;      //プレイヤーを引っ張った時のオーディオ取得
@@ -256,6 +258,7 @@ public class CPlayerScript : MonoBehaviour
             {
                 //大砲用タップ
                 TapFlag = true;
+                //大砲タップで音鳴らす
                 audioSource.PlayOneShot(Player_Gun_Out);
             }
 
@@ -356,6 +359,8 @@ public class CPlayerScript : MonoBehaviour
                 {
                     //大砲用タップ
                     TapFlag = true;
+                    //大砲タップで音鳴らす
+                    audioSource.PlayOneShot(Player_Gun_Out);
                 }
 
                 //マウス左クリック＆タップ
@@ -407,20 +412,19 @@ public class CPlayerScript : MonoBehaviour
                 //指を離したとき
                 if (touch.phase == TouchPhase.Ended)
                 {
+                    //引っ張るSEを止める
+                    PlayerPull_audio.Stop();
+
                     //クリックフラグがオンなら
                     if (ClickFlag)
-                    {
-                        PlayerPull_audio.Stop();
-                        audioSource.PlayOneShot(Player_Jump);
-
+                    { 
                         StartPosition = transform.position;
                         ClickFlag = false;
+                       
+                        audioSource.PlayOneShot(Player_Jump);
 
                         if (DirectionForce.magnitude >= MinMagnitude)
                         {
-                            //プレイヤーを飛ばすSE
-                            PlayerJump_audio.PlayOneShot(Player_Jump);
-
                             PlayFlag = true;
 
                             StopFieldFlag = false;
@@ -583,56 +587,67 @@ public class CPlayerScript : MonoBehaviour
         {
             OnlyBanner[0] = true;
             BannerScript.Get = true;
+            audioSource.PlayOneShot(Player_BannerGet);
         }
         if (WallCount >= 2 && !GoalScript.GetBatch[1] && !OnlyBanner[1])
         {
             OnlyBanner[1] = true;
             BannerScript.Get = true;
+            audioSource.PlayOneShot(Player_BannerGet);
         }
         if (Fly && !GoalScript.GetBatch[2] && !OnlyBanner[2])
         {
             OnlyBanner[2] = true;
             BannerScript.Get = true;
+            audioSource.PlayOneShot(Player_BannerGet);
         }
         if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 1 && !GoalScript.GetBatch[3] && !OnlyBanner[3])
         {
             OnlyBanner[3] = true;
             BannerScript.Get = true;
+            audioSource.PlayOneShot(Player_BannerGet);
         }
         if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 2 && !GoalScript.GetBatch[4] && !OnlyBanner[4])
         {
             OnlyBanner[4] = true;
             BannerScript.Get = true;
+            audioSource.PlayOneShot(Player_BannerGet);
         }
         if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 3 && !GoalScript.GetBatch[5] && !OnlyBanner[5])
         {
             OnlyBanner[5] = true;
             BannerScript.Get = true;
+            audioSource.PlayOneShot(Player_BannerGet);
         }
         if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 4 && !GoalScript.GetBatch[6] && !OnlyBanner[6])
         {
             OnlyBanner[6] = true;
             BannerScript.Get = true;
+            audioSource.PlayOneShot(Player_BannerGet);
         }
         if (Wind && !GoalScript.GetBatch[7] && !OnlyBanner[7])
         {
             OnlyBanner[7] = true;
             BannerScript.Get = true;
+            audioSource.PlayOneShot(Player_BannerGet);
         }
         if (GunTrophyFlag && !GoalScript.GetBatch[8] && !OnlyBanner[8])
         {
             OnlyBanner[8] = true;
             BannerScript.Get = true;
+            audioSource.PlayOneShot(Player_BannerGet);
         }
         if (BreakBlockCount >= 1 && !GoalScript.GetBatch[9] && !OnlyBanner[9])
         {
             OnlyBanner[9] = true;
             BannerScript.Get = true;
+            audioSource.PlayOneShot(Player_BannerGet);
         }
         if (GetStageTrophy && !GoalScript.GetBatch[10] && !OnlyBanner[10])
         {
             OnlyBanner[10] = true;
             BannerScript.Get = true;
+            audioSource.PlayOneShot(Player_BannerGet);
         }
         if (GetCoin >= GoalScript.MaxCoin && !GoalScript.GetBatch[12] && !OnlyBanner[12])
         {
@@ -641,6 +656,7 @@ public class CPlayerScript : MonoBehaviour
             {
                 OnlyBanner[12] = true;
                 BannerScript.Get = true;
+                audioSource.PlayOneShot(Player_BannerGet);
             }
         }
 
@@ -672,12 +688,16 @@ public class CPlayerScript : MonoBehaviour
                 WallCount++;
             }
         }
+
+        //破壊壁
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == GunTag && !GunFlag && !CoolTime)
         {
-            //ここにSE*********************************
+            //SE
+            audioSource.PlayOneShot(Player_Gun_In);
+
             GunFlag = true;
             GunTrophyFlag = true;
 
@@ -685,6 +705,7 @@ public class CPlayerScript : MonoBehaviour
             // 大砲エントリーエフェクト発生
             GetGunEnterObject(GunEnterEffect, EffectPosition, Quaternion.Euler(GunRotate.x, GunRotate.y, GunRotate.z * 100));
             //---宮本加筆ここまで------------------------------
+
         }
 
         //トロフィーゲット
@@ -697,9 +718,10 @@ public class CPlayerScript : MonoBehaviour
         }
 
         //風
-        if (collider.gameObject.name == "Wind")
+        if (collider.gameObject.tag == "Wind")
         {
             Wind = true;
+            audioSource.PlayOneShot(Player_Wind);
         }
 
         //コイン

@@ -134,6 +134,10 @@ MonoBehaviour:
   Player_Sit: {fileID: 8300000, guid: af41f14738518804da8dbe9d857d70a7, type: 3}
   Player_GetTrophy: {fileID: 8300000, guid: cfaeb692bd2b88f4388a1dc07d3d3df4, type: 3}
   Player_Coin: {fileID: 8300000, guid: 7db4ac894559a10468524b7c525df3a7, type: 3}
+  Player_Gun_In: {fileID: 8300000, guid: 2a4bb788da084bb4da12048b8c71ac37, type: 3}
+  Player_Gun_Out: {fileID: 8300000, guid: 20e142e88fcebaa4e9512ba3ac2685a0, type: 3}
+  Player_Wind: {fileID: 8300000, guid: d00dac2595fa04c41a9dcc128647705c, type: 3}
+  Player_BannerGet: {fileID: 8300000, guid: 9c3be20aa3c7c6b45ba9130dbb108acc, type: 3}
 --- !u!212 &1535846944235735134
 SpriteRenderer:
   m_ObjectHideFlags: 0
