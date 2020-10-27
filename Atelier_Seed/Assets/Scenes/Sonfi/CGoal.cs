@@ -222,13 +222,9 @@ public class CGoal : MonoBehaviour
                 }
                 GetBatch[11] = true;
             }
-            if (Coin >= MaxCoin)
+            if (AllCoin[0] && AllCoin[1] && AllCoin[2] && AllCoin[3] && AllCoin[4])
             {
-                AllCoin[Now_StageNum - 1] = true;
-                if(AllCoin[0]&& AllCoin[1]&& AllCoin[2]&& AllCoin[3]&& AllCoin[4])
-                {
-                    GetBatch[12] = true;
-                }
+                GetBatch[12] = true;
             }
             if (Now_StageNum == 5)
             {
@@ -263,6 +259,10 @@ public class CGoal : MonoBehaviour
             for (int i = 0; i <= CConst.STAGENUM - 1; i++)
             {
                 CSaveBool.SetBool("Photo" + i, PlayerScript.StagePhoto[i]);
+            }
+            for (int i = 0; i <= CConst.STAGENUM - 1; i++)
+            {
+                CSaveBool.SetBool("Coin" + i, AllCoin[i]);
             }
 
             //PlayerPrefsをセーブする   
