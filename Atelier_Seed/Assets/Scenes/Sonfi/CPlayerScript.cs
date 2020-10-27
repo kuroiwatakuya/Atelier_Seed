@@ -186,6 +186,8 @@ public class CPlayerScript : MonoBehaviour
 
         WallCountBath = false;
 
+        GetCoin = 0;
+
         for(int i = 0 ; i <= CConst.BATCH_NUM - 1 ; i++)
         {
             OnlyBanner[i] = false;
@@ -675,6 +677,7 @@ public class CPlayerScript : MonoBehaviour
     {
         if (collider.gameObject.tag == GunTag && !GunFlag && !CoolTime)
         {
+            //ここにSE*********************************
             GunFlag = true;
             GunTrophyFlag = true;
 

@@ -45,7 +45,7 @@ public class BreakBlock : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player" && (PlayerScript.Velocity.x >= Power || PlayerScript.Velocity.x >= Power))
+        if (collision.gameObject.name == "Player" && (PlayerScript.Velocity.x >= Power || PlayerScript.Velocity.y >= Power || PlayerScript.Velocity.x <= Power || PlayerScript.Velocity.y <= Power))
         {
             BreakBlocl_Source.PlayOneShot(BreakBlock_SE);
             BreakFlag = true;

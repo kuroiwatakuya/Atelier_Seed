@@ -310,6 +310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 2015836305}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1 &312350042 stripped
@@ -338,7 +342,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1839735485 &333264159
 Tilemap:
@@ -484,6 +488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 2015836305}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1 &383190154
@@ -502,7 +510,7 @@ GameObject:
   m_TagString: PlayerCrush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &383190155
 BoxCollider2D:
@@ -879,7 +887,7 @@ GameObject:
   m_TagString: StopFieldTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &416802382
 BoxCollider2D:
@@ -988,7 +996,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &427406697
 Transform:
@@ -2562,7 +2570,7 @@ GameObject:
   m_TagString: PlayerCrush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &781930208
 BoxCollider2D:
@@ -3027,7 +3035,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &924814728
 BoxCollider2D:
@@ -3133,7 +3141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Now_StageNum: 3
-  MaxCoin: 0
+  MaxCoin: 7
   Clear_Flag: 0
   PlayerScript: {fileID: 2015836305}
   GetTrophy: 000000000000000000000000000000
@@ -3256,7 +3264,7 @@ GameObject:
   m_TagString: PlayerCrush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &963378468
 BoxCollider2D:
@@ -3364,7 +3372,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1216166908
 Transform:
@@ -3461,6 +3469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 2015836305}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1 &1242748109
@@ -3478,7 +3490,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1242748110
 Transform:
@@ -3585,6 +3597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 2015836305}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1 &1534563451
@@ -3603,7 +3619,7 @@ GameObject:
   m_TagString: PlayerCrush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &1534563452
 BoxCollider2D:
@@ -4160,7 +4176,7 @@ GameObject:
   m_TagString: PlayerCrush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &1675996840
 BoxCollider2D:
@@ -4469,7 +4485,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &1739956143
 BoxCollider2D:
@@ -4753,7 +4769,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!212 &1809744491
 SpriteRenderer:
@@ -4875,6 +4891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 2015836305}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1 &1923913877
@@ -4892,7 +4912,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1923913878
 Transform:
@@ -5139,6 +5159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 2015836305}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1001 &1997100280
@@ -5196,6 +5220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 2015836305}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1001 &2015836304

@@ -139,7 +139,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &171021420
 MonoBehaviour:
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Now_StageNum: 5
-  MaxCoin: 8
+  MaxCoin: 7
   Clear_Flag: 0
   PlayerScript: {fileID: 804129067}
   GetTrophy: 000000000000000000000000000000
@@ -457,7 +457,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!70 &346408097
 CapsuleCollider2D:
@@ -595,6 +595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 804129067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1 &367672639
@@ -711,7 +715,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!212 &454410538
 SpriteRenderer:
@@ -752,7 +756,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: b020044c32093ad469848462ffad3bad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -773,7 +777,7 @@ Transform:
   m_GameObject: {fileID: 454410537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.9, y: 0, z: -1}
-  m_LocalScale: {x: 1.4037468, y: 1.4037468, z: 1.4037468}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 29
@@ -876,6 +880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 804129067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1 &516812139
@@ -1008,6 +1016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 804129067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1001 &550130209
@@ -1209,7 +1221,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!70 &557380107
 CapsuleCollider2D:
@@ -1418,7 +1430,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &642187843
 Transform:
@@ -1593,6 +1605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 804129067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1001 &740844786
@@ -1761,7 +1777,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &743189562
 MonoBehaviour:
@@ -2096,7 +2112,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!212 &782275854
 SpriteRenderer:
@@ -2137,7 +2153,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: f2e27f90ed3f74841b5c0754be186b18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2157,8 +2173,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782275853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.3, y: 0, z: -1}
-  m_LocalScale: {x: 1.4037468, y: 1.4037468, z: 1.4037468}
+  m_LocalPosition: {x: 19, y: 0, z: -1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -2178,7 +2194,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!212 &788215436
 SpriteRenderer:
@@ -2364,6 +2380,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -109.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9211104330675025185, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
 --- !u!1 &817969904
@@ -2383,7 +2403,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &817969905
 Transform:
@@ -4153,7 +4173,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!70 &822955671
 CapsuleCollider2D:
@@ -4331,7 +4351,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!212 &929500752
 SpriteRenderer:
@@ -4489,7 +4509,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!70 &1046201250
 CapsuleCollider2D:
@@ -4588,7 +4608,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &1093796387
 BoxCollider2D:
@@ -4697,7 +4717,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!70 &1098329821
 CapsuleCollider2D:
@@ -4888,7 +4908,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1170091780
 MonoBehaviour:
@@ -5029,7 +5049,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &1207685019
 BoxCollider2D:
@@ -5310,7 +5330,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!70 &1287015651
 CapsuleCollider2D:
@@ -5448,6 +5468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 804129067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1001 &1391726040
@@ -5562,6 +5586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 804129067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1 &1508383135
@@ -5737,7 +5765,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!70 &1528557166
 CapsuleCollider2D:
@@ -6233,6 +6261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 804129067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1 &1680428653
@@ -6421,7 +6453,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &1692294905
 BoxCollider2D:
@@ -6530,7 +6562,7 @@ GameObject:
   m_TagString: PlayerCrush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!70 &1700714276
 CapsuleCollider2D:
@@ -6629,7 +6661,7 @@ GameObject:
   m_TagString: PlayerCrush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!70 &1743428338
 CapsuleCollider2D:
@@ -6728,7 +6760,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!70 &1752256569
 CapsuleCollider2D:
@@ -6826,7 +6858,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!212 &1782478712
 SpriteRenderer:
@@ -6909,7 +6941,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1839735485 &1832139049
 Tilemap:
@@ -7394,7 +7426,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1977745023
 MonoBehaviour:
@@ -7691,7 +7723,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!70 &2045375820
 CapsuleCollider2D:
@@ -7895,6 +7927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4771054047244774173, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
+      propertyPath: PlayerScript
+      value: 
+      objectReference: {fileID: 804129067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be9fd52bf117504dbe6377cfbcb67ec, type: 3}
 --- !u!1 &2119764268
@@ -7913,7 +7949,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!70 &2119764269
 CapsuleCollider2D:
