@@ -30,16 +30,10 @@ public class Banner : MonoBehaviour
     // バナー移動フラグ
     private bool Down;
     private bool Up;
-
-    [SerializeField] private AudioClip banner_SE;
-    AudioSource audioSource;
-
-
+    
     // // 初期化 // //
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        
         // 取得フラグＯＦＦ
         Get = false;
 
@@ -53,6 +47,7 @@ public class Banner : MonoBehaviour
         // 移動フラグＯＦＦ
         Down = false;
         Up = false;
+        
     }
 
 
@@ -71,21 +66,18 @@ public class Banner : MonoBehaviour
         }
 
 
+
         // 取得したら
         if (Get)
         {
-            audioSource.PlayOneShot(banner_SE);
-
             // 下に動くＯＮ
             Down = true;
-
-
+            
             // 下に動くＯＮかつ上に動くＯＦＦ
             if (Down && !Up)
             {
                 Move.y -= 200.0f * Time.deltaTime;
             }
-
 
             // 下限に来たら
             if (Move.y < 270)
@@ -123,7 +115,7 @@ public class Banner : MonoBehaviour
                 // 移動フラグOFF
                 Up = false;
                 Get = false;
-
+                
                 // カウンターリセット
                 Count = 0.0f;
             }

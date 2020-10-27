@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class GunScript : MonoBehaviour
 {
-    [SerializeField] private AudioClip Gun_In_SE;
-    AudioSource audioSource;
-
+    
     //プレイヤー
     public GameObject Player;
 
@@ -19,7 +17,6 @@ public class GunScript : MonoBehaviour
     {
         //Player = GameObject.Find("Player");
         //PlayerScript = Player.GetComponent<CPlayerScript>();
-        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,7 +28,6 @@ public class GunScript : MonoBehaviour
     {
         if (PlayerScript.GunFlag)
         {
-            audioSource.PlayOneShot(Gun_In_SE);
             Quaternion Rot = Quaternion.AngleAxis(Angle, Vector3.forward);
             Quaternion NowRot = this.transform.rotation;
             this.transform.rotation = NowRot * Rot;
