@@ -369,7 +369,6 @@ public class CPlayerScript : MonoBehaviour
                     //動いてないかつクリックしてない
                     if (!PlayFlag && !ClickFlag)
                     {
-                        Debug.Log("タップしてますuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
                         ClickFlag = true;
                         //DragStart = GetMousePosition();
                         //タップ開始した位置
@@ -391,8 +390,6 @@ public class CPlayerScript : MonoBehaviour
                     Vector2 position = GetTouchPosition();
                     DirectionForce = position - DragStart;
 
-                    Debug.Log("ドラッグキめてるuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
-
                     if (DirectionForce.magnitude > MaxMagnitude)
                     {
                         DirectionForce *= MaxMagnitude / DirectionForce.magnitude;
@@ -401,12 +398,6 @@ public class CPlayerScript : MonoBehaviour
 
                     this.Direction.SetPosition(0, Rbody.position);//矢印の位置
                     this.Direction.SetPosition(1, Rbody.position + DirectionForce * -1);  //矢印の向き
-                }
-                
-
-                if(touch.phase == TouchPhase.Moved)
-                {
-                    Debug.Log("うべえああああああああああああああああああああああああああああああああああああああああああああ");
                 }
 
                 //指を離したとき
@@ -713,7 +704,6 @@ public class CPlayerScript : MonoBehaviour
         {
             audioSource.PlayOneShot(Player_GetTrophy);      //トロフィーをとった時のSE
             GetStageTrophy = true;
-            TrophyObject.SetActive(false);
 
         }
 

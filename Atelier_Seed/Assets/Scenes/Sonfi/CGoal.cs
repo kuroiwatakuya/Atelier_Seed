@@ -7,7 +7,8 @@ using Common;
 public class CGoal : MonoBehaviour
 {
 
-    public int Now_StageNum;
+    public int Now_StageNum;//クリアしたとき取得
+    public static int Now_StageNum2;//最初から取得
     public int MaxCoin;
 
     public bool Clear_Flag;
@@ -36,6 +37,8 @@ public class CGoal : MonoBehaviour
     void Start()
     {
         Clear_Flag = false;
+
+        Now_StageNum2 = Now_StageNum;
         
         for (int i = 0; i <= CConst.TROPHY_MAX - 1; i++)
         {
@@ -280,5 +283,10 @@ public class CGoal : MonoBehaviour
     public static int GetPlayCount()
     {
         return PlayCount;
+    }
+
+    public static int GetNowStage()
+    {
+        return Now_StageNum2;
     }
 }

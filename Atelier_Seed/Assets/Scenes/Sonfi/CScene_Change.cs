@@ -13,11 +13,13 @@ using Common;
 public class CScene_Change : MonoBehaviour
 {
     bool OnlySelect = true;     // キーの多重処理防止
+
+    bool FirstOp;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        FirstOp = CSaveBool.GetBool("Opening", false);
     }
 
     // Update is called once per frame
@@ -62,6 +64,25 @@ public class CScene_Change : MonoBehaviour
         {
             Time.timeScale = 1f;
             CFadeManager.FadeOut(CConst.SCENE_COLLECTION);
+            OnlySelect = false;
+        }
+    }
+
+    public void TitleTap()
+    {
+        if (OnlySelect)
+        {
+            if(!FirstOp)
+            {
+                CFadeManager.FadeOut(CConst.SCENE_OPENING);
+                FirstOp = true;
+                CSaveBool.SetBool("Opening", FirstOp);
+            }
+            else
+            {
+                CFadeManager.FadeOut(CConst.SCENE_STAGE_SELECT);
+            }
+            
             OnlySelect = false;
         }
     }

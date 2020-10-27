@@ -495,6 +495,7 @@ GameObject:
   - component: {fileID: 173724365}
   - component: {fileID: 173724364}
   - component: {fileID: 173724363}
+  - component: {fileID: 173724371}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Wall
@@ -557,11 +558,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -8.006743, y: 0}
-  - {x: -5.0480757, y: 0.0017697215}
-  - {x: -4.9873147, y: -0.0881965}
-  - {x: -5.5317793, y: -1.0207201}
-  - {x: -8.027148, y: -1.0187995}
+  - {x: -5.6141043, y: -0.0035470948}
+  - {x: -5.0671396, y: -0.0096720755}
+  - {x: -5.0673842, y: -0.10345222}
+  - {x: -5.611951, y: -1.0008131}
+  - {x: -5.6025004, y: -0.001721859}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -1358,6 +1359,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &173724371
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173724361}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -6.8044496, y: -0.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.391101, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &201374914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,6 +1847,10 @@ PrefabInstance:
       propertyPath: Player_Wind
       value: 
       objectReference: {fileID: 8300000, guid: 5e18d236fad46e941be77a6b1be48ff8, type: 3}
+    - target: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: Power
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 9211104330675025185, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
       propertyPath: m_CollisionDetection
       value: 1

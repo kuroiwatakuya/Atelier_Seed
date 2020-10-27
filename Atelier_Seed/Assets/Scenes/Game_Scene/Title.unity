@@ -1291,7 +1291,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1710787848}
         m_TargetAssemblyTypeName: CScene_Change, Assembly-CSharp
-        m_MethodName: Go_StageSelect
+        m_MethodName: TitleTap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
