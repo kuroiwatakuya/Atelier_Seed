@@ -28,7 +28,7 @@ public class CAwardEffect : MonoBehaviour
     // 拡大最大値
     public  float MaxScale = 1.0f;
 
-    
+    // エフェクト発生フラグ
     private bool EffectRun;
 
 
@@ -47,6 +47,7 @@ public class CAwardEffect : MonoBehaviour
     {
         // トランスフォーム取得
         Transform thisTransform = this.transform;
+
         // 拡大させる
         Scale.x += ExpandSpeed * Time.deltaTime;
         Scale.y += ExpandSpeed * Time.deltaTime;

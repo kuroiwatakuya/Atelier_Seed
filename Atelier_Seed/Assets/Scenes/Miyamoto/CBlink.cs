@@ -19,15 +19,11 @@ using UnityEngine.UI;
 // // クラス // //
 public class CBlink : MonoBehaviour
 {
-    // // public // //
-
+    
     // 点滅スピード
     public float Speed = 1.0f;          // 点滅するスピード
     public float AlphaInterval = 0.5f;  // 一回の処理でどれくらいα値が変化するか    
-
-    //-------------------------------------------------------------------
-
-    // // private // //
+    
 
     // テキストのコンポーネント格納用
     private Text ThisText;
@@ -50,8 +46,7 @@ public class CBlink : MonoBehaviour
 
     // 現在のオブジェクトの種類（初期値はテキスト）
     private ObjectType ThisObjectType = ObjectType.TEXT;
-
-    //-------------------------------------------------------------------
+    
 
     // // 初期化 // //
     void Start()
@@ -72,8 +67,7 @@ public class CBlink : MonoBehaviour
             ThisText = this.gameObject.GetComponent<Text>();    // テキストのコンポーネントを取得
         }
     }
-
-    //-------------------------------------------------------------------
+    
 
     // // 更新 // //
     void Update()
@@ -92,8 +86,7 @@ public class CBlink : MonoBehaviour
             ThisText.color = GetAlphaColor(ThisText.color);     // α値調整
         }
     }
-
-    //-------------------------------------------------------------------
+    
 
     // // α値を更新してColorを返す // //
     Color GetAlphaColor(Color color)

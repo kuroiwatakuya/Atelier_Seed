@@ -40,21 +40,25 @@ public class CHitEffect : MonoBehaviour
         // 粘着質ブロックへの衝突エフェクトを取得（ステージごとに色分け）
         if (SceneManager.GetActiveScene().name == "Stage1")
         {
+            // ステージ１
             HitSplashObject = (GameObject)Resources.Load("Effect_Splash1");
         }
 
         if (SceneManager.GetActiveScene().name == "Stage2")
         {
+            // ステージ２
             HitSplashObject = (GameObject)Resources.Load("Effect_Splash2");
         }
 
         if (SceneManager.GetActiveScene().name == "Stage3")
         {
+            // ステージ３
             HitSplashObject = (GameObject)Resources.Load("Effect_Splash3");
         }
 
         if (SceneManager.GetActiveScene().name == "Stage4")
         {
+            // ステージ４
             HitSplashObject = (GameObject)Resources.Load("Effect_Splash4");
         }
 

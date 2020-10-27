@@ -1,8 +1,18 @@
-﻿using System.Collections;
+﻿
+// //                       // //
+// //   Author:宮本早希     // //
+// //   シーン遷移の演出    // //
+// //                       // //
+
+
+// // インクルードファイル的なやつ // //
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+// // クラス // //
 public class CTransition : UnityEngine.UI.Graphic, InterfaceFade
 {
     // マスクするルール画像
@@ -15,11 +25,13 @@ public class CTransition : UnityEngine.UI.Graphic, InterfaceFade
     // マスク範囲の入出力
     public float Range
     {
+        // ゲッタ
         get
         {
             return CutoutRange;
         }
 
+        // セッタ
         set
         {
             CutoutRange = value;
@@ -67,6 +79,7 @@ public class CTransition : UnityEngine.UI.Graphic, InterfaceFade
     }
 
 
+    // Unityエディタで実行中の時
 #if UNITY_EDITOR
     protected override void OnValidate()
     {
@@ -75,18 +88,4 @@ public class CTransition : UnityEngine.UI.Graphic, InterfaceFade
         UpdateMaskTexture(MaskTexture);
     }
 #endif
-
-
-
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-        
-    //}
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
 }

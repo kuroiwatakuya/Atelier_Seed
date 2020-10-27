@@ -21,6 +21,7 @@ public class Skip : MonoBehaviour
     // // クリック or タップ // //
     public void OnMouseDown()
     {
+        // 次のシーンへ
         SceneManager.LoadScene(NextScene);
     }
 }
