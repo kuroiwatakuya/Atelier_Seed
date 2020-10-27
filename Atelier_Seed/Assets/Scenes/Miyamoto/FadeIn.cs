@@ -1,18 +1,23 @@
-﻿using System.Collections;
+﻿
+// //                                   // //
+// //   Author:宮本早希                 // //
+// //   シーン開始時自動フェードイン    // //
+// //                                   // //
+
+
+// // インクルードファイル // //
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// // クラス // //
 public class FadeIn : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // // 初期化 // //
     void Start()
     {
+        // フェードインする
         CFadeManager.FadeIn();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    }    
 }

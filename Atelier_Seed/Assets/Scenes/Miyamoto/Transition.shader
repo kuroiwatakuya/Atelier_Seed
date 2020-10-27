@@ -1,4 +1,10 @@
-﻿Shader "UI/Transition"
+﻿
+// //							// //
+// //	Author:宮本早希			// //
+// //	フェード演出シェーダ	// //
+// //							// //
+
+Shader "UI/Transition"
 {
 	Properties
 	{

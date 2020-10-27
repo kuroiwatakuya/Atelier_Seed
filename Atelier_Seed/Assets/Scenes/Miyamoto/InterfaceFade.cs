@@ -1,22 +1,17 @@
-﻿using System.Collections;
+﻿
+// //                                // //
+// //   Author:宮本早希              // //
+// //   フェード用インターフェース   // //
+// //                                // //
+
+
+// // インクルードファイル的なやつ // //
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//public class InterfaceFade : MonoBehaviour
-//{
-//    // Start is called before the first frame update
-//    void Start()
-//    {
 
-//    }
-
-//    // Update is called once per frame
-//    void Update()
-//    {
-
-//    }
-//}
-
+// // インターフェース // //
 public interface InterfaceFade
 {
     float Range { get; set; }

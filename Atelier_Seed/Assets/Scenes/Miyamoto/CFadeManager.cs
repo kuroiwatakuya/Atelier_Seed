@@ -17,15 +17,6 @@ using UnityEngine.Assertions;
 // // クラス // //
 public class CFadeManager : MonoBehaviour
 {
-    //// フェード用の Canvas と Image
-    //private static Canvas FadeCanvas;
-    //private static Image FadeImage;
-
-
-    //// フェード用の Image の透明度
-    //private static float Alpha = 0.0f;
-
-
     // フェードイン, フェードアウトのフラグ
     public static bool isFadeIn = false;
     public static bool isFadeOut = false;
@@ -39,86 +30,40 @@ public class CFadeManager : MonoBehaviour
     private static int NextScene;
 
 
+    // フェードのインターフェース取得用
     public static InterfaceFade iFade;
 
+
+    // マスク範囲
     public float CutoutRange;
-
-
-
-
-    // // フェード用の Canvas と Image の生成
-    static void Initialize()
-    {
-        // フェード用の Canvas 生成
-        //GameObject FadeCanvasObject = new GameObject("FadeCanvas");     // フェードキャンバスオブジェクトを生成
-        //FadeCanvas = FadeCanvasObject.AddComponent<Canvas>();           // キャンバスを生成
-        //FadeCanvasObject.AddComponent<GraphicRaycaster>();              // グラフィックレイキャスタを生成
-        //FadeCanvas.renderMode = RenderMode.ScreenSpaceOverlay;          // キャンバスのレンダモードを設定
-        //FadeCanvasObject.AddComponent<CFadeManager>();                  // フェードマネージャースクリプトをアタッチ
-
-        //// 最前面になるようにソートオーダー設定
-        //FadeCanvas.sortingOrder = 100;
-
-
-
-        //// フェード用の Image 生成
-        //FadeImage = new GameObject("FadeImage").AddComponent<Image>();  // フェード用イメージ生成
-        //FadeImage.transform.SetParent(FadeCanvas.transform, false);     // フェードキャンバスを親に設定
-        //FadeImage.rectTransform.anchoredPosition = Vector3.zero;        // 位置座標を決定
-
-
-        //// Image サイズを設定
-        //FadeImage.rectTransform.sizeDelta = new Vector2(2000, 2000);
-
-
-        // フェードアウトフラグがＯＮのとき
-        //if (isFadeOut)
-        //{
-        //    Alpha = 0.0f;       // α値をゼロに
-        //    isFadeOut = false;  // フラグＯＦＦ
-        //}
-
-
-        //// フェードインフラグがＯＮのとき
-        //if (isFadeIn)
-        //{
-        //    Alpha = 0.0f;
-        //    isFadeIn = false;
-        //}
-
-
-    }
-
+       
 
     // // フェードイン開始 // //
     public static void FadeIn()
     {
+        // フェードインフラグＯＮ
         isFadeIn = true;
-        //if (FadeImage == null) Initialize();    // フェードイメージがなければ初期化
-        //FadeImage.color = Color.black;          // フェードカラー設定
-        //FadeCanvas.enabled = true;              // フェードキャンバス有効化
-        //isFadeIn = true;                        // フェードインフラグＯＮ
-        //Alpha = 1.0f;                           // α値を1.0fにして開始
     }
 
 
     // // フェードアウト開始 // //
     public static void FadeOut(int nextscene)
     {
+        // 次のシーンを決定
         NextScene = nextscene;
+
+        // フェードアウトフラグＯＦＦ
         isFadeOut = true;
-        //if (FadeImage == null) Initialize();    // フェードイメージがなければ初期化
-        //NextScene = nextscene;                  // 遷移先のシーン番号を設定
-        //FadeImage.color = Color.black;          // フェードカラー設定
-        //FadeCanvas.enabled = true;              // フェードキャンバス有効化
-        //isFadeOut = true;                       // フェードアウトフラグＯＮ
     }
 
 
     // // 初期化 // //
     void Start()
     {
+        // フェードのインターフェースを取得
         iFade = GetComponent<InterfaceFade>();
+
+        // マスク範囲を取得
         iFade.Range = CutoutRange;
     }
 
@@ -128,20 +73,10 @@ public class CFadeManager : MonoBehaviour
         // フェードイン
         if (isFadeIn)
         {
-            //// 経過時間から透明度計算
-            //Alpha -= Time.deltaTime / FadeTime;
-
-            //// フェードイン終了判定
-            //if (Alpha <= 0.0f)
-            //{
-            //    isFadeIn = false;           // フェードインフラグＯＦＦ
-            //   // Alpha = 0.0f;               // α値０設定
-            //    FadeCanvas.enabled = false;  // フェードキャンバス無効化
-            //}
-
-            //// フェード用 Imgae のカラー設定
-            //FadeImage.color = new Color(0.0f, 0.0f, 0.0f, Alpha);
+            // マスク範囲を減らす
             iFade.Range -= FadeTime * Time.deltaTime;
+
+            // ０を越えたら止める
             if (iFade.Range < 0.0f)
             {
                 iFade.Range = 0.0f;
@@ -153,22 +88,10 @@ public class CFadeManager : MonoBehaviour
         // フェードアウト
         else if (isFadeOut)
         {
-            //// 時間経過から透明度計算
-            //Alpha += Time.deltaTime / FadeTime;
-
-            //// フェードアウト終了判定
-            //if (Alpha >= 1.0f)
-            //{
-            //    isFadeOut = false;  // フェードアウト
-            //   // Alpha = 1.0f;       // α値１設定
-
-            //    // 次のシーンへ遷移
-            //    SceneManager.LoadScene(NextScene);
-            //}
-
-            //// フェード用 Image のカラー設定
-            //FadeImage.color = new Color(0.0f, 0.0f, 0.0f, Alpha);
+            // マスク範囲を増やす
             iFade.Range += FadeTime * Time.deltaTime;
+
+            // １を越えたら止める
             if (iFade.Range > 1.0f)
             {
                 iFade.Range = 1.0f;
