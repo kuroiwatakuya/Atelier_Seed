@@ -1866,6 +1866,10 @@ PrefabInstance:
       propertyPath: Banner
       value: 
       objectReference: {fileID: 480489742}
+    - target: {fileID: 3123169576709009349, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
+      propertyPath: Player_Photo
+      value: 
+      objectReference: {fileID: 8300000, guid: a5abaa490afcb4d40b846af0244ff5e0, type: 3}
     - target: {fileID: 4351444219620821020, guid: 476f19e1dc56e24439e46aea8bc1ed38, type: 3}
       propertyPath: m_Volume
       value: 1
@@ -2437,7 +2441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Now_StageNum: 2
-  MaxCoin: 7
+  MaxCoin: 6
   Clear_Flag: 0
   PlayerScript: {fileID: 286090084}
   GetTrophy: 000000000000000000000000000000
@@ -3094,7 +3098,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &802803788
 RectTransform:
@@ -5781,6 +5785,14 @@ PrefabInstance:
     - target: {fileID: 4892719686368691592, guid: 454fa70cc36ae17429c7dfac3e5fe50e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892719686368691592, guid: 454fa70cc36ae17429c7dfac3e5fe50e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892719686368691592, guid: 454fa70cc36ae17429c7dfac3e5fe50e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 454fa70cc36ae17429c7dfac3e5fe50e, type: 3}

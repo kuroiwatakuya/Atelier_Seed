@@ -93,6 +93,10 @@ public class CBlink : MonoBehaviour
     {
         Timer += Time.deltaTime * Speed;                     // 点滅時間
         color.a = Mathf.Sin(Timer) * AlphaInterval + 0.5f;   // α値変更
+        if(Timer >= 360)
+        {
+            Timer = 0;
+        }
 
         return color;   // αを変更したカラーを返す
     }

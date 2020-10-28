@@ -139,6 +139,8 @@ MonoBehaviour:
   Player_Gun_Out: {fileID: 8300000, guid: 2ad4a1cc57b7439448f27ffa0d808678, type: 3}
   Player_Wind: {fileID: 8300000, guid: d00dac2595fa04c41a9dcc128647705c, type: 3}
   Player_BannerGet: {fileID: 8300000, guid: 9c3be20aa3c7c6b45ba9130dbb108acc, type: 3}
+  Player_Photo: {fileID: 8300000, guid: a5abaa490afcb4d40b846af0244ff5e0, type: 3}
+  Player_Break: {fileID: 8300000, guid: e79120d262cb3b74783b5d7e12f92b2b, type: 3}
 --- !u!212 &1535846944235735134
 SpriteRenderer:
   m_ObjectHideFlags: 0
