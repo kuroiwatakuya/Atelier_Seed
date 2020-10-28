@@ -927,7 +927,7 @@ GameObject:
   - component: {fileID: 104401559}
   - component: {fileID: 104401558}
   - component: {fileID: 104401557}
-  - component: {fileID: 104401560}
+  - component: {fileID: 104401561}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1000,7 +1000,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &104401560
+--- !u!82 &104401561
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1010,7 +1010,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6f3a3571d17de4c449c6b5a8bdde9b19, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
