@@ -22,6 +22,10 @@ public class CAwardEffect : MonoBehaviour
     private Vector3 Scale;
 
 
+    // オブジェクト保存用空オブジェクトのtransform
+    private Transform AwardPool;
+
+
     // 広がる速度
     public float ExpandSpeed = 2.0f;
 
@@ -31,12 +35,23 @@ public class CAwardEffect : MonoBehaviour
     // エフェクト発生フラグ
     private bool EffectRun;
 
+    // エフェクト再生カウント
+    private float RunTime;
+
 
     // // 初期化 // //
     void Start()
     {
+        // エフェクト保存用のオブジェクトを生成する
+        AwardPool = new GameObject("AwardEffect").transform;
+
+        // 再生カウントリセット
+        RunTime = 0.0f;
+
+        // エフェクトオブジェクトがあったら
         if (AwardEffectObject != null)
         {
+            // 再生フラグＯＮ
             EffectRun = true;
         }
     }
@@ -53,11 +68,26 @@ public class CAwardEffect : MonoBehaviour
         Scale.y += ExpandSpeed * Time.deltaTime;
 
 
-        // エフェクト生成（一回だけ）
+        // 再生フラグがＯＮなら
         if (EffectRun)
         {
-            Instantiate(AwardEffectObject, new Vector3(thisTransform.position.x, thisTransform.position.y, thisTransform.position.z), Quaternion.identity);
-            EffectRun = false;
+            // エフェクト生成
+            GetObject(AwardEffectObject, thisTransform.position, Quaternion.identity);
+
+            // カウント開始
+            RunTime += 1.0f * Time.deltaTime;
+
+
+            // カウントを過ぎたら
+            if (RunTime > 0.4f)
+            {
+                // カウントリセット
+                RunTime = 0.0f;
+
+                // 再生フラグＯＦＦ
+                EffectRun = false;
+            }
+
         }
 
 
@@ -74,5 +104,24 @@ public class CAwardEffect : MonoBehaviour
 
         // 代入
         thisTransform.localScale = Scale;
+    }
+
+
+    // // ゲームオブジェクｔのアクティブ判別と生成 // //
+    void GetObject(GameObject obj, Vector3 pos, Quaternion qua)
+    {
+        foreach (Transform transform in AwardPool)
+        {
+            // オブジェクトが非アクティブなら使いまわし
+            if (!transform.gameObject.activeSelf)
+            {
+                transform.SetPositionAndRotation(pos, qua);
+                transform.gameObject.SetActive(true);
+                return;
+            }
+        }
+
+        // 非アクティブなオブジェクトがなければ生成する
+        Instantiate(obj, pos, qua, AwardPool);
     }
 }
