@@ -141,12 +141,12 @@ public class CTrophyGetEffect : MonoBehaviour
 
 
                 // 消えた後の処理
-                if (nowScale.y > 2.0f)
+                if (nowScale.y > 2.5f)
                 {
                     Tate = false;
                     Yoko = false;
                     Hit = false;
-                    return;
+                    this.gameObject.SetActive(false);
                 }
             }
         }

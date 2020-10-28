@@ -1560,7 +1560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AwardEffectObject: {fileID: 7697406170446253361, guid: a9a9dd1337f120644be58cfc374b5b32, type: 3}
-  ExpandSpeed: 2
+  ExpandSpeed: 1
   MaxScale: 1
 --- !u!212 &295353752
 SpriteRenderer:
@@ -4705,7 +4705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AwardEffectObject: {fileID: 7697406170446253361, guid: a9a9dd1337f120644be58cfc374b5b32, type: 3}
-  ExpandSpeed: 2
+  ExpandSpeed: 1
   MaxScale: 1
 --- !u!212 &1353298368
 SpriteRenderer:
@@ -5729,7 +5729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AwardEffectObject: {fileID: 7697406170446253361, guid: a9a9dd1337f120644be58cfc374b5b32, type: 3}
-  ExpandSpeed: 2
+  ExpandSpeed: 1
   MaxScale: 1
 --- !u!212 &1516244848
 SpriteRenderer:
