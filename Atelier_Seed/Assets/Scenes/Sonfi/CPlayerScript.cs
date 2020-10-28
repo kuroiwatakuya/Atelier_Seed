@@ -146,6 +146,8 @@ public class CPlayerScript : MonoBehaviour
     public AudioClip Player_Gun_Out;      //大砲発射
     public AudioClip Player_Wind;            //風の当たり判定
     public AudioClip Player_BannerGet;    //バナー獲得SE
+    public AudioClip Player_Photo;         //写真取得SE
+    public AudioClip Player_Break;         //破壊
 
     AudioSource audioSource;            //オーディオソース
     AudioSource PlayerPull_audio;      //プレイヤーを引っ張った時のオーディオ取得
@@ -699,6 +701,10 @@ public class CPlayerScript : MonoBehaviour
         }
 
         //破壊壁
+        if (collision.gameObject.tag == "BreakFlag")
+        {
+            audioSource.PlayOneShot(Player_Break);
+        }
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -736,6 +742,12 @@ public class CPlayerScript : MonoBehaviour
         if (collider.gameObject.tag == "Coin")
         {
             audioSource.PlayOneShot(Player_Coin);
+        }
+
+        //写真
+        if (collider.gameObject.tag == "Photo")
+        {
+            audioSource.PlayOneShot(Player_Photo);
         }
     }
 

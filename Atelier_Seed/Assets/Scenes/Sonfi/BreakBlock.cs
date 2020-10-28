@@ -17,15 +17,12 @@ public class BreakBlock : MonoBehaviour
     private CPlayerScript PlayerScript;
 
     private bool BreakFlag;
-
-    [SerializeField] private AudioClip BreakBlock_SE;   //破壊壁SE
     AudioSource BreakBlocl_Source;
 
     // Start is called before the first frame update
     void Start()
     {
         PlayerScript = Player.GetComponent<CPlayerScript>();
-        BreakBlocl_Source = GetComponent<AudioSource>();
         BreakFlag = false;        
     }
 
