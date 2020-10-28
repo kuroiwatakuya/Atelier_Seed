@@ -17,6 +17,7 @@ public class CPlayerScript : MonoBehaviour
     public GameObject GunObject;
     public GameObject GunPlayerPosition;
     public GameObject TrophyObject;
+    public GameObject Banner;
     //---宮本加筆ここから------------------------------
     [SerializeField] private GameObject ShotEffect;         // プレイヤーショットのエフェクトオブジェクト
     [SerializeField] private GameObject GunEnterEffect;     // Gunに入った時のエフェクトオブジェクト
@@ -566,6 +567,11 @@ public class CPlayerScript : MonoBehaviour
         //バッチの初獲得
         //***********************************************
 
+        if(Banner.activeSelf && !BannerScript.Get)
+        {
+            Banner.SetActive(false);
+        }
+
         if (PhotoSprite.activeSelf)
         {
             if (StagePhoto[GoalScript.Now_StageNum - 1])
@@ -577,66 +583,77 @@ public class CPlayerScript : MonoBehaviour
         if (WallFlag && !GoalScript.GetBatch[0] && !OnlyBanner[0])
         {
             OnlyBanner[0] = true;
+            Banner.SetActive(true);
             BannerScript.Get = true;
             audioSource.PlayOneShot(Player_BannerGet);
         }
         if (WallCount >= 2 && !GoalScript.GetBatch[1] && !OnlyBanner[1])
         {
             OnlyBanner[1] = true;
+            Banner.SetActive(true);
             BannerScript.Get = true;
             audioSource.PlayOneShot(Player_BannerGet);
         }
         if (Fly && !GoalScript.GetBatch[2] && !OnlyBanner[2])
         {
             OnlyBanner[2] = true;
+            Banner.SetActive(true);
             BannerScript.Get = true;
             audioSource.PlayOneShot(Player_BannerGet);
         }
         if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 1 && !GoalScript.GetBatch[3] && !OnlyBanner[3])
         {
             OnlyBanner[3] = true;
+            Banner.SetActive(true);
             BannerScript.Get = true;
             audioSource.PlayOneShot(Player_BannerGet);
         }
         if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 2 && !GoalScript.GetBatch[4] && !OnlyBanner[4])
         {
             OnlyBanner[4] = true;
+            Banner.SetActive(true);
             BannerScript.Get = true;
             audioSource.PlayOneShot(Player_BannerGet);
         }
         if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 3 && !GoalScript.GetBatch[5] && !OnlyBanner[5])
         {
             OnlyBanner[5] = true;
+            Banner.SetActive(true);
             BannerScript.Get = true;
             audioSource.PlayOneShot(Player_BannerGet);
         }
         if (StopFieldCount >= 1 && GoalScript.Now_StageNum == 4 && !GoalScript.GetBatch[6] && !OnlyBanner[6])
         {
             OnlyBanner[6] = true;
+            Banner.SetActive(true);
             BannerScript.Get = true;
             audioSource.PlayOneShot(Player_BannerGet);
         }
         if (Wind && !GoalScript.GetBatch[7] && !OnlyBanner[7])
         {
             OnlyBanner[7] = true;
+            Banner.SetActive(true);
             BannerScript.Get = true;
             audioSource.PlayOneShot(Player_BannerGet);
         }
         if (GunTrophyFlag && !GoalScript.GetBatch[8] && !OnlyBanner[8])
         {
             OnlyBanner[8] = true;
+            Banner.SetActive(true);
             BannerScript.Get = true;
             audioSource.PlayOneShot(Player_BannerGet);
         }
         if (BreakBlockCount >= 1 && !GoalScript.GetBatch[9] && !OnlyBanner[9])
         {
             OnlyBanner[9] = true;
+            Banner.SetActive(true);
             BannerScript.Get = true;
             audioSource.PlayOneShot(Player_BannerGet);
         }
         if (GetStageTrophy && !GoalScript.GetBatch[10] && !OnlyBanner[10])
         {
             OnlyBanner[10] = true;
+            Banner.SetActive(true);
             BannerScript.Get = true;
             audioSource.PlayOneShot(Player_BannerGet);
         }
@@ -646,6 +663,7 @@ public class CPlayerScript : MonoBehaviour
             if (GoalScript.AllCoin[0] && GoalScript.AllCoin[1] && GoalScript.AllCoin[2] && GoalScript.AllCoin[3] && GoalScript.AllCoin[4])
             {
                 OnlyBanner[12] = true;
+                Banner.SetActive(true);
                 BannerScript.Get = true;
                 audioSource.PlayOneShot(Player_BannerGet);
             }
