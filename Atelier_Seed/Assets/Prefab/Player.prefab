@@ -94,6 +94,7 @@ MonoBehaviour:
   GunObject: {fileID: 0}
   GunPlayerPosition: {fileID: 0}
   TrophyObject: {fileID: 0}
+  Banner: {fileID: 0}
   ShotEffect: {fileID: 5664917040781186869, guid: 816561f59d8fb664788d514a34e303a0, type: 3}
   GunEnterEffect: {fileID: 7505187921048583444, guid: 4dbd2d4f0ed877d449edfeec1c857c01, type: 3}
   GunShootEffect: {fileID: 5222335967982672262, guid: 5a582f49ffd7010458fb072bb65682e2, type: 3}
@@ -133,9 +134,9 @@ MonoBehaviour:
   Player_Pull: {fileID: 8300000, guid: e5dab2740cb5db74eaf188b7a98f4153, type: 3}
   Player_Sit: {fileID: 8300000, guid: af41f14738518804da8dbe9d857d70a7, type: 3}
   Player_GetTrophy: {fileID: 8300000, guid: cfaeb692bd2b88f4388a1dc07d3d3df4, type: 3}
-  Player_Coin: {fileID: 8300000, guid: 7db4ac894559a10468524b7c525df3a7, type: 3}
+  Player_Coin: {fileID: 8300000, guid: f559f480faeeceb4cb1642f240ede0e2, type: 3}
   Player_Gun_In: {fileID: 8300000, guid: 2a4bb788da084bb4da12048b8c71ac37, type: 3}
-  Player_Gun_Out: {fileID: 8300000, guid: 20e142e88fcebaa4e9512ba3ac2685a0, type: 3}
+  Player_Gun_Out: {fileID: 8300000, guid: 2ad4a1cc57b7439448f27ffa0d808678, type: 3}
   Player_Wind: {fileID: 8300000, guid: d00dac2595fa04c41a9dcc128647705c, type: 3}
   Player_BannerGet: {fileID: 8300000, guid: 9c3be20aa3c7c6b45ba9130dbb108acc, type: 3}
 --- !u!212 &1535846944235735134
@@ -213,7 +214,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
